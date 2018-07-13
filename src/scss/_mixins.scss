@@ -1,0 +1,117 @@
+//colors
+$black:         #000000;
+$white:         #ffffff;
+$light-grey:    rgb(235,236,236);
+$middle-grey:   rgb(178,179,179);
+$cool-grey:     rgb(91,91,91);
+$blue:          rgb(2,121,147);
+$brown:         rgb(71,36,29);
+$light-brown:   rgb(170,152,119);
+$nut-brown:     rgb(188,103,44);
+$dark-blue:     rgb(0,36,71);
+
+$container-width: 1320px;
+$container-width-mob: 340px;
+
+$min-width-mob: 1040px;
+
+//utils
+.u-jc-fe {display: flex;justify-content: flex-end;}
+.u-jc-fs {display: flex;justify-content: flex-start;}
+.u-jc-ce {display: flex;justify-content: center;}
+.u-jc-sb {display: flex;justify-content: space-between;}
+
+.u-ai-fe {display: flex;align-items: flex-end;}
+.u-ai-ce {display: flex;align-items: center;}
+
+.u-as-ce {display: flex;align-self: center;margin:auto}
+
+.u-fd-col {display: flex;flex-direction: column;}
+
+//likes
+.h1 {font-size: 36px;}
+.h2 {font-size: 30px;}
+.h3 {font-size: 24px;}
+.h4 {font-size: 20px;}
+.h5 {font-size: 18px;font-weight: bold;}
+
+%link-like {
+  color: $black;
+  // line-height: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($black,0.3);
+  &:hover {
+    color: $blue;
+    border: none;
+  }
+}
+@mixin gradient ($dir:top,$start:$white,$end:$black,$startplace:0%,$endplace:100%) {
+  background: $start;
+  background: -moz-linear-gradient($dir, $start $startplace, $end $endplace);
+  background: -webkit-linear-gradient($dir, $start $startplace,$end $endplace);
+  background: linear-gradient(to $dir, $end $startplace, $start $endplace);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$end}',GradientType=0 );
+}
+@mixin typo($size: 20px, $line:30px, $weight: 400) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};
+}
+@mixin grey {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+//commonly used styles
+.list-inline {
+  display: flex;
+}
+.btn {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn--white {
+  padding: 10px 28px;
+  color: $white;
+  background: transparent;
+  border: 1px solid $white;
+  text-transform: uppercase;
+}
+.btn--empty {
+  padding: 12px 20px;
+  color: #BA7530;
+  background: transparent;
+  border: 1px solid #BA7530;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #BA7530;
+    color: $white;
+  }
+  &:active{
+    background-color: #BA7530;
+    box-shadow: 0 9px 25px 0 #BA7530;
+    color: $white;
+  }
+}
+.btn--regular {
+  padding: 20px 45px;
+  color: $white;
+  background: $nut-brown;
+  border: 1px solid $nut-brown;
+  &:hover {
+    background-color: #A2662B;
+  }
+  &:active{
+    background: $nut-brown;
+    box-shadow: 0 9px 25px 0 #BA7530;
+  }
+}

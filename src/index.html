@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		//= _head.html
+	</head>
+	<body>
+		//= _header.html
+		<section class="section slider">
+			<div class="container">
+				<div class="slider__content u-jc-fs u-ai-fe">
+					<div class="slider__text-block">
+						<p class="slider__header">Лучшие предложения на рынке аренды и покупки</p>
+						<ul class="slider__list">
+							<li>Более 100 предложений</li>
+							<li>Ежедневные обновления</li>
+							<li>Удобный поиск</li>
+						</ul>
+						<button class="btn btn--white slider__btn">Подробее</button>
+					</div>
+					<img src="images/slide__img.png" alt="" class="slider__img">
+				</div>
+				<div class="slider__arrows">
+
+				</div>
+			</div>
+		</section>
+
+		<section class="section filter">
+			<div class="container">
+				<div class="tab" id="type_switch">
+					<ul class="filter__nav tab__nav u-jc-sb u-as-ce">
+						<li><a href="#buy" class="tab__item js-tab__item js-active">Купить</a></li>
+						<li><a href="#rent" class="tab__item js-tab__item">Арендовать</a></li>
+					</ul>
+					<div class="filter__content tab__content">
+						<div class="tab__block js-active" id="buy">
+							<div class="filter__input-group u-jc-sb">
+								<input type="text" class="filter__input filter__input--normal" placeholder="Города"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Улица"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Дома / Квартира"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена От"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена До"/>
+							</div>
+							<div class="filter__input-group filter__input-group--add u-jc-sb">
+								<input type="text" class="filter__input filter__input--big" placeholder="Микрорайон"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Жилой комплекс"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Планировка"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Тип дома"/>
+							</div>
+							<div class="filter__footer u-jc-sb">
+								<div class="filter__link-group u-ai-ce">
+									<a href="#" class="filter__link js-hide-filter">Все параметры</a>
+									<a href="#" class="filter__link filter__link--map">Смотреть на карте</a>
+								</div>
+								<div class="u-jc-ce">
+									<button class="btn btn--regular filter__btn">Поиск</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab__block" id="rent">
+							<p>for test needs</p>
+							<div class="filter__input-group u-jc-sb">
+								<input type="text" class="filter__input filter__input--normal" placeholder="Города"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Улица"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Дома / Квартира"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена От"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена До"/>
+							</div>
+							<div class="filter__input-group u-jc-sb">
+								<input type="text" class="filter__input filter__input--big" placeholder="Микрорайон"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Жилой комплекс"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Планировка"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Тип дома"/>
+							</div>
+							<div class="filter__footer u-jc-sb">
+								<div class="filter__link-group u-ai-ce">
+									<a href="#" class="filter__link js-hide-filter">Все параметры</a>
+									<a href="#" class="filter__link filter__link--map">Смотреть на карте</a>
+								</div>
+								<div class="u-jc-ce">
+									<button class="btn btn--regular filter__btn">Поиск</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section search-type">
+			<div class="container container--scroll ">
+				<div class="scrollable-div u-jc-sb">
+					<div class="search-type__preset preset preset--small preset--first u-fd-col u-jc-sb">
+						<p class="preset__header">1. Квартиры</p>
+						<ul>
+							<li class="preset__list-item">
+								<span class="preset__text preset__rooms"><a href="#" class="preset__rooms">1-комн.</a></span>
+								<span class="preset__text preset__price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__number">2 856</span>
+							</li>
+							<li class="preset__list-item">
+								<span class="preset__text preset__rooms"><a href="#" class="preset__rooms">1-комн.</a></span>
+								<span class="preset__text preset__price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__number">2 856</span>
+							</li>
+							<li class="preset__list-item preset__list-item--last">
+								<span class="preset__text preset__rooms"><a href="#" class="preset__rooms">1-комн.</a></span>
+								<span class="preset__text preset__price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__number">2 856</span>
+							</li>
+						</ul>
+						<div>
+							<button class="btn btn--white">Посмотреть все</button>
+						</div>
+					</div>
+					<div class="search-type__preset preset preset--small preset--second u-fd-col u-jc-sb">
+						<p class="preset__header">2. Дома</p>
+						<ul>
+							<li class="preset__list-item">
+								<span class="preset__text preset__rooms"><a href="#" class="preset__rooms">1-комн.</a></span>
+								<span class="preset__text preset__price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__number">2 856</span>
+							</li>
+							<li class="preset__list-item">
+								<span class="preset__text preset__rooms"><a href="#" class="preset__rooms">1-комн.</a></span>
+								<span class="preset__text preset__price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__number">2 856</span>
+							</li>
+							<li class="preset__list-item preset__list-item--last">
+								<span class="preset__text preset__rooms"><a href="#" class="preset__rooms">1-комн.</a></span>
+								<span class="preset__text preset__price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__number">2 856</span>
+							</li>
+						</ul>
+						<div>
+							<button class="btn btn--white">Посмотреть все</button>
+						</div>				
+					</div>
+					<div class="search-type__preset preset preset--small preset--third u-fd-col u-jc-sb">
+						<p class="preset__header">3. Поиск жилья по карте</p>
+						<div>
+							<button class="btn btn--white">Искать на карте</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="search-type__preset preset preset--full u-fd-col u-jc-sb">
+					<p class="preset__header">Города острова Сахалин</p>
+					<div class="preset__wrapper u-jc-sb">
+						<ul class="preset__list">
+							<li class="preset__list-item">
+								<span class="preset__text preset__city"><a href="#" class="preset__rooms">Южно-Сахалинск</a></span>
+								<span class="preset__text preset__city-price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__city-number">2 856</span>
+							</li>
+							<li class="preset__list-item">
+								<span class="preset__text preset__city"><a href="#" class="preset__rooms">Южно-Сахалинск</a></span>
+								<span class="preset__text preset__city-price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__city-number">2 856</span>
+							</li>
+							<li class="preset__list-item">
+								<span class="preset__text preset__city"><a href="#" class="preset__rooms">Южно-Сахалинск</a></span>
+								<span class="preset__text preset__city-price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__city-number">2 856</span>
+							</li>
+						</ul>
+						<ul class="preset__list preset__list--last ">
+							<li class="preset__list-item">
+								<span class="preset__text preset__city"><a href="#" class="preset__rooms">Южно-Сахалинск</a></span>
+								<span class="preset__text preset__city-price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__city-number">2 856</span>
+							</li>
+							<li class="preset__list-item">
+								<span class="preset__text preset__city"><a href="#" class="preset__rooms">Южно-Сахалинск</a></span>
+								<span class="preset__text preset__city-price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__city-number">2 856</span>
+							</li>
+							<li class="preset__list-item">
+								<span class="preset__text preset__city"><a href="#" class="preset__rooms">Южно-Сахалинск</a></span>
+								<span class="preset__text preset__city-price">2,7 - 5,2 млн</span>
+								<span class="preset__text preset__city-number">2 856</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="btn btn--white">Посмотреть все</button>
+					</div>
+					<img src="images/preset__img.png" alt="" class="preset__img">
+				</div>
+			</div>
+		</section>
+
+		<section class="section offers">
+			<div class="container">
+				<p class="section__header offers__header">Лучшие предложения</p>
+			</div>
+			<div class="container container--scroll">
+				<div class="scrollable-div">		
+					<div class="offers__block u-jc-sb">
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section statistics">
+			<div class="container">
+				<p class="section__header statistics__header">Статистика</p>
+			</div>
+			<div class="container container--scroll">
+				<div class="scrollable-div">
+					<div class="statistics_block u-jc-sb">
+						<div class="statistics__card u-jc-ce u-ai-ce u-fd-col">
+							<p class="statistics__card-header">124</p>
+							<p class="statistics__card-text">Общее количество <br />объектов в работе</p>
+						</div>
+						<div class="statistics__card u-jc-ce u-ai-ce u-fd-col">
+							<p class="statistics__card-header">124</p>
+							<p class="statistics__card-text">Общее количество <br />объектов в работе</p>
+						</div>
+						<div class="statistics__card u-jc-ce u-ai-ce u-fd-col">
+							<p class="statistics__card-header">124</p>
+							<p class="statistics__card-text">Общее количество <br />объектов в работе</p>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</section>
+
+		<section class="section users-info ">
+			<div class="tab">
+				<div class="container">
+					<div class="">
+						<ul class="users-info__nav tab__nav u-jc-sb">
+							<li><a href="#buyer" class="tab__item js-tab__item tab__item--big js-active">Для покупателей</a></li>
+							<li><a href="#seller" class="tab__item js-tab__item tab__item--big">Для продавцов</a></li>
+						</ul>
+					</div>
+					<div class="container container--scroll">
+						<div class="scrollable-div">
+							<div class="tab__content">
+								<div class="tab__block js-active" id="buyer">
+									<div class=" u-jc-sb">
+										<div class="users-info__card">
+											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+										</div>
+										<div class="users-info__card">
+											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+										</div>
+										<div class="users-info__card">
+											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+										</div>
+										<div class="users-info__card">
+											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+										</div>
+									</div>
+								</div>
+								<div class="tab__block" id="seller">
+										<p>for test needs</p>
+										<div class=" u-jc-sb">
+											<div class="users-info__card">
+												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+											</div>
+											<div class="users-info__card">
+												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+											</div>
+											<div class="users-info__card">
+												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+											</div>
+											<div class="users-info__card">
+												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section partners">
+			<div class="container">
+				<p class="section__header partners__header">Партнеры</p>
+			</div>
+			<div class="container container--scroll">
+				<div class="scrollable-div">
+					<div class="partners__block"> 
+						<div class="partners__img-block "> 
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+						</div>
+						<div class="partners__img-block partners__img-block--last"> 
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="register">
+			<p class="register__header">Хочу продать свою недвижимость</p>
+			<button class="btn btn--empty">Начать продажу</button>
+		</section>
+		//= _footer.html
+	</body>
+</html>
