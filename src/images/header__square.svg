@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Group-3">
+        <path d="M0.5,0.5 L0.5,15.5 L13.5,15.5 L13.5,0.5 L0.5,0.5 Z M0.5,0.5 L13.5,0.5 L13.5,15.5 L0.5,15.5 L0.5,0.5 Z" id="Combined-Shape" stroke="#9B9B9B"></path>
+        <rect id="Rectangle" x="2" y="2" width="10" height="12"></rect>
+    </g>
+</svg>

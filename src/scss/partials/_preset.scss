@@ -1,0 +1,119 @@
+.preset {
+  border-radius: 8px;
+  padding: 18px 25px;
+  color: $white;
+  height: 225px;
+  margin-bottom: 50px;
+  @media (min-width: $min-width-mob) {
+    height: 300px;
+    padding: 40px 30px;
+    margin-bottom: 60px;
+  }
+  &.preset--full {
+    width: 100%;
+  }
+  &.preset--small {
+    width: 300px;
+    @media (min-width: $min-width-mob) {
+      width: 400px;
+    }
+  }
+  &.preset--first {
+    background-color: #ADA07A;
+  }
+  &.preset--second {
+    background-color: #007F99;
+  }
+  &.preset--third {
+    background-color: #ADA07A;
+    background-image: url(/images/search__map.png)
+  }
+  &.preset--full {
+    position: relative;
+    @include gradient ($dir:left,$start:#79403C,$end:#441E1C,$startplace:3%,$endplace:80%);
+    height: 300px;
+    padding: 30px;
+    @media (min-width: $min-width-mob) {
+      padding: 40px 30px;
+    }
+  }
+  .preset__header {
+    @include typo($size:20px,$line:24px);
+  }
+  .preset__list-item {
+    margin-bottom: 15px;
+    display: flex;
+    &.preset__list-item--last {
+      display: none;
+      @media (min-width: $min-width-mob) {
+        display: flex;
+      }
+    }
+  }
+  .preset__text {
+    font-size: 14px;
+    color: $white;    
+    line-height: 22px;
+    a {
+      color: $white;   
+      border-bottom: 1px solid rgba($white, 0.3);
+    }
+  }
+  .preset__rooms {
+    width: 100px;
+  }
+  .preset__price {
+    width: 115px;
+    text-align: right;
+  }
+  .preset__number {
+    width: 125px;
+    text-align: right;
+    display: none;
+    @media (min-width: $min-width-mob) {
+      display: block;
+    }
+  }
+  .preset__city {
+    width: 160px;
+  }
+  .preset__city-price {
+    width: 95px;
+    text-align: right;
+  }
+  .preset__city-number {
+    width: 85px;
+    text-align: right;
+    display: none;
+    @media (min-width: $min-width-mob) {
+      display: block;
+    }
+  }
+  .preset__wrapper {
+    ul {
+      width: 340px;
+    }
+    &:after {
+      content: " ";
+      width: 340px;
+      height: 1px;
+    }
+  }
+  .preset__list {
+    &.preset__list--last {
+      display: none;
+      @media (min-width: $min-width-mob) {
+        display: block;
+      }
+    }
+  }
+  .preset__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+    @media (min-width: $min-width-mob) {
+      display: block;
+    }
+  }
+}

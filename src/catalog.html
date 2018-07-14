@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		//= _head.html
+	</head>
+	<body>
+		//= _header.html
+    //= _svg.html
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list u-jc-fs">
+          <li class="breadcrumbs__item"><span class="breadcrumbs__link breadcrumbs__link--main">Главная</span></li>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог недвижимости</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container"><h2 class="page-header">Каталог недвижимости</h2></div>
+
+		<section class="section filter">
+			<div class="container">
+				<div class="tab" id="type_switch">
+					<ul class="filter__nav tab__nav u-jc-sb u-as-ce">
+						<li><a href="#buy" class="tab__item js-tab__item js-active">Купить</a></li>
+						<li><a href="#rent" class="tab__item js-tab__item">Арендовать</a></li>
+					</ul>
+					<div class="filter__content tab__content">
+						<div class="tab__block js-active" id="buy">
+							<div class="filter__input-group u-jc-sb">
+								<input type="text" class="filter__input filter__input--normal" placeholder="Города"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Улица"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Дома / Квартира"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена От"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена До"/>
+							</div>
+							<div class="filter__input-group filter__input-group--add u-jc-sb">
+								<input type="text" class="filter__input filter__input--big" placeholder="Микрорайон"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Жилой комплекс"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Планировка"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Тип дома"/>
+							</div>
+							<div class="filter__footer u-jc-sb">
+								<div class="filter__link-group u-ai-ce">
+									<a href="#" class="filter__link js-hide-filter u-ai-ce"><svg class="svg svg__filter">
+                      <use xlink:href="#filter__par">
+                    </svg>Все параметры</a>
+									<a href="#" class="filter__link filter__link--map u-ai-ce"><svg class="svg svg__filter">
+                      <use xlink:href="#filter__map">
+                    </svg>Смотреть на карте</a>
+								</div>
+								<div class="u-jc-ce">
+									<button class="btn btn--regular filter__btn">Поиск</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab__block" id="rent">
+							<p>for test needs</p>
+							<div class="filter__input-group u-jc-sb">
+								<input type="text" class="filter__input filter__input--normal" placeholder="Города"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Улица"/>
+								<input type="text" class="filter__input filter__input--normal" placeholder="Дома / Квартира"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена От"/>
+								<input type="text" class="filter__input filter__input--small" placeholder="Цена До"/>
+							</div>
+							<div class="filter__input-group u-jc-sb">
+								<input type="text" class="filter__input filter__input--big" placeholder="Микрорайон"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Жилой комплекс"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Планировка"/>
+								<input type="text" class="filter__input filter__input--big" placeholder="Тип дома"/>
+							</div>
+							<div class="filter__footer u-jc-sb">
+								<div class="filter__link-group u-ai-ce">
+									<a href="#" class="filter__link js-hide-filter">Все параметры</a>
+									<a href="#" class="filter__link filter__link--map">Смотреть на карте</a>
+								</div>
+								<div class="u-jc-ce">
+									<button class="btn btn--regular filter__btn">Поиск</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section offers">
+			<div class="container">
+				<p class="section__header offers__header">Название карточек</p>
+			</div>
+			<div class="container container--scroll">
+				<div class="scrollable-div">		
+					<div class="offers__block u-jc-sb">
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+            </a><a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a><a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+						<a class="card">
+							<p class="card__speacial">Снижение цены - 12%</p>
+							<div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
+							</div>
+							<div class="card__inner">
+								<p class="card__price">5 500 000 Р</p>
+								<p class="card__metr">1 кв / м - 45 000 Р</p>
+								<p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+								<p class="card__floor">3 этаж из 9</p>
+								<p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+							</div>
+						</a>
+            
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="register">
+			<p class="register__header">Хочу продать свою недвижимость</p>
+			<button class="btn btn--empty">Начать продажу</button>
+		</section>
+		//= _footer.html
+	</body>
+</html>

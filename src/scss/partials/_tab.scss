@@ -1,0 +1,31 @@
+.tab {
+  .tab__item {
+    color: $nut-brown;
+    height: 43px;
+    display: block;
+    margin-bottom: -1px;
+    @include typo($size:18px,$line:22px);
+    @media (min-width: $min-width-mob) {
+      @include typo($size:20px,$line:24px);
+    }
+    &.js-active {
+      color: $black;
+      border-bottom: 2px solid $nut-brown;
+    }
+    &.tab__item--big {
+      @include typo($size:18px,$line:22px);
+      @media (min-width: $min-width-mob) {
+        @include typo($size:24px,$line:29px);
+      }
+    }
+  }
+  .tab__nav {
+    border-bottom: 1px solid rgba(#BA7530,0.4);
+  }
+  .tab__block {
+    display: none;
+    &.js-active {
+      display: block;
+    }
+  }
+}

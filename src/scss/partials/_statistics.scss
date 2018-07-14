@@ -1,0 +1,39 @@
+.statistics {
+  margin-bottom: 50px;
+  @media (min-width: $min-width-mob) {
+    margin-bottom: 90px;
+  }
+  &-div {
+    width: 940px;
+    @media (min-width: $min-width-mob) {
+      width: $container-width;
+    }
+  }
+  &__header {
+    margin-bottom: 42px;
+  }
+  &__card {
+    width: 300px;
+    height: 225px;
+    border-radius: 8px;
+    color: $white;
+    @include gradient ($dir:top,$start:#004E80,$end:#002649);
+    @media (min-width: $min-width-mob) {
+      width: 400px;
+      height: 300px;
+    }
+  }
+  &__card-header {
+    margin-bottom: 15px;
+    @include typo($size:72px,$line:88px);
+  }
+  &__card-text {
+    @include typo($size:20px,$line:24px);
+  }
+  &__scrollable-div {
+    min-width: 940px;
+    @media (min-width: $min-width-mob) {
+      width: 100%;
+    }
+  }
+}

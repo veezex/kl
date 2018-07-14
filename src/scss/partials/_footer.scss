@@ -1,0 +1,112 @@
+.prefooter {
+  padding: 20px 0;
+  background-color: #F5F5F5;
+  @media (min-width: $min-width-mob) {
+    padding: 40px 0;
+  }
+  .prefooter__number {
+    margin-bottom: 10px;
+    @include typo($size:24px,$line:29px);
+  }
+  .prefooter__text {
+    color: #9B9B9B;
+    @include typo($size:14px,$line:18px);
+  }
+  .prefooter__block {
+    text-align: center;
+    @media (min-width: $min-width-mob) {
+      text-align: right;
+    }
+  }
+  .prefooter__logo {
+    @include grey; 
+  }
+  .prefooter__logo-block {
+    display: none;
+    @media (min-width: $min-width-mob) {
+      display: block;
+    }
+  }
+  .prefooter__container {
+    display: flex;
+    justify-content: center;
+    @media (min-width: $min-width-mob) {
+      justify-content: space-between;
+    }
+  }
+}
+.main-footer {
+  background-color: #262626;
+  color: #9B9B9B;
+  padding: 35px 0 30px;
+  @include typo($size:14px,$line:18px);
+  @media (min-width: $min-width-mob) {
+    padding: 35px 0 10px;
+  }
+  .main-footer__header {
+    margin-bottom: 25px;
+    @include typo($size:24px,$line:29px);
+  }
+  .main-footer__text {
+    margin-bottom: 20px;
+  }
+  .main-footer__column {
+    margin-bottom: 20px;
+    &.main-footer__column--first {
+      width: 300px;
+    }
+    &.main-footer__column--second {
+      width: 215px;
+    }
+    &.main-footer__column--third {
+      width: 200px;
+    }
+    &.main-footer__column--fourth {
+      width: 200px;
+    }
+  }
+  .main-footer__item {
+    margin-bottom: 15px;
+  }
+  .main-footer__link {
+    color: #9B9B9B;
+    border-bottom: 1px solid rgba(#9B9B9B,0.3);
+  }
+  .main-footer__social-link {
+    color: #9B9B9B;
+    @include typo($size:14px,$line:30px);
+  }
+  .main-footer__top {
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(#9B9B9B,0.2);
+    flex-direction: column;
+    @media (min-width: $min-width-mob) {
+      flex-direction: row;
+    }
+  }
+  .main-footer__bottom-text {
+    color: #7B7B7B;
+    text-transform: uppercase; 
+    @include typo($size:12px,$line:20px);
+    &.main-footer__bottom-text--copyright {
+      max-width: 230px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: $min-width-mob) {
+      &.main-footer__bottom-text--copyright {
+        max-width: none;
+      }
+    }
+  }
+  .main-footer__bottom-link {
+    color: #7B7B7B;
+    border-bottom: 1px solid;
+  }
+  .main-footer__copyright  {
+    margin-top: 25px;
+    flex-direction: column;
+    @media (min-width: $min-width-mob) {
+      flex-direction: row;
+    }
+  }
+}

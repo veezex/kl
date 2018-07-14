@@ -1,0 +1,43 @@
+.svg {
+  display: block;
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
+.svg__header-top {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+}
+.svg__filter {
+  background-color: #002649;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 50%;
+  margin-right: 22px;
+  color: $white;
+}
+.slider__arrow-img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-color: #339FB3;
+  border-radius: 50%;
+  color: $white;
+}
+.svg__users-info {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: $dark-blue;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  color: $white;
+}
+.svg__main-footer {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  color: #A8A8A8;
+}

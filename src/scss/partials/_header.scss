@@ -1,0 +1,63 @@
+.header {
+  &__logo {
+    width: 100px;
+    height: 60px;
+    display: block;
+    background: url(/images/logo-mob.png) no-repeat;
+    @media (min-width: $min-width-mob) {
+      width: 310px;
+      background: url(/images/logo.png) no-repeat;
+    }
+  }
+  &__menu-mob {
+    display: block;
+    @media (min-width: $min-width-mob) {
+      display: none;
+    }
+  }
+  &__top {
+    display: none;
+    background-color: rgba(155,155,155,0.1);
+    border-bottom: 1px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
+    @media (min-width: $min-width-mob) {
+      display: block;
+    }
+  }
+  &__main {
+    border-bottom: 1px solid #E1E1E1;
+  }
+  &__main-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (min-width: $min-width-mob) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  &__top-item {
+    position: relative;
+    color: #9B9B9B;
+    letter-spacing: 0.24px;
+    margin-left: 30px;
+    // padding-left: 31px;
+    // text-decoration: none;    
+    @include typo($size:15px,$line:28px);
+    &:hover {
+      color: $black;
+    }
+  } 
+  &__nav {
+    display: none;
+    a {
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0.24px;
+      margin-left: 30px;
+      @extend %link-like;
+    }
+    @media (min-width: $min-width-mob) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+input, button, a, textarea {
+  &:focus {
+    outline: none;
+  }
+}
+input, textarea, select, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px; 
+  position: relative;
+  &.container--scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  @media (min-width: $min-width-mob) {
+    &.container--scroll {
+      overflow: visible;
+    }
+  }
+}
+
+.section {
+  .section__header {
+    @include typo($size:20px,$line:24px);
+    @media (min-width: $min-width-mob) {
+      @include typo($size:24px,$line:29px);
+    }
+  }
+}
+
+.page-header {
+  margin-bottom: 55px;
+  @include typo($size:30px,$line:37px);
+}
+
+.btn {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn--white {
+  padding: 10px 28px;
+  color: $white;
+  background: transparent;
+  border: 1px solid $white;
+  text-transform: uppercase;
+}
+.btn--empty {
+  padding: 12px 20px;
+  color: #BA7530;
+  background: transparent;
+  border: 1px solid #BA7530;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #BA7530;
+    color: $white;
+  }
+  &:active{
+    background-color: #BA7530;
+    box-shadow: 0 9px 25px 0 #BA7530;
+    color: $white;
+  }
+}
+.btn--regular {
+  padding: 20px 45px;
+  color: $white;
+  background: $nut-brown;
+  border: 1px solid $nut-brown;
+  &:hover {
+    background-color: #A2662B;
+  }
+  &:active{
+    background: $nut-brown;
+    box-shadow: 0 9px 25px 0 #BA7530;
+  }
+}

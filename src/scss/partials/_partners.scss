@@ -1,0 +1,35 @@
+.partners {
+  margin-bottom: 15px;
+  @media (min-width: $min-width-mob) {
+    margin-bottom: 35px;
+  }
+  &__header {
+    margin-bottom: 40px;
+    @media (min-width: $min-width-mob) {
+      margin-bottom: 55px;
+    }
+  }
+  &__scrollable-div {
+    width: 1320px;
+    @media (min-width: $min-width-mob) {
+      width: 100%;
+    }
+  }
+  &__img-block {
+    margin-bottom: 65px;
+    &--last {
+      margin: 0;
+    }
+    @media (min-width: $min-width-mob) {
+      &--last {
+        margin-bottom: 65px;
+      }
+    }
+  }
+  &__img {
+    max-width: 244px;
+    max-height: 60px;
+    width: 100%;
+    height: auto;
+  }
+}

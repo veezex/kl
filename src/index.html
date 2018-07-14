@@ -5,6 +5,8 @@
 	</head>
 	<body>
 		//= _header.html
+		//= _svg.html
+
 		<section class="section slider">
 			<div class="container">
 				<div class="slider__content u-jc-fs u-ai-fe">
@@ -19,8 +21,21 @@
 					</div>
 					<img src="images/slide__img.png" alt="" class="slider__img">
 				</div>
-				<div class="slider__arrows">
-
+				<div class="slider__arrows u-jc-sb">
+					<a href="" class="slider__arrow slider__arrow--left">
+						<span class="slider__arrow-img">
+							<svg class="svg">
+							<use xlink:href="#slider__arrow--left">
+							</svg>
+						</span>
+					</a>
+					<a href="" class="slider__arrow slider__arrow--right">
+						<span class="slider__arrow-img">
+							<svg class="svg">
+							<use xlink:href="#slider__arrow--right">
+							</svg>
+						</span>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -29,58 +44,63 @@
 			<div class="container">
 				<div class="tab" id="type_switch">
 					<ul class="filter__nav tab__nav u-jc-sb u-as-ce">
-						<li><a href="#buy" class="tab__item js-tab__item js-active">Купить</a></li>
-						<li><a href="#rent" class="tab__item js-tab__item">Арендовать</a></li>
+						<li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
+						<li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
 					</ul>
 					<div class="filter__content tab__content">
 						<div class="tab__block js-active" id="buy">
-							<div class="filter__input-group u-jc-sb">
-								<input type="text" class="filter__input filter__input--normal" placeholder="Города"/>
-								<input type="text" class="filter__input filter__input--normal" placeholder="Улица"/>
-								<input type="text" class="filter__input filter__input--normal" placeholder="Дома / Квартира"/>
-								<input type="text" class="filter__input filter__input--small" placeholder="Цена От"/>
-								<input type="text" class="filter__input filter__input--small" placeholder="Цена До"/>
-							</div>
-							<div class="filter__input-group filter__input-group--add u-jc-sb">
-								<input type="text" class="filter__input filter__input--big" placeholder="Микрорайон"/>
-								<input type="text" class="filter__input filter__input--big" placeholder="Жилой комплекс"/>
-								<input type="text" class="filter__input filter__input--big" placeholder="Планировка"/>
-								<input type="text" class="filter__input filter__input--big" placeholder="Тип дома"/>
-							</div>
-							<div class="filter__footer u-jc-sb">
-								<div class="filter__link-group u-ai-ce">
-									<a href="#" class="filter__link js-hide-filter">Все параметры</a>
-									<a href="#" class="filter__link filter__link--map">Смотреть на карте</a>
+							<form action="">
+								<div class="filter__input-group u-jc-sb">
+									<div class="filter__input-block filter__input-block--normal">
+										<input type="text" class="filter__input " placeholder="Города"/>
+									</div>
+									<div class="filter__input-block filter__input-block--normal">
+										<input type="text" class="filter__input" placeholder="Улица"/>
+									</div>
+									<div class="filter__input-block filter__input-block--normal">
+										<input type="text" class="filter__input" placeholder="Дома / Квартира"/>
+									</div>
+									<div class="filter__input-block filter__input-block--small">
+										<input type="text" class="filter__input" placeholder="Цена От"/>
+									</div>
+									<div class="filter__input-block filter__input-block--small">
+										<input type="text" class="filter__input" placeholder="Цена До"/>
+									</div>
 								</div>
-								<div class="u-jc-ce">
-									<button class="btn btn--regular filter__btn">Поиск</button>
+								<div class="filter__input-group filter__input-group--add u-jc-sb">
+									<div class="filter__input-block filter__input-block--big">
+										<input type="text" class="filter__input " placeholder="Микрорайон"/>
+									</div>
+									<div class="filter__input-block filter__input-block--big">
+										<input type="text" class="filter__input " placeholder="Жилой комплекс"/>
+									</div>
+									<div class="filter__input-block filter__input-block--big">
+										<input type="text" class="filter__input " placeholder="Планировка"/>
+									</div>
+									<div class="filter__input-block filter__input-block--big">
+										<input type="text" class="filter__input " placeholder="Тип дома"/>
+									</div>
 								</div>
-							</div>
+								<div class="filter__footer u-jc-sb">
+									<div class="filter__link-group u-ai-ce">
+										<a href="#" class="filter__link js-hide-filter u-ai-ce"><svg class="svg svg__filter">
+												<use xlink:href="#filter__par">
+											</svg>
+											<span class="filter__link-text filter__link-text--closed">Все параметры</span>
+											<span class="filter__link-text filter__link-text--opened">Скрыть параметры</span>
+										</a>
+										<a href="#" class="filter__link filter__link--map u-ai-ce"><svg class="svg svg__filter">
+												<use xlink:href="#filter__map">
+											</svg>Смотреть на карте</a>
+									</div>
+									<div class="u-jc-ce">
+										<button class="btn btn--regular filter__btn" type="submit">Поиск</button>
+									</div>
+								</div>
+							</form>
 						</div>
 						<div class="tab__block" id="rent">
 							<p>for test needs</p>
-							<div class="filter__input-group u-jc-sb">
-								<input type="text" class="filter__input filter__input--normal" placeholder="Города"/>
-								<input type="text" class="filter__input filter__input--normal" placeholder="Улица"/>
-								<input type="text" class="filter__input filter__input--normal" placeholder="Дома / Квартира"/>
-								<input type="text" class="filter__input filter__input--small" placeholder="Цена От"/>
-								<input type="text" class="filter__input filter__input--small" placeholder="Цена До"/>
-							</div>
-							<div class="filter__input-group u-jc-sb">
-								<input type="text" class="filter__input filter__input--big" placeholder="Микрорайон"/>
-								<input type="text" class="filter__input filter__input--big" placeholder="Жилой комплекс"/>
-								<input type="text" class="filter__input filter__input--big" placeholder="Планировка"/>
-								<input type="text" class="filter__input filter__input--big" placeholder="Тип дома"/>
-							</div>
-							<div class="filter__footer u-jc-sb">
-								<div class="filter__link-group u-ai-ce">
-									<a href="#" class="filter__link js-hide-filter">Все параметры</a>
-									<a href="#" class="filter__link filter__link--map">Смотреть на карте</a>
-								</div>
-								<div class="u-jc-ce">
-									<button class="btn btn--regular filter__btn">Поиск</button>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -88,8 +108,8 @@
 		</section>
 
 		<section class="section search-type">
-			<div class="container container--scroll ">
-				<div class="scrollable-div u-jc-sb">
+			<div class="container container--scroll">
+				<div class="search-type__scrollable-div u-jc-sb">
 					<div class="search-type__preset preset preset--small preset--first u-fd-col u-jc-sb">
 						<p class="preset__header">1. Квартиры</p>
 						<ul>
@@ -196,7 +216,7 @@
 				<p class="section__header offers__header">Лучшие предложения</p>
 			</div>
 			<div class="container container--scroll">
-				<div class="scrollable-div">		
+				<div class="offers__scrollable-div">		
 					<div class="offers__block u-jc-sb">
 						<a class="card">
 							<p class="card__speacial">Снижение цены - 12%</p>
@@ -256,7 +276,7 @@
 				<p class="section__header statistics__header">Статистика</p>
 			</div>
 			<div class="container container--scroll">
-				<div class="scrollable-div">
+				<div class="statistics__scrollable-div">
 					<div class="statistics_block u-jc-sb">
 						<div class="statistics__card u-jc-ce u-ai-ce u-fd-col">
 							<p class="statistics__card-header">124</p>
@@ -280,46 +300,51 @@
 				<div class="container">
 					<div class="">
 						<ul class="users-info__nav tab__nav u-jc-sb">
-							<li><a href="#buyer" class="tab__item js-tab__item tab__item--big js-active">Для покупателей</a></li>
-							<li><a href="#seller" class="tab__item js-tab__item tab__item--big">Для продавцов</a></li>
+							<li><a href="javascript:;" data-tab="buyer" class="tab__item js-tab__item tab__item--big js-active">Для покупателей</a></li>
+							<li><a href="javascript:;" data-tab="seller" class="tab__item js-tab__item tab__item--big">Для продавцов</a></li>
 						</ul>
 					</div>
 					<div class="container container--scroll">
-						<div class="scrollable-div">
+						<div class="users-info__scrollable-div">
 							<div class="tab__content">
 								<div class="tab__block js-active" id="buyer">
 									<div class=" u-jc-sb">
-										<div class="users-info__card">
+										<div class="users-info__card u-fd-col u-ai-ce">
+											<span class="svg__users-info ">
+												<svg class="svg">
+													<use xlink:href="#user-info__personal">
+												</svg>
+											</span>
 											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
 										</div>
-										<div class="users-info__card">
+										<div class="users-info__card u-fd-col u-ai-ce">
+											<span class="svg__users-info">
+												<svg class="svg">
+													<use xlink:href="#user-info__online">
+												</svg>
+											</span>
 											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
 										</div>
-										<div class="users-info__card">
+										<div class="users-info__card u-fd-col u-ai-ce">
+											<span class="svg__users-info">
+												<svg class="svg">
+													<use xlink:href="#user-info__discount">
+												</svg>
+											</span>
 											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
 										</div>
-										<div class="users-info__card">
+										<div class="users-info__card u-fd-col u-ai-ce">
+											<span class="svg__users-info">
+												<svg class="svg">
+													<use xlink:href="#user-info__group">
+												</svg>
+											</span>
 											<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
 										</div>
 									</div>
 								</div>
 								<div class="tab__block" id="seller">
-										<p>for test needs</p>
-										<div class=" u-jc-sb">
-											<div class="users-info__card">
-												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
-											</div>
-											<div class="users-info__card">
-												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
-											</div>
-											<div class="users-info__card">
-												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
-											</div>
-											<div class="users-info__card">
-												<p class="users-info__card-text">Большой выбор объектов недвижимости со скидками</p>
-											</div>
-										</div>
-									</div>
+									<p>for test needs</p>
 							</div>
 						</div>
 					</div>
@@ -332,16 +357,16 @@
 				<p class="section__header partners__header">Партнеры</p>
 			</div>
 			<div class="container container--scroll">
-				<div class="scrollable-div">
+				<div class="partners__scrollable-div">
 					<div class="partners__block"> 
-						<div class="partners__img-block "> 
+						<div class="partners__img-block u-jc-sb"> 
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 						</div>
-						<div class="partners__img-block partners__img-block--last"> 
+						<div class="partners__img-block u-jc-sb partners__img-block--last"> 
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
 							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">

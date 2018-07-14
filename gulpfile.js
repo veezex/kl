@@ -36,9 +36,9 @@ var path = {
         fonts: 'src/fonts/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-        html: 'src/*.html',
-        js: 'src/js/*.js',
-        style: 'src/scss/*.scss',
+        html: 'src/**/*.html',
+        js: 'src/js/**/*.js',
+        style: 'src/scss/**/*.{scss,css}',
         img: 'src/images/*.*',
         fonts: 'src/fonts/*.*'
     },
@@ -54,6 +54,24 @@ var config = {
     port: 9000,
     logPrefix: "kp"
 };
+
+gulp.task('internalsvg', function () {
+    gulp.src('src/images/*.svg')
+      .pipe(svgstore())
+      .pipe(gulp.dest('build/images'));
+});
+
+gulp.task('externalsvg', function () {
+    function fileContents (filePath, file) {
+      return file.contents.toString('utf8')
+    };
+    var svgs = gulp
+      .src('src/images/*.svg')
+      .pipe(svgstore({ inlineSvg: true }));
+    gulp.src('src/_svg.html')
+      .pipe(inject(svgs, { transform: fileContents }))
+      .pipe(gulp.dest('src'));
+});
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
@@ -109,51 +127,6 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
-// gulp.task('svgstore', function () {
-//     gulp.src(path.src.svg)
-//         .pipe(svgmin(function (file) {
-//             var prefix = pathmod.basename(file.relative, pathmod.extname(file.relative));
-//             return {
-//                 plugins: [{
-//                     cleanupIDs: {
-//                         prefix: prefix + '-',
-//                         minify: true
-//                     }
-//                 }]
-//             }
-//         }))
-//         .pipe(svgstore())
-//         .pipe(gulp.dest(path.build.img));
-// });
-
-// gulp.task('svgstore', function () {
-//     var svgs = gulp
-//         .src(path.src.svg)
-//         .pipe(svgmin(function (file) {
-//             var prefix = pathmod.basename(file.relative, pathmod.extname(file.relative));
-//             return {
-//                 plugins: [{
-//                     cleanupIDs: {
-//                         prefix: prefix + '-',
-//                         minify: true
-//                     }
-//                 }]
-//             }
-//         }))
-//         .pipe(svgstore({ inlineSvg: true }))
-//         // .pipe(gulp.dest(path.build.img))
-//         ;        
- 
-//     function fileContents (filePath, file) {
-//         return file.contents.toString();
-//     }
- 
-//     return gulp
-//         .src('src/index.html')
-//         .pipe(inject(svgs, { transform: fileContents }))
-//         .pipe(gulp.dest('build'));
-// });
-
 gulp.task('copysvg', function() {
    gulp.src('./src/images/**/*.svg')
       .pipe(gulp.dest('build/images/'));
@@ -167,14 +140,16 @@ gulp.task('copysvg', function() {
 // });
 
 gulp.task('build', [
+    'internalsvg',
+    'externalsvg',
     'html:build',
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build',
-    // 'svgstore',
-    'copysvg',
-    //'copycss'
+    'image:build'
+    // 'svgstore'
+    // 'copysvg',
+    // 'copycss'
 ]);
 
 gulp.task('watch', function(){

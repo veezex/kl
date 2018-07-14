@@ -1,0 +1,11 @@
+.breadcrumbs {
+  padding: 30px 0;
+  .breadcrumbs__link {
+    margin-right: 20px;
+    color: $blue;
+    @include typo($size:12px,$line:15px);
+    &.breadcrumbs__link--main {
+      color: $black;
+    }
+  }
+}

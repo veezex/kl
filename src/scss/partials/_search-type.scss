@@ -1,0 +1,13 @@
+.search-type {
+  margin: 30px 0;
+  position: relative;
+  @media (min-width: $min-width-mob) {
+    margin: 100px 0 30px;
+  }
+  &__scrollable-div {
+    min-width: 940px;
+    @media (min-width: $min-width-mob) {
+      width: 100%;
+    }
+  }
+}
