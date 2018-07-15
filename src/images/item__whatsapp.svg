@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0,58 L4.988,43.037 C2.457,38.78 1,33.812 1,28.5 C1,12.76 13.76,0 29.5,0 C45.24,0 58,12.76 58,28.5 C58,44.24 45.24,57 29.5,57 C24.711,57 20.201,55.813 16.24,53.727 L0,58 Z" id="path-1"></path>
+        <filter x="-44.0%" y="-28.4%" width="187.9%" height="187.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="9" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Dekstope-(1440-px)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-К.Н.-––-«Карточка-объекта»" transform="translate(-1317.000000, -888.000000)" fill-rule="nonzero">
+            <g id="whatsapp" transform="translate(1330.000000, 893.000000)">
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#2CB742" xlink:href="#path-1"></use>
+                </g>
+                <path d="M47.683,37.985 C46.367,35.498 41.514,32.654 41.514,32.654 C40.416,32.028 39.091,31.958 38.465,33.074 C38.465,33.074 36.888,34.965 36.487,35.237 C34.655,36.478 32.958,36.43 31.245,34.717 L27.264,30.736 L23.283,26.755 C21.57,25.042 21.522,23.345 22.763,21.513 C23.035,21.112 24.926,19.535 24.926,19.535 C26.042,18.908 25.972,17.584 25.346,16.486 C25.346,16.486 22.502,11.633 20.015,10.317 C18.957,9.757 17.658,9.953 16.812,10.799 L15.054,12.557 C9.477,18.134 12.223,24.43 17.8,30.007 L22.897,35.104 L27.994,40.201 C33.571,45.778 39.867,48.524 45.444,42.947 L47.202,41.189 C48.048,40.341 48.243,39.042 47.683,37.985 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

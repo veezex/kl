@@ -2,11 +2,11 @@
   &__logo {
     height: 60px;
     width: 310px;
-    background: url(/images/logo.png) no-repeat;
+    background: url(../images/logo.png) no-repeat;
     @media (max-width: $min-width-mob) {
       // display: block;
       width: 100px;
-      background: url(/images/logo-mob.png) no-repeat;
+      background: url(../images/logo-mob.png) no-repeat;
     }
   }
   &__menu-mob {

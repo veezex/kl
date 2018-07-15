@@ -1,0 +1,64 @@
+.small-carousel {
+  padding: 0 15px;
+  .image__carousel-wrapper {
+    width: 100%;
+    float: left;
+  }
+  .item__wrapper {
+    width: 20%;
+    float: left;
+    padding: 0 10px;
+  }
+  .item__img {
+    width: 100%;
+    cursor: pointer;
+  }
+  .carousel-item-image{
+    .carousel-control{ 
+      width: 40px;
+      background: none;
+      &.left {
+        margin-left:15px;
+      }
+      &.right {
+        margin-right:15px;
+      }
+    }
+    .cloneditem-1, .cloneditem-2, .cloneditem-3,.cloneditem-4 {
+      display: none;
+    }
+    .carousel-inner {
+      margin: 0 55px;
+      width: auto;
+      @media (min-width: 1280px) {    
+        @media (transform-3d), (-webkit-transform-3d) {
+          > .item.active.right, > .item.next { 
+            transform: translate3d(20%, 0, 0);  
+            left: 0;
+          }    
+          > .item.active.left, > .item.prev { 
+            transform: translate3d(-20%, 0, 0);
+            left: 0;
+          }
+          > .item.left, > .item.prev.right, > .item.active {
+            transform: translate3d(0, 0, 0);
+            left: 0;
+          }
+        }
+        > .active.left, > .prev {
+          left: -20%;
+        }
+        > .active.right, > .next {
+          left:  20%;
+        }
+        > .left, > .prev.right, > .active {
+          left: 0;
+        }
+
+        .cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4{
+          display: block;
+        }
+      }    
+    }
+  }
+}

@@ -85,3 +85,19 @@
   height: 28px;
   color: $blue;
 }
+.small-slider__arrow-img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  color: $white;
+  background-color: rgba($white, 0.2);
+}
+.svg__item-infra {
+  height: 60px;
+  margin-bottom: 20px;
+}
+.svg__fixed-icon {
+  width: 65px;
+  height: 65px;
+}
