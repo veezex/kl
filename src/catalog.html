@@ -20,13 +20,13 @@
 
     <section class="section filter">
       <div class="container">
-        <div class="tab" id="type_switch">
+        <div class="tab">
           <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
             <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
             <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
           </ul>
           <div class="filter__content tab__content">
-            <div class="tab__block js-active" id="buy">
+            <div class="tab__block js-active" data-content="buy">
               <form action="">
                 <div class="filter__input-group u-jc-sb">
                   <div class="filter__input-block filter__input-block--normal">
@@ -77,7 +77,7 @@
                 </div>
               </form>
             </div>
-            <div class="tab__block" id="rent">
+            <div class="tab__block" data-content="rent">
               <p>for test needs</p>
             </div>
           </div>
@@ -89,14 +89,14 @@
       <div class="tab">
         <div class="container">
           <div class="offers__nav u-jc-sb">
-            <p class="section__header offers__header">Название карточек</p>
+            <p class="section__header offers__header">Лучшие предложения</p>
             <div class="offers__nav-icons u-jc-fe">
-              <a href="javascript:;" data-tab="card" class="u-jc-ce js-tab__item ">
+              <a href="javascript:;" data-tab="card" class="u-jc-ce js-tab__item js-active">
                 <span class="svg__offers"><svg class="svg ">
                   <use xlink:href="#svg__offers--card">
                 </svg></span>
               </a>
-              <a href="javascript:;" data-tab="list" class="js-tab__item u-jc-ce js-active">
+              <a href="javascript:;" data-tab="list" class="js-tab__item u-jc-ce ">
                 <span class="svg__offers"><svg class="svg ">
                   <use xlink:href="#svg__offers--list">
                 </svg></span>
@@ -107,8 +107,8 @@
         
         <div class="container">
           <div class="tab__content">
-            <div class="tab__block " id="card">
-              <div class="offers__block u-jc-sb">
+            <div class="tab__block js-active" data-content="card">
+              <div class="offers__block offers__block--notscrollabel">
                 <a class="card">
                   <p class="card__speacial">Снижение цены - 12%</p>
                   <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
@@ -253,8 +253,15 @@
                 </a>
                 
               </div>
+              <ul class="offers__pagination pagination u-jc-ce">
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce iSactive">1</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">2</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">3</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">4</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">5</a></li>
+              </ul>
             </div>
-            <div class="tab__block js-active" id="list">
+            <div class="tab__block " data-content="list">
               <div class="offers__block">
                 <div class="line u-jc-sb">
                   <p class="line__speacial">Снижение цены - 12%</p>
@@ -377,6 +384,13 @@
                   </div>
                 </div>
               </div> 
+              <ul class="offers__pagination pagination u-jc-ce">
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce iSactive">1</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">2</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">3</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">4</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link u-jc-ce">5</a></li>
+              </ul>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 .offers {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   @media (max-width: $min-width-mob) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   &__header {
     margin-bottom: 30px;
@@ -13,12 +13,41 @@
     }
   }
   &__block {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    &--notscrollabel {
+      @media (max-width: $min-width-mob) {
+        justify-content: space-around;
+      }
+    }
   }
   &__nav {
     margin-top: 60px;
     // &-icons {
     //   display: flex;
     // }
+    &-icons {
+      @media (max-width: $min-width-mob) {
+        display: none;
+      }
+    }
+  }
+  &__pagination {
+    padding-bottom: 20px;
+  }
+}
+.pagination {
+  &__link {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    color: $white;
+    background-color: #BA7530;
+    border-radius: 50%;
+    @include typo($size:20px,$line:40px);
+    &.iSactive {
+      background-color: $blue;
+    }
   }
 }

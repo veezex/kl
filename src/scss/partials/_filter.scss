@@ -73,17 +73,17 @@
       }
     }
     &-text--opened {
-      display: inline;
+      display: none;
     }
     &-text--closed {
-      display: none;
+      display: inline;
     }
     &.iSopened {
       .filter__link-text--opened {
-        display: none;
+        display: inline;
       }
       .filter__link-text--closed {
-        display: inline;
+        display: none;
       }
     }
   }
@@ -100,6 +100,11 @@
     @media (max-width: $min-width-mob) {
       flex-direction: column-reverse;  
     }
+  }
+  &__header {
+    padding: 0 20px 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(#979797,0.2);
   }
   &--mob {
     padding: 25px 40px;
@@ -124,6 +129,19 @@
     }
     .filter__link-group {
       display: none;
+    }
+  }
+  &--modal {
+    display: none;
+    &.isOpened {
+      display: block;
+      position: fixed;
+      background: $white;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
   }
 }

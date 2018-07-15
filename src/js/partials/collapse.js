@@ -3,9 +3,9 @@ $('.js-hide-filter').on('click',function(e) {
   var $this = $( this );
   if ( $('.filter__input-group--add').hasClass('js-isVisible') ) {
     $('.filter__input-group--add').removeClass('js-isVisible');
-    $this.addClass('iSopened');
+    $this.removeClass('iSopened');
   } else {
     $('.filter__input-group--add').addClass('js-isVisible');      
-    $this.removeClass('iSopened');
+    $this.addClass('iSopened');
   }
 });

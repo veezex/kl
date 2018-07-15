@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="15px" viewBox="0 0 23 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="3.-К.Н.-––-«Карта»" transform="translate(-19.000000, -120.000000)">
+        <g id="2.-Навигация" transform="translate(0.000000, 97.000000)">
+            <g id="Переключатели" transform="translate(20.000000, 19.000000)">
+                <g id="иконка" transform="translate(0.000000, 4.000000)">
+                    <polygon id="Shape" transform="translate(10.250000, 12.000000) rotate(90.000000) translate(-10.250000, -12.000000) " points="10.625 2 9.875 2 9.875 16.2857143 8 16.2857143 8 18.7857143 9.875 18.7857143 9.875 22 10.625 22 10.625 18.7857143 12.5 18.7857143 12.5 16.2857143 10.625 16.2857143"></polygon>
+                    <polygon id="Shape" transform="translate(11.000000, 3.000000) rotate(90.000000) translate(-11.000000, -3.000000) " points="11.375 -7 10.625 -7 10.625 -3.78571429 8.75 -3.78571429 8.75 -1.28571429 10.625 -1.28571429 10.625 13 11.375 13 11.375 -1.28571429 13.25 -1.28571429 13.25 -3.78571429 11.375 -3.78571429"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

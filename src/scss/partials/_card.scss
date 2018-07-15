@@ -5,6 +5,9 @@
   margin-bottom: 65px;
   border-radius: 8px;
   border: 1px solid rgba(#979797,0.2);
+  @media (max-width: $min-width-mob) {
+    margin-bottom: 20px;
+  }
   &:hover {
     border-color: rgba(#BA7530,0.3);
   }
@@ -61,6 +64,7 @@
 .line {
   padding-bottom: 35px;
   margin-bottom: 40px;
+  width: 100%;
   &:not(:last-child) {
     border-bottom: 1px solid rgba(#979797, 0.3);
   }

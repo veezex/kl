@@ -7,5 +7,5 @@ $('.js-tab__item').on('click',function(e) {
   var val = $this.attr('data-tab');    
 
   $this.closest('.tab').find('.tab__block').removeClass('js-active');
-  $("#"+val).addClass('js-active');
+  $('[data-content="'+val+'"]').addClass('js-active');
 }); 
