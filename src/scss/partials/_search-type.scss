@@ -1,13 +1,13 @@
 .search-type {
-  margin: 30px 0;
+  margin: 100px 0 30px;
   position: relative;
-  @media (min-width: $min-width-mob) {
-    margin: 100px 0 30px;
+  @media (max-width: $min-width-mob) {
+    margin: 30px 0;
   }
   &__scrollable-div {
-    min-width: 940px;
-    @media (min-width: $min-width-mob) {
-      width: 100%;
+    width: 100%;    
+    @media (max-width: $min-width-mob) {
+      min-width: 940px;
     }
   }
 }

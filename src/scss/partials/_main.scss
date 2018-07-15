@@ -25,21 +25,21 @@ input, textarea, select, button {
   padding-right: 20px; 
   position: relative;
   &.container--scroll {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: visible;
   }
-  @media (min-width: $min-width-mob) {
+  @media (max-width: $min-width-mob) {
     &.container--scroll {
-      overflow: visible;
+      overflow-x: scroll;
+      overflow-y: hidden;
     }
   }
 }
 
 .section {
   .section__header {
-    @include typo($size:20px,$line:24px);
-    @media (min-width: $min-width-mob) {
-      @include typo($size:24px,$line:29px);
+    @include typo($size:24px,$line:29px);
+    @media (max-width: $min-width-mob) {
+      @include typo($size:20px,$line:24px);
     }
   }
 }

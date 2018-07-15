@@ -1,15 +1,15 @@
 .offers {
-  margin-bottom: 50px;
-  @media (min-width: $min-width-mob) {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  @media (max-width: $min-width-mob) {
+    margin-bottom: 50px;
   }
   &__header {
     margin-bottom: 30px;
   }
   &__scrollable-div {
-    min-width: 1260px;
-    @media (min-width: $min-width-mob) {
-      width: 100%;
+    width: 100%;
+    @media (max-width: $min-width-mob) {
+      min-width: 1260px;
     }
   }
   &__block {

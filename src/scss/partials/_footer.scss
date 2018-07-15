@@ -1,8 +1,8 @@
 .prefooter {
-  padding: 20px 0;
+  padding: 40px 0;
   background-color: #F5F5F5;
-  @media (min-width: $min-width-mob) {
-    padding: 40px 0;
+  @media (max-width: $min-width-mob) {
+    padding: 20px 0;
   }
   .prefooter__number {
     margin-bottom: 10px;
@@ -13,35 +13,35 @@
     @include typo($size:14px,$line:18px);
   }
   .prefooter__block {
-    text-align: center;
-    @media (min-width: $min-width-mob) {
-      text-align: right;
+    text-align: right;
+    @media (max-width: $min-width-mob) {
+      text-align: center;
     }
   }
   .prefooter__logo {
     @include grey; 
   }
   .prefooter__logo-block {
-    display: none;
-    @media (min-width: $min-width-mob) {
-      display: block;
+    display: block;
+    @media (max-width: $min-width-mob) {
+      display: none;
     }
   }
   .prefooter__container {
     display: flex;
-    justify-content: center;
-    @media (min-width: $min-width-mob) {
-      justify-content: space-between;
+    justify-content: space-between;
+    @media (max-width: $min-width-mob) {
+      justify-content: center;
     }
   }
 }
 .main-footer {
   background-color: #262626;
   color: #9B9B9B;
-  padding: 35px 0 30px;
+  padding: 35px 0 10px;
   @include typo($size:14px,$line:18px);
-  @media (min-width: $min-width-mob) {
-    padding: 35px 0 10px;
+  @media (max-width: $min-width-mob) {
+    padding: 35px 0 30px;
   }
   .main-footer__header {
     margin-bottom: 25px;
@@ -79,9 +79,9 @@
   .main-footer__top {
     margin-bottom: 35px;
     border-bottom: 1px solid rgba(#9B9B9B,0.2);
-    flex-direction: column;
-    @media (min-width: $min-width-mob) {
-      flex-direction: row;
+    flex-direction: row;
+    @media (max-width: $min-width-mob) {
+      flex-direction: column;
     }
   }
   .main-footer__bottom-text {
@@ -89,12 +89,12 @@
     text-transform: uppercase; 
     @include typo($size:12px,$line:20px);
     &.main-footer__bottom-text--copyright {
-      max-width: 230px;
+      max-width: none;
       margin-bottom: 20px;
-    }
-    @media (min-width: $min-width-mob) {
+    }    
+    @media (max-width: $min-width-mob) {
       &.main-footer__bottom-text--copyright {
-        max-width: none;
+        max-width: 230px;
       }
     }
   }
@@ -104,9 +104,9 @@
   }
   .main-footer__copyright  {
     margin-top: 25px;
-    flex-direction: column;
-    @media (min-width: $min-width-mob) {
-      flex-direction: row;
+    flex-direction: row;
+    @media (max-width: $min-width-mob) {
+      flex-direction: column;      
     }
   }
 }

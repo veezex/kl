@@ -7,9 +7,9 @@
     color: #BA7530;
     margin-bottom: 20px;
     @include typo($size:24px,$line:29px);
-    display: none;
-    @media (min-width: $min-width-mob) {
-      display: block;
+    // display: block;
+    @media (max-width: $min-width-mob) {
+      display: none;      
     }
   }
 }

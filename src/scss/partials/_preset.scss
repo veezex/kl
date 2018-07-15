@@ -1,21 +1,21 @@
 .preset {
   border-radius: 8px;
-  padding: 18px 25px;
   color: $white;
-  height: 225px;
-  margin-bottom: 50px;
-  @media (min-width: $min-width-mob) {
-    height: 300px;
-    padding: 40px 30px;
-    margin-bottom: 60px;
+  height: 300px;
+  padding: 40px 30px;
+  margin-bottom: 60px;
+  @media (max-width: $min-width-mob) {
+    height: 225px;
+    margin-bottom: 50px;
+    padding: 18px 25px;
   }
   &.preset--full {
     width: 100%;
   }
   &.preset--small {
-    width: 300px;
-    @media (min-width: $min-width-mob) {
-      width: 400px;
+    width: 400px;
+    @media (max-width: $min-width-mob) {
+      width: 300px;
     }
   }
   &.preset--first {
@@ -32,9 +32,9 @@
     position: relative;
     @include gradient ($dir:left,$start:#79403C,$end:#441E1C,$startplace:3%,$endplace:80%);
     height: 300px;
-    padding: 30px;
-    @media (min-width: $min-width-mob) {
-      padding: 40px 30px;
+    padding: 40px 30px;
+    @media (max-width: $min-width-mob) {
+      padding: 30px;
     }
   }
   .preset__header {
@@ -44,9 +44,8 @@
     margin-bottom: 15px;
     display: flex;
     &.preset__list-item--last {
-      display: none;
-      @media (min-width: $min-width-mob) {
-        display: flex;
+      @media (max-width: $min-width-mob) {
+        display: none;        
       }
     }
   }
@@ -69,9 +68,9 @@
   .preset__number {
     width: 125px;
     text-align: right;
-    display: none;
-    @media (min-width: $min-width-mob) {
-      display: block;
+    // display: block;
+    @media (max-width: $min-width-mob) {
+      display: none;
     }
   }
   .preset__city {
@@ -84,9 +83,9 @@
   .preset__city-number {
     width: 85px;
     text-align: right;
-    display: none;
-    @media (min-width: $min-width-mob) {
-      display: block;
+    // display: block;
+    @media (max-width: $min-width-mob) {
+      display: none;
     }
   }
   .preset__wrapper {
@@ -101,9 +100,9 @@
   }
   .preset__list {
     &.preset__list--last {
-      display: none;
-      @media (min-width: $min-width-mob) {
-        display: block;
+      // display: block;
+      @media (max-width: $min-width-mob) {
+        display: none;
       }
     }
   }
@@ -111,9 +110,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    display: none;
-    @media (min-width: $min-width-mob) {
-      display: block;
+    // display: block;
+    @media (max-width: $min-width-mob) {
+      display: none;
     }
   }
 }

@@ -1,28 +1,28 @@
 .users-info {
-  margin-bottom: 50px;
-  @media (min-width: $min-width-mob) {
-    margin-bottom: 90px;
+  margin-bottom: 90px;
+  @media (max-width: $min-width-mob) {
+    margin-bottom: 50px;
   }
   &__nav {
-    width: 340px;
+    width: 460px;
     margin-bottom: 40px;
-    @media (min-width: $min-width-mob) {
-      width: 460px;
+    @media (max-width: $min-width-mob) {
+      width: 340px;      
     }
   }
   &__scrollable-div {
-    min-width: 960px;
-    @media (min-width: $min-width-mob) {
-      width: 100%;
+    width: 100%;
+    @media (max-width: $min-width-mob) {
+      min-width: 960px;
     }
   }
   &__card {
-    width: 240px;
-    padding: 25px 30px 0 0;
+    width: 300px;
+    padding: 25px 30px;
     @include typo($size:16px,$line:19px);
-    @media (min-width: $min-width-mob) {
-      width: 300px;
-      padding: 25px 30px;
+    @media (max-width: $min-width-mob) {
+      width: 240px;
+      padding: 25px 30px 0 0;
     }
   }
 }

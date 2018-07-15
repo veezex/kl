@@ -1,28 +1,28 @@
 .partners {
-  margin-bottom: 15px;
-  @media (min-width: $min-width-mob) {
-    margin-bottom: 35px;
+  margin-bottom: 35px;
+  @media (max-width: $min-width-mob) {
+    margin-bottom: 15px;
   }
   &__header {
-    margin-bottom: 40px;
-    @media (min-width: $min-width-mob) {
-      margin-bottom: 55px;
+    margin-bottom: 55px;
+    @media (max-width: $min-width-mob) {
+      margin-bottom: 40px;
     }
   }
   &__scrollable-div {
-    width: 1320px;
-    @media (min-width: $min-width-mob) {
-      width: 100%;
+    width: 100%;
+    @media (max-width: $min-width-mob) {
+      width: 1320px;
     }
   }
   &__img-block {
     margin-bottom: 65px;
     &--last {
-      margin: 0;
+      margin-bottom: 65px;
     }
-    @media (min-width: $min-width-mob) {
+    @media (max-width: $min-width-mob) {
       &--last {
-        margin-bottom: 65px;
+        margin: 0;
       }
     }
   }
