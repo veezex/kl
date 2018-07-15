@@ -4,6 +4,29 @@
   @media (max-width: $min-width-mob) {
     margin-bottom: 30px;
   }
+  &--fixed {
+    margin-bottom: 20px;
+  }
+  &__inner {
+    max-width: 840px;
+    margin: auto;
+  }
+  &__indicators {
+    li {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: #BA7530;
+      border: none;
+      margin: 0 20px;
+      &.active {
+        width: 14px;
+        height: 14px;
+        margin: 0 20px;
+        background-color: $blue;
+      }
+    }
+  }
   &__content {
     position: relative;
     height: 345px;
@@ -67,5 +90,8 @@
   }
   &--test {
     @include gradient ($dir:top,$start:#000000,$end:#ffffff); 
+  }
+  &--about {
+    @include gradient ($dir:top,$start:#D6CEB2,$end:#ADA07A); 
   }
 }

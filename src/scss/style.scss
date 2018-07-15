@@ -21,3 +21,55 @@
 // @import "partials/_preset.scss";
 
 //= partials
+
+.about-us {
+  margin-bottom: 90px;
+  &__page-header {
+    margin-top: 45px;
+  }
+  &__wrapper {
+    column-count: 2;
+    column-gap: 50px;
+    @include typo($size:14px,$line:18px);
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.achievement {
+  margin-bottom: 40px;
+  &__header {
+    margin-bottom: 35px;
+  }
+  &__item {
+    width: 180px;
+  }
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__text {
+    padding: 0 15px;
+    text-align: center;
+    @include typo($size:16px,$line:19px);
+  }
+}
+
+.references {
+  position: relative;
+  color: black;
+  &__header {
+    margin-bottom: 55px;
+  }
+  &__text-block {
+    margin-left: 60px;
+    @include typo($size:14px,$line:18px);
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  &__slider {
+    padding-bottom: 75px;
+    margin-bottom: 75px;
+  }
+}
