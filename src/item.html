@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-    <title>Каталог</title>
+    <title>Квартира</title>
 		//= _head.html
 	</head>
 	<body>
@@ -12,76 +12,174 @@
         <ul class="breadcrumbs__list u-jc-fs">
             <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
             <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог недвижимости</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Название карточки</a></li>
           </ul>
       </div>
     </div>
 
-    <div class="container"><h2 class="page-header">Каталог недвижимости</h2></div>
+    <div class="container"><h2 class="page-header">Название карточки</h2></div>
 
-    <section class="section filter">
-      <div class="container">
-        <div class="tab" id="type_switch">
-          <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
-            <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
-            <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
-          </ul>
-          <div class="filter__content tab__content">
-            <div class="tab__block js-active" id="buy">
-              <form action="">
-                <div class="filter__input-group u-jc-sb">
-                  <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input " placeholder="Города"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input" placeholder="Улица"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input" placeholder="Дома / Квартира"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--small">
-                    <input type="text" class="filter__input" placeholder="Цена От"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--small">
-                    <input type="text" class="filter__input" placeholder="Цена До"/>
-                  </div>
-                </div>
-                <div class="filter__input-group filter__input-group--add u-jc-sb">
-                  <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Микрорайон"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Жилой комплекс"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Планировка"/>
-                  </div>
-                  <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Тип дома"/>
-                  </div>
-                </div>
-                <div class="filter__footer u-jc-sb">
-                  <div class="filter__link-group u-ai-ce">
-                    <a href="#" class="filter__link js-hide-filter u-ai-ce"><svg class="svg svg__filter">
-                        <use xlink:href="#filter__par">
-                      </svg>
-                      <span class="filter__link-text filter__link-text--closed">Все параметры</span>
-                      <span class="filter__link-text filter__link-text--opened">Скрыть параметры</span>
-                    </a>
-                    <a href="#" class="filter__link filter__link--map u-ai-ce"><svg class="svg svg__filter">
-                        <use xlink:href="#filter__map">
-                      </svg>Смотреть на карте</a>
-                  </div>
-                  <div class="u-jc-ce">
-                    <button class="btn btn--regular filter__btn" type="submit">Поиск</button>
-                  </div>
-                </div>
-              </form>
+    <section class="item">
+      <div class="item__top u-jc-sb">
+        <div class="item__top-side item__top-text">
+          <p class="item__name">1-комнатная квартира 60 м2</p>
+          <div class="item__price-block u-jc-sb">
+            <p class="item__price">
+              <span class="item__price-old">5 500 000 Р</span>
+              <span class="item__price-new">4 950 000 Р</span>
+            </p>
+            <p class="item__metr-price">1 кв / м² –– 45 000 Р</p>
+          </div>  
+          <p class="item__address">Корсаков, ул. Корсаковская, 12</p>
+          <p class="item__opt u-jc-sb">
+            <span class="item__type">Вторичное жильё</span>
+            <span class="item__date">22 февраля 2018</span>
+            <span class="item__views u-jc-sb">
+              <span class="svg__item-views">
+                <svg class="svg">
+                <use xlink:href="#item__views-img">
+                </svg>
+              </span> –– 120</span>
+          </p>
+          <p class="item__special">Снижение цены ––– 12 %</p>
+          <div class="item__btn-block u-jc-ce">
+            <button class="btn btn--white item__btn">Получить консультацию</button>
+          </div>
+        </div>
+        <div class="item__top-side item__top-img">
+          <div class="item__carousel">
+            <img src="" alt="" class="carousel__img" />
+            <a class="carousel__arrow"></a>
+            <div class="carousel__preview"></div>
+            <a class="carousel__arrow"></a>
+          </div> 
+        </div> 
+      </div>
+      <div class="item__content content u-jc-sb">
+        <div class="content__text content__side">
+          <div class="content__main u-jc-sb">
+            <div class="main__item u-ai-ce u-fd-col">
+              <p class="main__label">68 м²</p>
+              <p class="main__desc">Площадь</p>
             </div>
-            <div class="tab__block" id="rent">
-              <p>for test needs</p>
+            <div class="main__item u-ai-ce u-fd-col">
+              <p class="main__label">40 м²</p>
+              <p class="main__desc">Жилая</p>
+            </div>
+            <div class="main__item u-ai-ce u-fd-col">
+              <p class="main__label">28 м²</p>
+              <p class="main__desc">Кухня</p>
+            </div>
+            <div class="main__item u-ai-ce u-fd-col">
+              <p class="main__label">3 из 9</p>
+              <p class="main__desc">Этажей</p>
+            </div>
+          </div>
+          <div class="content__info info u-jc-sb">
+            <div class="info__item">
+              <p class="info__header">Квартира</p>
+              <div class="info__table"> 
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Комнат</span>
+                  <span class="info__data">1</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Площадь</span>
+                  <span class="info__data">68 м²</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Кухня</span>
+                  <span class="info__data">28 м²</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Жилая</span>
+                  <span class="info__data">40 м²</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Этаж</span>
+                  <span class="info__data">11</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Балкон</span>
+                  <span class="info__data">нет</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Лоджия</span>
+                  <span class="info__data">да</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Санузел</span>
+                  <span class="info__data">Совмещенный</span>
+                </p>
+              </div>
+            </div>
+            <div class="info__det">
+              <p class="info__header">Дом</p>
+              <div class="info__table"> 
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Год постройки</span>
+                  <span class="info__data">1979</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Год строительства</span>
+                  <span class="info__data">1970 г.</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Материал стен</span>
+                  <span class="info__data">Блочные</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Серия здания</span>
+                  <span class="info__data">11-68</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Этажность</span>
+                  <span class="info__data">9</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Мурсоропровод</span>
+                  <span class="info__data">Да</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Газ в доме</span>
+                  <span class="info__data">Есть</span>
+                </p>
+                <p class="info__tr u-jc-sb">
+                  <span class="info__label">Охрана здания</span>
+                  <span class="info__data">Да</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content__descr descr">
+            <p class="descr__header">Описание</p>
+            <div class="descr__text">
+              <p>Продается 1-комнатная квартира: г. Реутов, ул. Победы, д. 30. До ст.м. "Новогиреево", "Новокосино" 10 минут транспортом. 7 этаж 9-этажного кирпичного дома, 1975 год постройки, высота потолка 2.50 м., ж/б перекрытия. Состояние квартиры отличное. Уютная, светлая, удачное использование жилой площади.</p>
+              <p>Общая площадь 31.3 кв.м., жилая 18 кв.м., кухня 6 кв.м., санузел совмещен, линолеум, стеклопакеты, окна на улицу. Благоустроенный двор. В шаговой доступности детский сад, школа. Развита инфраструктура: продуктовые магазины, аптека, поликлиника, автостоянка. Чистый ухоженный подъезд, комфортный двор.</p>
             </div>
           </div>
         </div>
+        <div class="content__map content__side">
+
+        </div>
+      </div>
+      <div class="item__benefits">
+        <div class="container">
+          <p class="benefits__header">Инфраструктура</p>
+          <div class="benefits__block u-jc-sb u-fw-wr">
+            <div class="benefits__item u-jc-ce">Школа</div>
+            <div class="benefits__item u-jc-ce">Детский сад</div>
+            <div class="benefits__item u-jc-ce benefits__item--disabled">Аптека</div>
+            <div class="benefits__item u-jc-ce">Поликлиника</div>
+            <div class="benefits__item u-jc-ce">Магазины</div>
+            <div class="benefits__item u-jc-ce">Банк</div>
+            <div class="benefits__item u-jc-ce">Кафе</div>
+            <div class="benefits__item u-jc-ce benefits__item--disabled">Места для отдыха</div>
+          </div>
+        </div>
+      </div>
+      <div class="item__footer u-jc-ce">
+        <button class="btn btn--regular">Зарезервировать</button>
       </div>
     </section>
 

@@ -1,49 +1,53 @@
 .slider {
   color: $white;
-  margin-bottom: 30px;
-  @include gradient ($dir:top,$start:#00B6C9,$end:#007F99);
-  @media (min-width: $min-width-mob) {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
+  @media (max-width: $min-width-mob) {
+    margin-bottom: 30px;
   }
-  .slider__content {
+  &__content {
     position: relative;
-  }
-  .slider__header {
-    width: 180px;
-    padding: 15px 0 25px;
-    @include typo($size:20px,$line:24px,$weight:500);
-    @media (min-width: $min-width-mob) {
-      width: 538px;
-      padding: 30px 0 25px;
-      @include typo($size:36px,$line:44px,$weight:500);
+    height: 345px;
+    @media (max-width: $min-width-mob) {
+      height: 190px;
     }
   }
-  .slider__list {
-    display: none;
+  &__header {
+    width: 538px;
+    padding: 30px 0 25px;
+    @include typo($size:36px,$line:44px,$weight:500);
+    @media (max-width: $min-width-mob) {
+      width: 180px;
+      padding: 15px 0 25px;
+      @include typo($size:20px,$line:24px,$weight:500);
+    }
+  }
+  &__list {
+    // display: block;
     margin-bottom: 35px;
     @include typo($size:20px,$line:30px);
-    @media (min-width: $min-width-mob) {
-      display: block;
+    @media (max-width: $min-width-mob) {
+      display: none;
     }
   }
-  .slider__btn {
-    margin-bottom: 18px;
+  &__btn {
+    margin-bottom: 40px;
     text-transform: capitalize;
-    @media (min-width: $min-width-mob) {
-      margin-bottom: 40px;
+    @media (max-width: $min-width-mob) {
+      margin-bottom: 18px;
     }
   }
-  .slider__img {
+  &__img {
     position: absolute;
     bottom: 0;
-    right: 0;
-    height: 180px;
-    @media (min-width: $min-width-mob) {
-      right: 30%;
-      height: 100%;
+    right: 30%;
+    height: 100%;   
+    @media (max-width: $min-width-mob) {
+      right: 0;
+      height: 180px;
+
     }
   }
-  .slider__arrows {
+  &__arrows {
     position: absolute;
     bottom: 40px;
     right: 20px;
@@ -52,7 +56,16 @@
       display: none;
     }
   }
-  .slider__arrow {
+  &__arrow {
     display: flex;
+  }
+}
+
+.item {
+  &--best-offers {
+    @include gradient ($dir:top,$start:#00B6C9,$end:#007F99); 
+  }
+  &--test {
+    @include gradient ($dir:top,$start:#000000,$end:#ffffff); 
   }
 }

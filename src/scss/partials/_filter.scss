@@ -1,31 +1,32 @@
 .filter {
-  padding: 20px 0 0;
+  padding: 20px 0;
   border-top: 1px solid rgba(#979797,0.2);
   border-bottom: 1px solid rgba(#979797,0.2);
-  @media (min-width: $min-width-mob) {
-    padding-bottom: 20px;
+  @media (max-width: $min-width-mob) {
+    padding-bottom: 0;
   }
   &__nav {
     width: 235px;
-    margin-bottom: 35px;
-    @media (min-width: $min-width-mob) {
-      margin-bottom: 45px;
+    margin-bottom: 45px;
+    @media (max-width: $min-width-mob) {
+      margin-bottom: 35px;      
     }
   }
   &__input-block {
-    width: 100%;
-    &--small {
-      width: 158px;
+    &--normal {
+      width: 260px;
     }
-    @media (min-width: $min-width-mob) {
-      &--normal {
-        width: 260px;
-      }
-      &--big {
-        width: 300px;
-      }
+    &--big {
+      width: 300px;
+    }
+    &--small {
+      width: 190px;
+    }
+    @media (max-width: $min-width-mob) {
+      width: 100%;
       &--small {
-        width: 190px;
+        width: 45%;
+        max-width: 158px;
       }
     }
   }
@@ -37,19 +38,19 @@
     padding: 0 20px;
     font-size: 14px;
     color: $black;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
     @include placeholder{
       font-size: 14px;
       color: #9B9B9B;
     };
-    @media (min-width: $min-width-mob) {
-      margin-bottom: 40px;
+    @media (max-width: $min-width-mob) {
+      margin-bottom: 20px;
     }
   }
-  .filter__input-group {
+  &__input-group {
     flex-wrap: wrap;
-    &.filter__input-group--add {
+    &--add {
       display: none;
       &.js-isVisible {
         display: flex;
@@ -60,14 +61,15 @@
     color: $blue;
     margin: auto;
     padding-bottom: 30px;
+    margin-right: 76px;
     @include typo($size:20px,$line:40px);
-    &__link--map {
-      display: none;
-    }
-    @media (min-width: $min-width-mob) {
-      margin-right: 76px;
+    // &__link--map {
+    //   display: flex;
+    // }
+    @media (max-width: $min-width-mob) {
+      margin-right: auto;
       &__link--map {
-        display: flex;
+        display: none;
       }
     }
     &-text--opened {
@@ -93,10 +95,35 @@
   &__btn {
     margin-bottom: 30px;
   }
-  .filter__footer {
-    flex-direction: column-reverse;
-    @media (min-width: $min-width-mob) {
-      flex-direction: row;
+  &__footer {
+    // flex-direction: row;
+    @media (max-width: $min-width-mob) {
+      flex-direction: column-reverse;  
+    }
+  }
+  &--mob {
+    padding: 25px 40px;
+    border: none;
+    .filter__nav {
+      margin-bottom: 35px;      
+    }
+    .filter__input-block {
+      width: 100%;
+      &--small {
+        width: 45%;
+      }
+    }
+    .filter__input {
+      margin-bottom: 40px;
+    }
+    .filter__link {
+      margin-right: auto;
+      &__link--map {
+        display: none;
+      }
+    }
+    .filter__link-group {
+      display: none;
     }
   }
 }

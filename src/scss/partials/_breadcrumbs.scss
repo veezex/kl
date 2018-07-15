@@ -1,11 +1,13 @@
 .breadcrumbs {
   padding: 30px 0;
-  .breadcrumbs__link {
+  &__link {
     margin-right: 20px;
-    color: $blue;
+    color: $black;
     @include typo($size:12px,$line:15px);
-    &.breadcrumbs__link--main {
-      color: $black;
+  }
+  &__item:last-child {
+    .breadcrumbs__link {
+      color: $blue;
     }
   }
 }

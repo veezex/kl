@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-    <title>Каталог</title>
+    <title>Карта</title>
 		    <meta charset="utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
@@ -231,20 +231,20 @@
     <div class="breadcrumbs">
       <div class="container">
         <ul class="breadcrumbs__list u-jc-fs">
-            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
-            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог недвижимости</a></li>
-          </ul>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог недвижимости</a></li>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Поиск на карте</a></li>
+        </ul>
       </div>
     </div>
 
-    <div class="container"><h2 class="page-header">Каталог недвижимости</h2></div>
-
-    <section class="section filter">
-      <div class="container">
-        <div class="tab" id="type_switch">
+    <section class="map">
+      <div id="map" class="map__image" style="width: calc(100% - 340px); height: 1030px"></div>
+      <aside class="map__side filter filter--mob">
+        <div class="tab" >
           <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
-            <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
             <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
+            <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
           </ul>
           <div class="filter__content tab__content">
             <div class="tab__block js-active" id="buy">
@@ -265,8 +265,6 @@
                   <div class="filter__input-block filter__input-block--small">
                     <input type="text" class="filter__input" placeholder="Цена До"/>
                   </div>
-                </div>
-                <div class="filter__input-group filter__input-group--add u-jc-sb">
                   <div class="filter__input-block filter__input-block--big">
                     <input type="text" class="filter__input " placeholder="Микрорайон"/>
                   </div>
@@ -280,18 +278,7 @@
                     <input type="text" class="filter__input " placeholder="Тип дома"/>
                   </div>
                 </div>
-                <div class="filter__footer u-jc-sb">
-                  <div class="filter__link-group u-ai-ce">
-                    <a href="#" class="filter__link js-hide-filter u-ai-ce"><svg class="svg svg__filter">
-                        <use xlink:href="#filter__par">
-                      </svg>
-                      <span class="filter__link-text filter__link-text--closed">Все параметры</span>
-                      <span class="filter__link-text filter__link-text--opened">Скрыть параметры</span>
-                    </a>
-                    <a href="#" class="filter__link filter__link--map u-ai-ce"><svg class="svg svg__filter">
-                        <use xlink:href="#filter__map">
-                      </svg>Смотреть на карте</a>
-                  </div>
+                <div class="filter__footer u-jc-ce">
                   <div class="u-jc-ce">
                     <button class="btn btn--regular filter__btn" type="submit">Поиск</button>
                   </div>
@@ -303,406 +290,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </aside>
     </section>
-
-		<section class="section offers">
-      <div class="tab">
-        <div class="container">
-          <div class="offers__nav u-jc-sb">
-            <p class="section__header offers__header">Название карточек</p>
-            <div class="offers__nav-icons u-jc-fe">
-              <a href="javascript:;" data-tab="card" class="u-jc-ce js-tab__item ">
-                <span class="svg__offers"><svg class="svg ">
-                  <use xlink:href="#svg__offers--card">
-                </svg></span>
-              </a>
-              <a href="javascript:;" data-tab="list" class="js-tab__item u-jc-ce js-active">
-                <span class="svg__offers"><svg class="svg ">
-                  <use xlink:href="#svg__offers--list">
-                </svg></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="container">
-          <div class="tab__content">
-            <div class="tab__block " id="card">
-              <div class="offers__block u-jc-sb">
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a><a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a><a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                <a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a>
-                
-              </div>
-            </div>
-            <div class="tab__block js-active" id="list">
-              <div class="offers__block">
-                <div class="line u-jc-sb">
-                  <p class="line__speacial">Снижение цены - 12%</p>
-                  <div class="line__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="line__inner">
-                    <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
-                      <span class="line__rooms">6 комн.</span>
-                      <span class="line__area">88 м</span>
-                      <span class="line__floor">3 этаж из 9</span>
-                      <span class="line__address">Корсаков, ул. Корсаковская, 12</span>
-                    </p>
-                    <p class="line__text">Продается 1-комнатная квартира, в строящемся доме (Добрыня, 1 очередь), срок сдачи: IV-кв. 2018, общей площадью 39.19 кв.м., на 7 этаже. Жилой комплекс "Добрыня" это девятисекционный дом эконом-класса высотой 5-9 этажей, выгодно</p>
-                    <a href="javascript:;" class="u-jc-fs line__fav">
-                      <span class="svg__fav"><svg class="svg ">
-                        <use xlink:href="#svg__offers--fav">
-                      </svg></span>
-                      В избранное</a>
-                  </div>
-                </div>
-                <div class="line u-jc-sb">
-                  <p class="line__speacial">Снижение цены - 12%</p>
-                  <div class="line__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="line__inner">
-                    <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
-                      <span class="line__rooms">6 комн.</span>
-                      <span class="line__area">88 м</span>
-                      <span class="line__floor">3 этаж из 9</span>
-                      <span class="line__address">Корсаков, ул. Корсаковская, 12</span>
-                    </p>
-                    <p class="line__text">Продается 1-комнатная квартира, в строящемся доме (Добрыня, 1 очередь), срок сдачи: IV-кв. 2018, общей площадью 39.19 кв.м., на 7 этаже. Жилой комплекс "Добрыня" это девятисекционный дом эконом-класса высотой 5-9 этажей, выгодно</p>
-                    <a href="javascript:;" class="u-jc-fs line__fav">
-                      <span class="svg__fav"><svg class="svg ">
-                        <use xlink:href="#svg__offers--fav">
-                      </svg></span>
-                      В избранное</a>
-                  </div>
-                </div>
-                <div class="line u-jc-sb">
-                  <p class="line__speacial">Снижение цены - 12%</p>
-                  <div class="line__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="line__inner">
-                    <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
-                      <span class="line__rooms">6 комн.</span>
-                      <span class="line__area">88 м</span>
-                      <span class="line__floor">3 этаж из 9</span>
-                      <span class="line__address">Корсаков, ул. Корсаковская, 12</span>
-                    </p>
-                    <p class="line__text">Продается 1-комнатная квартира, в строящемся доме (Добрыня, 1 очередь), срок сдачи: IV-кв. 2018, общей площадью 39.19 кв.м., на 7 этаже. Жилой комплекс "Добрыня" это девятисекционный дом эконом-класса высотой 5-9 этажей, выгодно</p>
-                    <a href="javascript:;" class="u-jc-fs line__fav">
-                      <span class="svg__fav"><svg class="svg ">
-                        <use xlink:href="#svg__offers--fav">
-                      </svg></span>
-                      В избранное</a>
-                  </div>
-                </div>
-                <div class="line u-jc-sb">
-                  <p class="line__speacial">Снижение цены - 12%</p>
-                  <div class="line__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="line__inner">
-                    <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
-                      <span class="line__rooms">6 комн.</span>
-                      <span class="line__area">88 м</span>
-                      <span class="line__floor">3 этаж из 9</span>
-                      <span class="line__address">Корсаков, ул. Корсаковская, 12</span>
-                    </p>
-                    <p class="line__text">Продается 1-комнатная квартира, в строящемся доме (Добрыня, 1 очередь), срок сдачи: IV-кв. 2018, общей площадью 39.19 кв.м., на 7 этаже. Жилой комплекс "Добрыня" это девятисекционный дом эконом-класса высотой 5-9 этажей, выгодно</p>
-                    <a href="javascript:;" class="u-jc-fs line__fav">
-                      <span class="svg__fav"><svg class="svg ">
-                        <use xlink:href="#svg__offers--fav">
-                      </svg></span>
-                      В избранное</a>
-                  </div>
-                </div>
-                <div class="line u-jc-sb">
-                  <p class="line__speacial">Снижение цены - 12%</p>
-                  <div class="line__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="line__inner">
-                    <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
-                      <span class="line__rooms">6 комн.</span>
-                      <span class="line__area">88 м</span>
-                      <span class="line__floor">3 этаж из 9</span>
-                      <span class="line__address">Корсаков, ул. Корсаковская, 12</span>
-                    </p>
-                    <p class="line__text">Продается 1-комнатная квартира, в строящемся доме (Добрыня, 1 очередь), срок сдачи: IV-кв. 2018, общей площадью 39.19 кв.м., на 7 этаже. Жилой комплекс "Добрыня" это девятисекционный дом эконом-класса высотой 5-9 этажей, выгодно</p>
-                    <a href="javascript:;" class="u-jc-fs line__fav">
-                      <span class="svg__fav"><svg class="svg ">
-                        <use xlink:href="#svg__offers--fav">
-                      </svg></span>
-                      В избранное</a>
-                  </div>
-                </div>
-                <div class="line u-jc-sb">
-                  <p class="line__speacial">Снижение цены - 12%</p>
-                  <div class="line__image" style="background-image:url(http://via.placeholder.com/350x150)">
-                  </div>
-                  <div class="line__inner">
-                    <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
-                      <span class="line__rooms">6 комн.</span>
-                      <span class="line__area">88 м</span>
-                      <span class="line__floor">3 этаж из 9</span>
-                      <span class="line__address">Корсаков, ул. Корсаковская, 12</span>
-                    </p>
-                    <p class="line__text">Продается 1-комнатная квартира, в строящемся доме (Добрыня, 1 очередь), срок сдачи: IV-кв. 2018, общей площадью 39.19 кв.м., на 7 этаже. Жилой комплекс "Добрыня" это девятисекционный дом эконом-класса высотой 5-9 этажей, выгодно</p>
-                    <a href="javascript:;" class="u-jc-fs line__fav">
-                      <span class="svg__fav"><svg class="svg ">
-                        <use xlink:href="#svg__offers--fav">
-                      </svg></span>
-                      В избранное</a>
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div>
-		</section>
-
-		<section class="register">
-			<p class="register__header">Хочу продать свою недвижимость</p>
-			<button class="btn btn--empty">Начать продажу</button>
-		</section>
-		<footer>
-		  <div class="prefooter">
-		    <div class="container prefooter__container">
-		      <a href="/" class="prefooter__logo-block">
-		        <img src="images/logo.png" class="prefooter__logo" alt="Логотип Клиент-Плюс">
-		      </a>
-		      <div class="prefooter__block">
-		        <p class="prefooter__number">8 800 555 44 22</p>
-		        <p class="prefooter__text">Для звонков по России</p>
-		      </div> 
-		    </div>
-		  </div>
-		  <div class="main-footer">
-		    <div class="container">
-		      <div class="main-footer__top u-jc-sb">
-		        <div class="main-footer__column main-footer__column--first">
-		          <p class="main-footer__header">Гарантия качества</p>
-		          <p class="main-footer__text">На сайте сервиса «Клиент Плюс» Вы найдёте объекты по аренде и продаже недвижимости острова Сахалин и Дальневосточного Федерального Округа.</p>
-		          <p class="main-footer__text"> Все квартиры, дома и другие объекты проверены нашей командой модераторов.</p>
-		        </div>
-		        <div class="main-footer__column main-footer__column--second">
-		          <p class="main-footer__header">Клиент Плюс</p>
-		          <ul>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		          </ul>
-		        </div>
-		        <div class="main-footer__column main-footer__column--third">
-		          <p class="main-footer__header">Клиент Плюс</p>
-		          <ul>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		            <li class="main-footer__item"><a href="#" class="main-footer__link">Каталог недвижимости</a></li>
-		          </ul>
-		        </div>
-		        <div class="main-footer__column main-footer__column--fourth">
-		          <p class="main-footer__header">На связи</p>
-		          <ul>
-		            <li class="main-footer__item">
-		              <a href="#" class="main-footer__social-link u-jc-fs">
-		                <span class="svg__main-footer">
-		                  <svg class="svg">
-		                    <use xlink:href="#main-footer__vk">
-		                  </svg>
-		                </span>
-		                Вконтакте
-		              </a>
-		            </li>
-		            <li class="main-footer__item">
-		              <a href="#" class="main-footer__social-link u-jc-fs">
-		                <span class="svg__main-footer">
-		                  <svg class="svg">
-		                    <use xlink:href="#main-footer__ok">
-		                  </svg>
-		                </span>
-		                Одноклассники
-		              </a>
-		            </li>
-		            <li class="main-footer__item">
-		              <a href="#" class="main-footer__social-link u-jc-fs">
-		                <span class="svg__main-footer">
-		                  <svg class="svg">
-		                    <use xlink:href="#main-footer__in">
-		                  </svg>
-		                </span>
-		                Instagram
-		              </a>
-		            </li>
-		            <li class="main-footer__item">
-		              <a href="#" class="main-footer__social-link u-jc-fs">
-		                <span class="svg__main-footer">
-		                  <svg class="svg">
-		                    <use xlink:href="#main-footer__yt">
-		                  </svg>
-		                </span>
-		                YouTube
-		              </a>
-		            </li>
-		          </ul>
-		        </div>
-		      </div>
-		      <div class="main-footer__bottom">
-		        <div class="">
-		          <p class="main-footer__bottom-text">«Клиент Плюс» — сервис и база данных о недвижимости. Использование сайта означает согласие с <a href="#" class="main-footer__bottom-link">Пользовательским соглашением</a> и <a href="#" class="main-footer__bottom-link">Политикой конфиденциальности</a> компании ООО «Клиент Плюс». Оплачивая авансовый платеж, вы принимаете Лицензионное соглашение сервиса.</p>
-		          <div class="u-jc-sb main-footer__copyright ">
-		            <p class="main-footer__bottom-text main-footer__bottom-text--copyright">© 2007–2018, ООО «Клиент Плюс», официальный сайт.</p>
-		            <a href="#" class="main-footer__bottom-text">Сделано в DL</a>
-		          </div>
-		        </div>
-		      </div> 
-		    </div>
-		  </div>
-		</footer>
 	</body>
 </html>

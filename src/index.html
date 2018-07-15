@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
+		<title>Главная</title>
 		//= _head.html
 	</head>
 	<body>
@@ -8,34 +9,58 @@
 		//= _svg.html
 
 		<section class="section slider">
-			<div class="container">
-				<div class="slider__content u-jc-fs u-ai-fe">
-					<div class="slider__text-block">
-						<p class="slider__header">Лучшие предложения на рынке аренды и покупки</p>
-						<ul class="slider__list">
-							<li>Более 100 предложений</li>
-							<li>Ежедневные обновления</li>
-							<li>Удобный поиск</li>
-						</ul>
-						<button class="btn btn--white slider__btn">Подробее</button>
+			<div id="main-carousel" class="carousel slide slider" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item item--best-offers active">
+						<div class="container">
+							<div class="slider__content u-jc-fs u-ai-fe">
+								<div class="slider__text-block">
+									<p class="slider__header">Лучшие предложения на рынке аренды и покупки</p>
+									<ul class="slider__list">
+										<li>Более 100 предложений</li>
+										<li>Ежедневные обновления</li>
+										<li>Удобный поиск</li>
+									</ul>
+									<button class="btn btn--white slider__btn">Подробее</button>
+								</div>
+								<img src="images/slide__img.png" alt="" class="slider__img">
+							</div>
+						</div>
 					</div>
-					<img src="images/slide__img.png" alt="" class="slider__img">
+					<div class="item item--test">
+						<div class="container">
+							<div class="slider__content u-jc-fs u-ai-fe">
+								<div class="slider__text-block">
+									<p class="slider__header">Тест</p>
+									<ul class="slider__list">
+										<li>Тест</li>
+										<li>Тест</li>
+										<li>Тест</li>
+									</ul>
+									<button class="btn btn--white slider__btn">Тест</button>
+								</div>
+							<!-- <img src="images/slide__img.png" alt="" class="slider__img"> -->
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="slider__arrows u-jc-sb">
-					<a href="" class="slider__arrow slider__arrow--left">
-						<span class="slider__arrow-img">
-							<svg class="svg">
-							<use xlink:href="#slider__arrow--left">
-							</svg>
-						</span>
-					</a>
-					<a href="" class="slider__arrow slider__arrow--right">
-						<span class="slider__arrow-img">
-							<svg class="svg">
-							<use xlink:href="#slider__arrow--right">
-							</svg>
-						</span>
-					</a>
+				<div class="container">
+					<div class="slider__arrows u-jc-sb">
+						<a href="#main-carousel" role="button" data-slide="prev" class="slider__arrow slider__arrow--left">
+							<span class="slider__arrow-img">
+								<svg class="svg">
+								<use xlink:href="#slider__arrow--left">
+								</svg>
+							</span>
+						</a>
+						<a href="#main-carousel" role="button" data-slide="next" class="slider__arrow slider__arrow--right">
+							<span class="slider__arrow-img">
+								<svg class="svg">
+								<use xlink:href="#slider__arrow--right">
+								</svg>
+							</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>

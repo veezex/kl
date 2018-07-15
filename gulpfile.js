@@ -93,6 +93,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наши *.scss
+        .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer({

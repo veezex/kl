@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    <title>Карта</title>
+		//= _head.html
+	</head>
+	<body>
+		//= _header.html
+    //= _svg.html
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list u-jc-fs">
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог недвижимости</a></li>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Поиск на карте</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="map">
+      <div id="map" class="map__image" style="width: calc(100% - 340px); height: 1030px"></div>
+      <aside class="map__side filter filter--mob">
+        <div class="tab" >
+          <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
+            <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
+            <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
+          </ul>
+          <div class="filter__content tab__content">
+            <div class="tab__block js-active" id="buy">
+              <form action="">
+                <div class="filter__input-group u-jc-sb">
+                  <div class="filter__input-block filter__input-block--normal">
+                    <input type="text" class="filter__input " placeholder="Города"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--normal">
+                    <input type="text" class="filter__input" placeholder="Улица"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--normal">
+                    <input type="text" class="filter__input" placeholder="Дома / Квартира"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--small">
+                    <input type="text" class="filter__input" placeholder="Цена От"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--small">
+                    <input type="text" class="filter__input" placeholder="Цена До"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--big">
+                    <input type="text" class="filter__input " placeholder="Микрорайон"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--big">
+                    <input type="text" class="filter__input " placeholder="Жилой комплекс"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--big">
+                    <input type="text" class="filter__input " placeholder="Планировка"/>
+                  </div>
+                  <div class="filter__input-block filter__input-block--big">
+                    <input type="text" class="filter__input " placeholder="Тип дома"/>
+                  </div>
+                </div>
+                <div class="filter__footer u-jc-ce">
+                  <div class="u-jc-ce">
+                    <button class="btn btn--regular filter__btn" type="submit">Поиск</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="tab__block" id="rent">
+              <p>for test needs</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+	</body>
+</html>
