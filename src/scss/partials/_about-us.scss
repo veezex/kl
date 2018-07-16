@@ -1,0 +1,26 @@
+.about-us {
+  margin-bottom: 90px;
+  &__page-header {
+    margin-top: 45px;
+  }
+  &__wrapper {
+    column-count: 2;
+    column-gap: 50px;
+    @include typo($size:14px,$line:18px);
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  &__fixed-icon {
+    max-width: 140px;
+    background-color: #D0021B;
+    box-shadow: 0 9px 25px 0 rgba(208,2,27,0.60);
+    border-radius: 8px 0 0 8px;
+    color: $white;
+    right: 0;
+    @include typo($size:14px,$line:19px);
+    a {
+      padding: 15px;
+    }
+  }
+}

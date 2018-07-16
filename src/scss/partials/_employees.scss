@@ -1,0 +1,38 @@
+.employees {
+  &__scrollable-div {
+    width: 100%;
+    @media (max-width: $min-width-mob) {
+      min-width: 1280px;
+    }
+  }
+  &__card {
+    position: relative;
+    width: 300px;
+    height: 410px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    background-color: #441E1C;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0 25px 40px 0 rgba(0,0,0,0.31);
+      .employees__text {
+        background-color: transparent;
+      }
+    }
+  }
+  &__text {
+    color: $white;
+    padding: 20px 40px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: #441E1C;
+    @include typo($size:14px,$line:18px);
+  }
+  &__img {
+    height: 100%;
+  }
+  &__name {
+    margin-bottom: 16px;
+    @include typo($size:24px,$line:29px);
+  }
+}

@@ -1,0 +1,17 @@
+.achievement {
+  margin-bottom: 40px;
+  &__header {
+    margin-bottom: 35px;
+  }
+  &__item {
+    width: 180px;
+  }
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__text {
+    padding: 0 15px;
+    text-align: center;
+    @include typo($size:16px,$line:19px);
+  }
+}

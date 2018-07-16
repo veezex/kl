@@ -29,7 +29,7 @@ input, textarea, select, button {
     overflow: visible;
   }
   &--small {
-    max-width: 740px;
+    max-width: 730px;
   }
   @media (max-width: $min-width-mob) {
     &--scroll {
@@ -100,4 +100,20 @@ input, textarea, select, button {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
+}
+
+
+.collapse {
+  display: none;
+  &.in {
+    display: block;
+  }
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-duration: 0.35s;
+  transition-timing-function: ease;
 }

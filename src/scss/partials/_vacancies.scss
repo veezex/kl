@@ -1,0 +1,48 @@
+.vacancies {
+  margin-bottom: 55px;
+  &-benefits {
+    margin-bottom: 70px;
+    &__header {
+      margin-bottom: 35px;
+    }
+  }
+  &__card {
+    position: relative;
+    width: 640px;
+    height: 320px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: $white;
+    @include typo($size:14px,$line:18px);
+    @include gradient ($dir:top,$start:#004E80,$end:#002649);
+  }
+  &__card-text {
+    max-width: 250px;
+  }
+  &__header {
+    margin-bottom: 60px;
+  }
+  &__item {
+    margin-bottom: 40px;
+    @include typo($size:14px,$line:18px);
+    h5 {
+      margin: 0 0 20px;
+      font-weight: bold;
+    }
+  }
+  &__tab-nav {
+    margin-bottom: 35px;
+  }
+  &__collapse-header {
+    margin-bottom: 40px;
+    @include typo($size:20px,$line:24px);    
+    a {
+      color: $blue;
+      &[aria-expanded="false"] {
+        color: $nut-brown;  
+        border-bottom: 1px solid rgba($nut-brown,0.3);
+      }
+    }
+  }
+}
