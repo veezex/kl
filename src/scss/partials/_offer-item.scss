@@ -1,4 +1,8 @@
 .offer-item {
+  &__header {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
   &__top {
     &-side {
       width: 50%;
@@ -128,10 +132,15 @@
       width: 300px;
       padding-bottom: 40px;
       margin-bottom: 40px;
+      @include typo($size:20px,$line:24px);
       &--disabled {
         filter: grayscale(100%);
         opacity: 0.6;
         color: #424242;
+      }
+      &-text {
+        padding: 15px 25px;
+        @include typo($size:14px,$line:18px);
       }
     }
   }

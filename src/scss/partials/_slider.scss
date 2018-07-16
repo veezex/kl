@@ -98,4 +98,7 @@
   &--about {
     @include gradient ($dir:top,$start:#D6CEB2,$end:#ADA07A); 
   }
+  &--score {
+    @include gradient ($dir:top,$start:#79403C,$end:#441E1C); 
+  }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Иконка</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.01,16.8615556 C-1.3375,23.068 -1.3375,33.1268889 5.01,39.3333333" id="path-1"></path>
+        <path d="M8.545,20.3204444 C4.1525,24.6153333 4.1525,31.582 8.545,35.8768889" id="path-2"></path>
+    </defs>
+    <g id="Dekstope-(1440-px)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.-Услуги-––-«Оценка-нед-сти»" transform="translate(-864.000000, -681.000000)">
+            <g id="4.-Почему-МЫ" transform="translate(63.000000, 613.000000)">
+                <g id="3-карточка" transform="translate(682.000000, 67.000000)">
+                    <g id="иконка" transform="translate(119.000000, 1.000000)">
+                        <g id="Иконка" transform="translate(0.500000, 0.000000)">
+                            <g id="Shape" stroke-linecap="round" stroke-linejoin="round" stroke="#027993">
+                                <use xlink:href="#path-1"></use>
+                                <use xlink:href="#path-1"></use>
+                            </g>
+                            <g id="Shape" stroke-linecap="round" stroke-linejoin="round" stroke="#027993">
+                                <use xlink:href="#path-2"></use>
+                                <use xlink:href="#path-2"></use>
+                            </g>
+                            <path d="M50.49,16.8615556 C56.8375,23.068 56.8375,33.1268889 50.49,39.3333333" id="Shape" stroke="#027993" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M46.955,20.3204444 C51.3475,24.6153333 51.3475,31.582 46.955,35.8768889" id="Shape" stroke="#027993" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M41.75,51.5555556 L41.75,5.11111111 C41.75,2.96737706 39.9651825,1.22222222 37.75,1.22222222 L17.75,1.22222222 C15.5348175,1.22222222 13.75,2.96737706 13.75,5.11111111 L13.75,51.5555556 C13.75,53.6992896 15.5348175,55.4444444 17.75,55.4444444 L37.75,55.4444444 C39.9651825,55.4444444 41.75,53.6992896 41.75,51.5555556 Z" id="Shape" stroke="#BA7530" stroke-width="2"></path>
+                            <ellipse id="Oval" stroke="#BA7530" stroke-linecap="round" stroke-linejoin="round" cx="27.75" cy="50.3333333" rx="1.25" ry="1.22222222"></ellipse>
+                            <path d="M25.25,5.11111111 L30.25,5.11111111" id="Shape" stroke="#BA7530" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -14,5 +14,10 @@
   }
   &__btn {
     display: inline-block;
+    &--big {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 22.5px 20px;
+    }
   }
 }
