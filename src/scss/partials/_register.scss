@@ -4,7 +4,7 @@
   border-top: 1px solid rgba(#979797,0.2);
   border-bottom: 1px solid rgba(#979797,0.2);
   &__header {
-    color: #BA7530;
+    color: $nut-brown;
     margin-bottom: 20px;
     @include typo($size:24px,$line:29px);
     // display: block;

@@ -50,7 +50,7 @@
 }
 .js-active {
   .svg__offers {
-    color: #BA7530;
+    color: $nut-brown;
   }
 }
 .svg__fav {
@@ -72,13 +72,13 @@
   width: 40px;
   height: 30px;
   margin-right: 20px;
-  color: #BA7530;
+  color: $nut-brown;
 }
 .svg__map-btn {
   height: 20px;
   width: 25px;
   margin-right: 20px;
-  color: #BA7530;
+  color: $nut-brown;
 }
 .svg__filter-close {
   width: 28px;
@@ -100,4 +100,13 @@
 .svg__fixed-icon {
   width: 65px;
   height: 65px;
+}
+.acred__icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: $white;
+  padding: 20px;
+  margin-right: 40px;
+  background-color: $dark-blue;
 }

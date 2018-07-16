@@ -7,6 +7,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 input, button, a, textarea {
   &:focus {
@@ -24,11 +25,14 @@ input, textarea, select, button {
   padding-left: 20px; 
   padding-right: 20px; 
   position: relative;
-  &.container--scroll {
+  &--scroll {
     overflow: visible;
   }
+  &--small {
+    max-width: 740px;
+  }
   @media (max-width: $min-width-mob) {
-    &.container--scroll {
+    &--scroll {
       overflow-x: scroll;
       overflow-y: hidden;
     }
@@ -65,17 +69,17 @@ input, textarea, select, button {
 }
 .btn--empty {
   padding: 12px 20px;
-  color: #BA7530;
+  color: $nut-brown;
   background: transparent;
-  border: 1px solid #BA7530;
+  border: 1px solid $nut-brown;
   text-transform: uppercase;
   &:hover {
-    background-color: #BA7530;
+    background-color: $nut-brown;
     color: $white;
   }
   &:active{
-    background-color: #BA7530;
-    box-shadow: 0 9px 25px 0 #BA7530;
+    background-color: $nut-brown;
+    box-shadow: 0 9px 25px 0 $nut-brown;
     color: $white;
   }
 }
@@ -89,6 +93,11 @@ input, textarea, select, button {
   }
   &:active{
     background: $nut-brown;
-    box-shadow: 0 9px 25px 0 #BA7530;
+    box-shadow: 0 9px 25px 0 $nut-brown;
   }
+}
+.fixed-side-block {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
 }

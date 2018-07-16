@@ -9,7 +9,7 @@
     margin-bottom: 20px;
   }
   &:hover {
-    border-color: rgba(#BA7530,0.3);
+    border-color: rgba($nut-brown,0.3);
   }
   &:active {
     box-shadow: 0 9px 25px 0 rgba(186,117,48,0.40);
@@ -51,7 +51,7 @@
   }
   &__speacial {
     position: absolute;
-    background-color: #BA7530;
+    background-color: $nut-brown;
     padding: 0 12px;
     color: $white;
     @include typo($size:14px,$line:30px);
@@ -97,7 +97,7 @@
   &__fav {
     letter-spacing: 0.24;
     margin-top: 10px;
-    color: #BA7530;
+    color: $nut-brown;
     @include typo($size:16px,$line:40px);
   }
 }
