@@ -101,4 +101,7 @@
   &--score {
     @include gradient ($dir:top,$start:#79403C,$end:#441E1C); 
   }
+  &--vopros-otvet {
+    @include gradient ($dir:top,$start:#028496,$end:#014D5D); 
+  }
 }

@@ -1,0 +1,13 @@
+.vopros-otvet {
+  &__header {
+    margin-top: 80px;
+    margin-bottom: 55px;
+  }
+  &__text {
+    margin-bottom: 35px;
+    @include typo($size:16px,$line:24px);
+    h4 {
+      @include typo($size:18px,$line:22px,$weight:700);
+    }
+  }
+}

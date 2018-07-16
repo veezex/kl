@@ -35,8 +35,8 @@
     margin-bottom: 35px;
   }
   &__collapse-header {
-    margin-bottom: 20px;
-    @include typo($size:20px,$line:24px);    
+    margin-bottom: 35px;
+    @include typo($size:20px,$line:36px);    
     a {
       color: $blue;
       &[aria-expanded="false"] {

@@ -1,0 +1,17 @@
+.score {
+  margin-bottom: 90px;
+  &__page-header {
+    margin-bottom: 30px;
+  }
+  &__text {
+    margin-bottom: 65px;
+    @include typo($size:16px,$line:19px);
+    h5 {
+      font-weight: bold;
+    }
+    a {
+      color: $nut-brown;
+      border-bottom: 1px solid rgba($nut-brown,0.3);
+    }
+  }
+}
