@@ -9,5 +9,9 @@
     h4 {
       @include typo($size:18px,$line:22px,$weight:700);
     }
+    a {
+      color: $nut-brown;
+      border-bottom: 1px solid rgba($nut-brown,0.3);
+    }
   }
 }

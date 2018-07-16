@@ -26,12 +26,22 @@
     &--inline {
       margin: 0;
     }
+    &--full {
+      width: 100%;
+    }
     @media (max-width: $min-width-mob) {
       width: 100%;
       &--small {
         width: 45%;
         max-width: 158px;
       }
+    }
+  }
+  &__label {
+    color: #9B9B9B;
+    @include typo($size:14px,$line:18px);
+    &--textarea {
+      padding-top: 16px;
     }
   }
   &__input {
@@ -44,6 +54,9 @@
     color: $black;
     // margin-bottom: 40px;
     width: 100%;
+    &--full {
+      width: 500px;
+    }
     @include placeholder{
       font-size: 14px;
       color: #9B9B9B;
@@ -51,6 +64,11 @@
     @media (max-width: $min-width-mob) {
       margin-bottom: 20px;
     }
+  }
+  &__textarea {
+    height: 160px;
+    resize: none;
+    padding: 18px 20px;
   }
   &__input-group {
     flex-wrap: wrap;
@@ -146,6 +164,56 @@
       width: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
+    }
+  }
+  &__radio {
+    margin-top: 15px;
+    &-input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      margin: 10px 0 0 20px;
+      & + label {
+        position: relative;
+        cursor: pointer;
+        line-height: 40px;
+        font-size: 14px;
+        color: #9B9B9B;
+        padding: 11px 0 11px 80px;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px;
+          background-color: #EAF4F6;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+        }
+      }
+      &:checked + label:after {
+        background: $black;
+      }
+      // &:checked + label:before {
+      //   background: #9FD468;
+      // }
+      // &:focus + label:before {
+      //   box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+      // }
+    }
+    &-label {
+      a {
+        color: $nut-brown;
+        border-bottom: 1px solid rgba($nut-brown,0.3);
+      }
     }
   }
 }
