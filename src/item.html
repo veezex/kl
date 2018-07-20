@@ -23,7 +23,7 @@
       <div class="offer-item__top u-jc-sb">
         <div class="offer-item__top-side offer-item__top-text">
           <p class="offer-item__name">1-комнатная квартира 60 м2</p>
-          <div class="offer-item__price-block u-jc-sb">
+          <div class="offer-item__price-block u-jc-sb u-fw-wr">
             <p class="offer-item__price">
               <span class="offer-item__price-old">5 500 000 Р</span>
               <span class="offer-item__price-new">4 950 000 Р</span>
@@ -31,10 +31,10 @@
             <p class="offer-item__metr-price">1 кв / м² –– 45 000 Р</p>
           </div>  
           <p class="offer-item__address">Корсаков, ул. Корсаковская, 12</p>
-          <p class="offer-item__opt u-jc-sb">
-            <span class="offer-item__type">Вторичное жильё</span>
-            <span class="offer-item__date">22 февраля 2018</span>
-            <span class="offer-item__views u-jc-sb">
+          <p class="offer-item__opt u-jc-sb u-fw-wr">
+            <span class="offer-item__text offer-item__type">Вторичное жильё</span>
+            <span class="offer-item__text offer-item__date">22 февраля 2018</span>
+            <span class="offer-item__text offer-item__views u-jc-sb">
               <span class="svg__item-views">
                 <svg class="svg">
                 <use xlink:href="#item__views-img">
@@ -48,14 +48,14 @@
           </div>
         </div>
         <div class="offer-item__top-side offer-item__image image">
-          <div class="image__container">
+          <div class="image__container" style="background-image: url(../images/temp__item__building.png)">
           </div>
           <div class="image__carousel small-carousel">
-            <div class="image__carousel-wrapper">
+            <div class="image__carousel-wrapper image__carousel-wrapper--desktop">
               <div class="carousel carousel-item-image slide" id="carousel-item-image">
                 <div class="carousel-inner">
                   <div class="item active">
-                    <div class="item__wrapper"><img src="http://placehold.it/100x75/0054A6/fff/&amp;text=1" class="item__img"></div>
+                    <div class="item__wrapper"><img src="../images/temp__item__building.png" class="item__img"></div>
                   </div>
                   <div class="item">
                     <div class="item__wrapper"><img src="http://placehold.it/100x75/002d5a/fff/&amp;text=2" class="item__img"></div>
@@ -87,6 +87,50 @@
                   </span>
                 </a>
                 <a class="right carousel-control u-jc-ce u-ai-ce" href="#carousel-item-image" data-slide="next">
+                  <span class="small-slider__arrow-img">
+                    <svg class="svg">
+                    <use xlink:href="#slider__arrow--right">
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="image__carousel-wrapper image__carousel-wrapper--mobile">
+              <div class="carousel slide" id="carousel-item-mob">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <div class="item__wrapper"><img src="../images/temp__item__building.png" class="item__img"></div>
+                  </div>
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/002d5a/fff/&amp;text=2" class="item__img"></div>
+                  </div>
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/d6d6d6/333&amp;text=3" class="item__img"></div>
+                  </div>          
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/002040/eeeeee&amp;text=4" class="item__img"></div>
+                  </div>
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/0054A6/fff/&amp;text=5" class="item__img"></div>
+                  </div>
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/002d5a/fff/&amp;text=6" class="item__img"></div>
+                  </div>
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/eeeeee&amp;text=7" class="item__img"></div>
+                  </div>
+                  <div class="item">
+                    <div class="item__wrapper"><img src="http://placehold.it/100x75/40a1ff/002040&amp;text=8" class="item__img"></div>
+                  </div>
+                </div>
+                <a class="left carousel-control u-jc-ce u-ai-ce" href="#carousel-item-mob" data-slide="prev">
+                  <span class="small-slider__arrow-img">
+                    <svg class="svg">
+                    <use xlink:href="#slider__arrow--left">
+                    </svg>
+                  </span>
+                </a>
+                <a class="right carousel-control u-jc-ce u-ai-ce" href="#carousel-item-mob" data-slide="next">
                   <span class="small-slider__arrow-img">
                     <svg class="svg">
                     <use xlink:href="#slider__arrow--right">
@@ -210,39 +254,55 @@
         <div class="container">
           <p class="benefits__header">Инфраструктура</p>
           <div class="benefits__block u-jc-sb u-fw-wr">
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+            <div class="benefits__item u-ai-ce">
+              <span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-school">
-              </svg></span>Школа
+              </svg></span>
+              <p class="benefits__item-header">Школа</p>
             </div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
-              <svg class="svg">
-                <use xlink:href="#item__icon-kinder">
-              </svg></span>Детский сад</div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce benefits__item--disabled u-ai-ce u-fd-col"><span class="svg__item-infra">
-              <svg class="svg">
-                <use xlink:href="#item__icon-drugstore">
-              </svg></span>Аптека</div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
-              <svg class="svg">
-                <use xlink:href="#item__icon-hospital">
-              </svg></span>Поликлиника</div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+            <div class="benefits__item u-ai-ce">
+              <span class="svg__item-infra">
+                <svg class="svg">
+                  <use xlink:href="#item__icon-kinder">
+                </svg>
+              </span>
+              <p class="benefits__item-header">Детский сад</p></div>
+            <div class="benefits__item u-ai-ce benefits__item--disabled">
+              <span class="svg__item-infra">
+                <svg class="svg">
+                  <use xlink:href="#item__icon-drugstore">
+                </svg>
+              </span>
+              <p class="benefits__item-header">Аптека</p>
+            </div>
+            <div class="benefits__item u-ai-ce">
+              <span class="svg__item-infra">
+                <svg class="svg">
+                  <use xlink:href="#item__icon-hospital">
+                </svg></span>
+                <p class="benefits__item-header">Поликлиника</p>
+              </div>
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-shops">
-              </svg></span>Магазины</div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+              </svg></span>
+              <p class="benefits__item-header">Магазины</p></div>
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-bank">
-              </svg></span>Банк</div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+              </svg></span>
+              <p class="benefits__item-header">Банк</p></div>
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-cafe">
-              </svg></span>Кафе</div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce benefits__item--disabled u-ai-ce u-fd-col"><span class="svg__item-infra">
+              </svg></span>
+              <p class="benefits__item-header">Кафе</p></div>
+            <div class="benefits__item u-ai-ce benefits__item--disabled"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-rest">
-              </svg></span>Места для отдыха</div>
+              </svg></span>
+              <p class="benefits__item-header">Места для отдыха</p></div>
           </div>
         </div>
       </div>
@@ -273,11 +333,11 @@
         
         <div class="container">
           <div class="tab__content">
-            <div class="tab__block " data-content="card">
-              <div class="offers__block u-jc-sb">
-                <a class="card">
+            <div class="tab__block offers__tab-block " data-content="card">
+              <div class="offers__block wrapper">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -287,9 +347,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -299,9 +359,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -311,20 +371,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a><a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -334,9 +383,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -346,9 +395,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -358,20 +407,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
-                  </div>
-                  <div class="card__inner">
-                    <p class="card__price">5 500 000 Р</p>
-                    <p class="card__metr">1 кв / м - 45 000 Р</p>
-                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
-                    <p class="card__floor">3 этаж из 9</p>
-                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
-                  </div>
-                </a><a class="card">
-                  <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -381,9 +419,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -393,9 +431,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -405,9 +443,9 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                <a class="card">
+                <a class="card col offers__card">
                   <p class="card__speacial">Снижение цены - 12%</p>
-                  <div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
                   </div>
                   <div class="card__inner">
                     <p class="card__price">5 500 000 Р</p>
@@ -417,10 +455,33 @@
                     <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
                   </div>
                 </a>
-                
+                <a class="card col offers__card">
+                  <p class="card__speacial">Снижение цены - 12%</p>
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
+                  </div>
+                  <div class="card__inner">
+                    <p class="card__price">5 500 000 Р</p>
+                    <p class="card__metr">1 кв / м - 45 000 Р</p>
+                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+                    <p class="card__floor">3 этаж из 9</p>
+                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+                  </div>
+                </a>
+                <a class="card col offers__card">
+                  <p class="card__speacial">Снижение цены - 12%</p>
+                  <div class="card__image" style="background-image:url(/images/item__img.png)">
+                  </div>
+                  <div class="card__inner">
+                    <p class="card__price">5 500 000 Р</p>
+                    <p class="card__metr">1 кв / м - 45 000 Р</p>
+                    <p class="card__rooms">6 комн. <span class="card__area">88 м</span></p>
+                    <p class="card__floor">3 этаж из 9</p>
+                    <p class="card__address">Корсаков, ул. Корсаковская, 12</p>
+                  </div>
+                </a>
               </div>
             </div>
-            <div class="tab__block js-active" data-content="list">
+            <div class="tab__block offers__tab-block js-active" data-content="list">
               <div class="offers__block">
                 <div class="line u-jc-sb">
                   <p class="line__speacial">Снижение цены - 12%</p>
@@ -428,7 +489,7 @@
                   </div>
                   <div class="line__inner">
                     <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
+                    <p class="line__text line__opt u-jc-sb">
                       <span class="line__rooms">6 комн.</span>
                       <span class="line__area">88 м</span>
                       <span class="line__floor">3 этаж из 9</span>
@@ -448,7 +509,7 @@
                   </div>
                   <div class="line__inner">
                     <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
+                    <p class="line__text line__opt u-jc-sb">
                       <span class="line__rooms">6 комн.</span>
                       <span class="line__area">88 м</span>
                       <span class="line__floor">3 этаж из 9</span>
@@ -468,7 +529,7 @@
                   </div>
                   <div class="line__inner">
                     <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
+                    <p class="line__text line__opt u-jc-sb">
                       <span class="line__rooms">6 комн.</span>
                       <span class="line__area">88 м</span>
                       <span class="line__floor">3 этаж из 9</span>
@@ -488,7 +549,7 @@
                   </div>
                   <div class="line__inner">
                     <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
+                    <p class="line__text line__opt u-jc-sb">
                       <span class="line__rooms">6 комн.</span>
                       <span class="line__area">88 м</span>
                       <span class="line__floor">3 этаж из 9</span>
@@ -508,7 +569,7 @@
                   </div>
                   <div class="line__inner">
                     <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
+                    <p class="line__text line__opt u-jc-sb">
                       <span class="line__rooms">6 комн.</span>
                       <span class="line__area">88 м</span>
                       <span class="line__floor">3 этаж из 9</span>
@@ -528,7 +589,7 @@
                   </div>
                   <div class="line__inner">
                     <p class="line__price">5 500 000 Р 1 кв / м - 45 000 Р</p>
-                    <p class="line__text line__opt u-jc-fs">
+                    <p class="line__text line__opt u-jc-sb">
                       <span class="line__rooms">6 комн.</span>
                       <span class="line__area">88 м</span>
                       <span class="line__floor">3 этаж из 9</span>
@@ -549,11 +610,11 @@
       </div>
     </section>
     
-    <div class="offer-item__fixed-icon fixed-side-block u-jc-ce">
+    <!-- <div class="offer-item__fixed-icon fixed-side-block u-jc-ce">
       <span class="svg__fixed-icon"><svg class="svg ">
         <use xlink:href="#item__whatsapp">
       </svg></span>
-    </div> 
+    </div>  -->
 
 		<section class="register">
 			<p class="register__header">Хочу продать свою недвижимость</p>

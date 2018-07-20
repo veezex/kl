@@ -12,7 +12,7 @@
 			<div id="main-carousel" class="carousel slide slider" data-ride="carousel">
 				<div class="carousel-inner" role="listbox">
 					<div class="item item--best-offers active">
-						<div class="container">
+						<div class="container slider__container">
 							<div class="slider__content u-jc-fs u-ai-fe">
 								<div class="slider__text-block">
 									<p class="slider__header">Лучшие предложения на рынке аренды и покупки</p>
@@ -30,7 +30,7 @@
 						</div>
 					</div>
 					<div class="item item--test">
-						<div class="container">
+						<div class="container slider__container">
 							<div class="slider__content u-jc-fs u-ai-fe">
 								<div class="slider__text-block">
 									<p class="slider__header">Тест</p>
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="container">
+				<div class="container slider__container">
 					<div class="slider__arrows u-jc-sb">
 						<a href="#main-carousel" role="button" data-slide="prev" class="slider__arrow slider__arrow--left">
 							<span class="slider__arrow-img">
@@ -79,33 +79,60 @@
 							<form action="">
 								<div class="filter__input-group u-jc-sb">
 									<div class="filter__input-block filter__input-block--normal">
-										<input type="text" class="filter__input " placeholder="Города"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Город</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--normal">
-										<input type="text" class="filter__input" placeholder="Улица"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Улица</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--normal">
-										<input type="text" class="filter__input" placeholder="Дома / Квартира"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Дом / Квартира</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--small">
-										<input type="text" class="filter__input" placeholder="Цена От"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Цена От</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--small">
-										<input type="text" class="filter__input" placeholder="Цена До"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Цена До</span>
+										</div>
 									</div>
 								</div>
 								<div class="filter__input-group filter__input-group--add u-jc-sb">
 									<div class="filter__input-block filter__input-block--big">
-										<input type="text" class="filter__input " placeholder="Микрорайон"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Микрорайон</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
-										<input type="text" class="filter__input " placeholder="Жилой комплекс"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Жилой комплекс</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
-										<input type="text" class="filter__input " placeholder="Планировка"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Планировка</span>
+										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
-										<input type="text" class="filter__input " placeholder="Тип дома"/>
+										<div class="filter__input-wrap">
+											<input type="text" class="filter__input" required/>
+											<span class="filter__floating-label">Тип дома</span>
+										</div>
 									</div>
 								</div>
 								<div class="filter__footer u-jc-sb">
@@ -156,7 +183,7 @@
 								<span class="preset__text preset__number">2 856</span>
 							</li>
 						</ul>
-						<div>
+						<div class="search-type__preset-btn">
 							<a href="#" class="btn btn--white">Посмотреть все</a>
 						</div>
 					</div>
@@ -179,13 +206,13 @@
 								<span class="preset__text preset__number">2 856</span>
 							</li>
 						</ul>
-						<div>
+						<div class="search-type__preset-btn">
 							<a href="#" class="btn btn--white">Посмотреть все</a>
 						</div>				
 					</div>
 					<div class="search-type__preset preset preset--small preset--third u-fd-col u-jc-sb">
 						<p class="preset__header">3. Поиск жилья по карте</p>
-						<div>
+						<div class="search-type__preset-btn">
 							<a href="#" class="btn btn--white">Искать на карте</a>
 						</div>
 					</div>
@@ -230,7 +257,7 @@
 							</li>
 						</ul>
 					</div>
-					<div>
+					<div class="search-type__preset-btn">
 						<a href="#" class="btn btn--white">Посмотреть все</a>
 					</div>
 					<img src="images/preset__img.png" alt="" class="preset__img">
@@ -247,7 +274,7 @@
 					<div class="offers__block u-jc-sb">
 						<a class="card">
 							<p class="card__speacial">Снижение цены - 12%</p>
-							<div class="card__image" style="background-image:url(http://via.placeholder.com/350x150)">
+							<div class="card__image" style="background-image:url(/images/item__img.png)">
 							</div>
 							<div class="card__inner">
 								<p class="card__price">5 500 000 Р</p>
@@ -259,7 +286,7 @@
 						</a>
 						<a class="card">
 							<p class="card__speacial">Снижение цены - 12%</p>
-							<div class="card__image" style="background-image:url(http://via.placeholder.com/250x250)">
+							<div class="card__image" style="background-image:url(/images/item__img.png)">
 							</div>
 							<div class="card__inner">
 								<p class="card__price">5 500 000 Р</p>
@@ -271,7 +298,7 @@
 						</a>
 						<a class="card">
 							<p class="card__speacial">Снижение цены - 12%</p>
-							<div class="card__image" style="background-image:url(http://via.placeholder.com/450x100)">
+							<div class="card__image" style="background-image:url(/images/item__img.png)">
 							</div>
 							<div class="card__inner">
 								<p class="card__price">5 500 000 Р</p>
@@ -283,7 +310,7 @@
 						</a>
 						<a class="card">
 							<p class="card__speacial">Снижение цены - 12%</p>
-							<div class="card__image" style="background-image:url(http://via.placeholder.com/300x200)">
+							<div class="card__image" style="background-image:url(/images/item__img.png)">
 							</div>
 							<div class="card__inner">
 								<p class="card__price">5 500 000 Р</p>
@@ -387,18 +414,18 @@
 				<div class="partners__scrollable-div">
 					<div class="partners__block"> 
 						<div class="partners__img-block u-jc-sb"> 
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="images/pertners__logo1.png" alt="">
+							<img class="partners__img" src="images/pertners__logo2.png" alt="">
+							<img class="partners__img" src="images/pertners__logo3.png" alt="">
+							<img class="partners__img" src="images/pertners__logo4.png" alt="">
+							<img class="partners__img" src="images/pertners__logo5.png" alt="">
 						</div>
 						<div class="partners__img-block u-jc-sb partners__img-block--last"> 
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
-							<img class="partners__img" src="http://via.placeholder.com/350x150" alt="">
+							<img class="partners__img" src="images/pertners__logo6.png" alt="">
+							<img class="partners__img" src="images/pertners__logo7.png" alt="">
+							<img class="partners__img" src="images/pertners__logo8.png" alt="">
+							<img class="partners__img" src="images/pertners__logo9.png" alt="">
+							<img class="partners__img" src="images/pertners__logo10.png" alt="">
 						</div>
 					</div>
 				</div>

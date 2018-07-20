@@ -1,13 +1,28 @@
 .small-carousel {
   padding: 0 15px;
   .image__carousel-wrapper {
-    width: 100%;
-    float: left;
+    &--desktop {
+      width: 100%;
+      float: left;
+      @media (max-width: $min-width-medium) {
+        display: none;
+      }
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: $min-width-medium) {
+        display: block;
+      }
+    }
   }
   .item__wrapper {
     width: 20%;
     float: left;
     padding: 0 10px;
+    @media (max-width: $min-width-medium) {
+      width: 100%;
+      padding: 0;
+    }
   }
   .item__img {
     width: 100%;
@@ -24,8 +39,11 @@
         margin-right:15px;
       }
     }
+    // .cloneditem-1, .cloneditem-2, .cloneditem-3,.cloneditem-4 {
+    //   display: none;
+    // }
     .cloneditem-1, .cloneditem-2, .cloneditem-3,.cloneditem-4 {
-      display: none;
+      display: block;
     }
     .carousel-inner {
       margin: 0 55px;

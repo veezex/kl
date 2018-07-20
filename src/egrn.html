@@ -43,16 +43,28 @@
           <form action="">
             <div class="filter__input-group u-jc-sb">
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
-                <input type="text" class="filter__input " placeholder="Кадастровый номер"/>
+                <div class="filter__input-wrap">
+                  <input type="text" class="filter__input" required/>
+                  <span class="filter__floating-label">Кадастровый номер</span>
+                </div>
               </div>
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
-                <input type="text" class="filter__input" placeholder="Ваше Имя"/>
+                <div class="filter__input-wrap">
+                  <input type="text" class="filter__input" required/>
+                  <span class="filter__floating-label">Ваше Имя</span>
+                </div>
               </div>
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
-                <input type="text" class="filter__input" placeholder="Телефон"/>
+                <div class="filter__input-wrap">
+                  <input type="text" class="filter__input" required/>
+                  <span class="filter__floating-label">Телефон</span>
+                </div>
               </div>
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
-                <input type="text" class="filter__input" placeholder="Выбор Whatsup/Почта"/>
+                <div class="filter__input-wrap">
+                  <input type="text" class="filter__input" required/>
+                  <span class="filter__floating-label">Выбор Whatsup/Почта</span>
+                </div>
               </div>
               <button class="btn btn--regular egrn__btn" type="submit">Поиск</button>
             </div>
@@ -67,34 +79,42 @@
           <p class="offer-item__header section__header">Почему мы</p>
         </div>
         <div class="container">
-          <div class="benefits__block u-jc-sb u-fw-wr">
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+          <div class="benefits__block u-jc-sb">
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-fast">
               </svg></span>
-              <p>Быстро</p>
-              <p class="benefits__item-text">80% заказов вы получите в течение дня</p>
+              <div class="benefits__item-content">
+                <p class="benefits__item-header">Быстро</p>
+                <p class="benefits__item-text">80% заказов вы получите в течение дня</p>
+              </div> 
             </div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-good">
               </svg></span>
-              <p>Выгодно</p>
-              <p class="benefits__item-text">Стоимость простой выписки от 99 рублей</p>
+              <div class="benefits__item-content">
+                <p class="benefits__item-header">Выгодно</p>
+                <p class="benefits__item-text">Стоимость простой выписки от 99 рублей</p>
+              </div>
             </div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce u-ai-ce u-fd-col"><span class="svg__item-infra">
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-comf">
               </svg></span>
-              <p>Удобно</p>
-              <p class="benefits__item-text">Вам придет уведомление о готовности выписки</p>
+              <div class="benefits__item-content">
+                <p class="benefits__item-header">Удобно</p>
+                <p class="benefits__item-text">Вам придет уведомление о готовности выписки</p>
+              </div>
             </div>
-            <div class="benefits__item u-ai-ce u-fd-col u-jc-ce"><span class="svg__item-infra">
+            <div class="benefits__item u-ai-ce"><span class="svg__item-infra">
               <svg class="svg">
                 <use xlink:href="#item__icon-solved">
               </svg></span>
-              <p>Решено</p>
-              <p class="benefits__item-text">Заказ простой выписки или с цифровой подписью Росреестра</p>
+              <div class="benefits__item-content">
+                <p class="benefits__item-header">Решено</p>
+                <p class="benefits__item-text">Заказ простой выписки или с цифровой подписью Росреестра</p>
+              </div>
             </div>
           </div>
         </div>
@@ -239,10 +259,7 @@
         </div>
       </div>
     </section>
-
-    <section class="register">
-      <a href="#" class="btn btn--empty register__btn register__btn--big">Получить консультацию</a>
-    </section>
+    //= _consult.html
     
     <div class="about-us__fixed-icon fixed-side-block u-jc-ce">
       <a href="#">Юридическая помощь</a>

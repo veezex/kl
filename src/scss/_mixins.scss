@@ -15,6 +15,12 @@ $container-width-mob: 340px;
 
 $min-width-mob: 1279px;
 
+$min-width-large: 1080px;
+$min-width-medium: 979px;
+$min-width-small: 767px;
+$min-width-xsmall: 600px;
+
+$max-width-medium: 980px;
 //utils
 .u-jc-fe {display: flex;justify-content: flex-end;}
 .u-jc-fs {display: flex;justify-content: flex-start;}
@@ -66,7 +72,13 @@ $min-width-mob: 1279px;
   &::-moz-placeholder          {@content};
   &:-ms-input-placeholder      {@content};
 }
-@mixin grey {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+// @mixin grey {
+//   -webkit-filter: grayscale(100%);
+//   filter: grayscale(100%);
+// }
+
+@mixin text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

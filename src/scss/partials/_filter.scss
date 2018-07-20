@@ -8,40 +8,66 @@
   &__nav {
     width: 235px;
     margin-bottom: 45px;
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-large) {
       margin-bottom: 35px;      
     }
   }
   &__input-block {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
+    margin: 0 10px 40px;
     &--normal {
-      width: 260px;
+      // width: 260px;
+      flex-basis: 20%;
     }
     &--big {
-      width: 300px;
+      // width: 300px;
+      flex-basis: 22%;
     }
     &--small {
-      width: 190px;
+      // width: 190px;
+      flex-basis: 15%;
     }
     &--inline {
       margin: 0;
     }
     &--full {
       width: 100%;
+      margin-left: 0;
+      margin-right: 0;
     }
-    @media (max-width: $min-width-mob) {
-      width: 100%;
+    @media (max-width: $min-width-small) {
+      // width: 100%;
+      flex-basis: 100%;
+      margin-bottom: 20px;
       &--small {
-        width: 45%;
-        max-width: 158px;
+        // width: 45%;
+        flex-basis: 42%;
+        // max-width: 158px;
+      }
+    }
+  }
+  &__input-group {
+    // flex-wrap: wrap;
+    margin: 0 -10px;
+    @media (max-width: $min-width-small) {
+      flex-wrap: wrap;
+    }
+    &--add {
+      display: none;
+      &.js-isVisible {
+        display: flex;
       }
     }
   }
   &__label {
     color: #9B9B9B;
+    margin-right: 10px;
     @include typo($size:14px,$line:18px);
     &--textarea {
       padding-top: 16px;
+    }
+    @media (max-width: $min-width-small) {
+      display: none;
     }
   }
   &__input {
@@ -49,35 +75,65 @@
     border-radius: 8px;
     border: none;
     height: 60px;
-    padding: 0 20px;
+    padding: 0 20px 0;
     font-size: 14px;
+    line-height: 18px;
     color: $black;
     // margin-bottom: 40px;
     width: 100%;
     &--full {
       width: 500px;
+      @media (max-width: $min-width-small) {
+        width: 100%;
+      }
     }
-    @include placeholder{
-      font-size: 14px;
-      color: #9B9B9B;
-    };
-    @media (max-width: $min-width-mob) {
-      margin-bottom: 20px;
+    // @include placeholder{
+    //   font-size: 14px;
+    //   color: #9B9B9B;
+    // }
+    &:focus,
+    &:not(:focus):valid {
+      padding: 23px 20px 0;
+    }
+    &:focus ~ .filter__floating-label,
+    &:not(:focus):valid ~ .filter__floating-label{
+      top: 9px;
+      // bottom: auto;
+      // left: 20px;
+      // font-size: 14px;
+      // color: #C0C0C0;
+      // opacity: 1;
     }
   }
   &__textarea {
     height: 160px;
     resize: none;
     padding: 18px 20px;
+    &:focus,
+    &:not(:focus):valid {
+      padding: 30px 20px 18px;
+    }
   }
-  &__input-group {
-    flex-wrap: wrap;
-    &--add {
-      display: none;
-      &.js-isVisible {
-        display: flex;
+  &__input-wrap {
+    position: relative;
+    @media (max-width: $min-width-small) {
+      &--full {
+        width: 100%;
       }
     }
+  }
+  &__floating-label {
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    padding: 0 20px; 
+    line-height: 18px;
+    color: #C0C0C0;
+    font-size: 14px;
+    top: 21px;
+    transition: 0.2s ease all;
+    @include text-overflow;
   }
   &__link {
     color: $blue;
@@ -88,7 +144,7 @@
     // &__link--map {
     //   display: flex;
     // }
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-small) {
       margin-right: auto;
       &__link--map {
         display: none;
@@ -110,7 +166,7 @@
     }
   }
   &__link-group {
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-small) {
       flex-direction: column;
     }
   }
@@ -119,14 +175,9 @@
   }
   &__footer {
     // flex-direction: row;
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-small) {
       flex-direction: column-reverse;  
     }
-  }
-  &__header {
-    padding: 0 20px 20px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid rgba(#979797,0.2);
   }
   &--mob {
     padding: 25px 40px;
@@ -135,13 +186,16 @@
       margin-bottom: 35px;      
     }
     .filter__input-block {
-      width: 100%;
+      // width: 100%;
+      flex-basis: 100%;
+      // margin-bottom: 40px;
       &--small {
-        width: 45%;
+        // width: 45%;
+        flex-basis: 40%;
       }
     }
-    .filter__input {
-      margin-bottom: 40px;
+    .filter__input-group {
+      flex-wrap: wrap;
     }
     .filter__link {
       margin-right: auto;
@@ -151,19 +205,6 @@
     }
     .filter__link-group {
       display: none;
-    }
-  }
-  &--modal {
-    display: none;
-    &.isOpened {
-      display: block;
-      position: fixed;
-      background: $white;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      overflow-y: scroll;
-      overflow-x: hidden;
     }
   }
   &__radio {
@@ -180,6 +221,9 @@
         font-size: 14px;
         color: #9B9B9B;
         padding: 11px 0 11px 80px;
+        @media (max-width: $min-width-small) {
+          padding-left: 50px;
+        }
         &:before {
           content: '';
           position: absolute;
@@ -200,7 +244,7 @@
         }
       }
       &:checked + label:after {
-        background: $black;
+        background-image: url(../images/mark.png);
       }
       // &:checked + label:before {
       //   background: #9FD468;

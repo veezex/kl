@@ -1,7 +1,6 @@
 .slider {
-  color: $white;
   margin-bottom: 60px;
-  @media (max-width: $min-width-mob) {
+  @media (max-width: $min-width-medium) {
     margin-bottom: 30px;
   }
   &--fixed {
@@ -30,21 +29,47 @@
       }
     }
   }
+  &__container {
+    @media (max-width: $min-width-medium) {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
   &__content {
     position: relative;
-    height: 345px;
-    @media (max-width: $min-width-mob) {
-      height: 190px;
+    // height: 345px;
+    color: $white;
+    min-height: 140px;
+    // @media (max-width: $min-width-medium) {
+    //   height: 305px;
+    // }
+    // @media (max-width: $min-width-small) {
+    //   height: 190px;
+    // }
+  }
+  &__contact-text {
+    display: none;
+    @media (max-width: $min-width-xsmall) {
+      display: block;
+      width: 50%;
+      margin-bottom: 20px;
     }
   }
   &__header {
     width: 538px;
     padding: 30px 0 25px;
     @include typo($size:36px,$line:44px,$weight:500);
-    @media (max-width: $min-width-mob) {
-      width: 180px;
-      padding: 15px 0 25px;
-      @include typo($size:20px,$line:24px,$weight:500);
+    @media (max-width: $min-width-medium) {
+      // width: 430px;
+      width: 60%;
+      padding: 20px 0;
+      @include typo($size:30px,$line:34px,$weight:500);
+    }
+    @media (max-width: $min-width-small) {
+      @include typo($size:24px,$line:30px,$weight:500);
+    }
+    @media (max-width: $min-width-xsmall) {
+      @include typo($size:18px,$line:22px,$weight:500);
     }
   }
   &__list {
@@ -52,39 +77,54 @@
     margin-bottom: 35px;
     max-width: 576px;
     @include typo($size:20px,$line:30px);
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-medium) {
+      margin-bottom: 20px;
+      width: 50%;
+      @include typo($size:18px,$line:24px);
+    }
+    @media (max-width: $min-width-xsmall) {
       display: none;
     }
   }
   &__btn {
     margin-bottom: 40px;
     text-transform: capitalize;
-    @media (max-width: $min-width-mob) {
-      margin-bottom: 18px;
+    @media (max-width: $min-width-small) {
+      margin-bottom: 20px;
     }
   }
   &__img {
     position: absolute;
     bottom: 0;
-    right: 20%;
-    height: 100%;   
-    @media (max-width: $min-width-mob) {
+    right: 15%;
+    height: 100%;  
+    max-height: 340px; 
+    @media (max-width: $min-width-medium) {
       right: 0;
-      height: 180px;
-
+      // height: 90%;
     }
+    @media (max-width: $min-width-xsmall) {
+      height: 80%;
+    }
+    // @media (max-width: $min-width-small) {
+    //   right: 0;
+    //   height: 180px;
+    // }
   }
   &__arrows {
     position: absolute;
     bottom: 40px;
-    right: 20px;
+    right: 6%;
     width: 120px;
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-medium) {
       display: none;
     }
   }
   &__arrow {
     display: flex;
+  }
+  &__text-block {
+    width: 100%;
   }
 }
 

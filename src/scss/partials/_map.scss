@@ -3,9 +3,10 @@
   &__image {
     position: relative;
     width: calc(100% - 340px);
-    min-height: 1030px;
-    @media (max-width: $min-width-mob) {
+    height: 1030px;
+    @media (max-width: $min-width-medium) {
       width: 100%;
+      height: calc(100vh - 161px)!important;
     }
   }
   &__side {
@@ -15,7 +16,7 @@
     height: 100%;
     width: 340px;
     background-color: $white;
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-medium) {
       display: none;
     }
   }
@@ -47,7 +48,7 @@
     box-shadow: 0 14px 30px -3px rgba(0,0,0,0.31);
     border-radius: 8px;
     @include typo($size:20px,$line:40px);
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-medium) {
       display: none;
     }
   }
@@ -63,7 +64,7 @@
   }
   &__btn-block {
     display: none;
-    @media (max-width: $min-width-mob) {
+    @media (max-width: $min-width-medium) {
       display: flex;
     }
   }

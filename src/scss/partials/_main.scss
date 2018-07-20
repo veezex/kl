@@ -117,3 +117,40 @@ input, textarea, select, button {
   transition-duration: 0.35s;
   transition-timing-function: ease;
 }
+.wrapper {
+  margin: 0 -10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+  &:after {
+    content: "";
+  }
+  &:after, .col {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+}
+.modal {
+  display: none;
+  &.isOpened {
+    display: block;
+    position: fixed;
+    background: $white;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 9999;
+    padding: 0 0 80px;
+    @media (max-width: $min-width-small) {
+      padding: 0 0 30px;
+    }
+  }
+  &__header {
+    padding: 40px 0 50px;
+    // margin-bottom: 25px;
+    // border-bottom: 1px solid rgba(#979797,0.2);
+  }
+}

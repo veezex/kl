@@ -8,7 +8,6 @@
   }
   &__card {
     position: relative;
-    width: 640px;
     height: 320px;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -16,6 +15,9 @@
     color: $white;
     @include typo($size:14px,$line:18px);
     @include gradient ($dir:top,$start:#004E80,$end:#002649);
+  }
+  &__card, &__block:after {
+    width: 450px;
   }
   &__card-text {
     max-width: 250px;

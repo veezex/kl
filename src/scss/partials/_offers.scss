@@ -16,11 +16,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    &--notscrollabel {
-      @media (max-width: $min-width-mob) {
-        justify-content: space-around;
-      }
-    }
+    // &--notscrollabel {
+    //   @media (max-width: $min-width-mob) {
+    //     justify-content: space-around;
+    //   }
+    // }
+  }
+  &__card, &__block:after {
+      width: 300px;
   }
   &__nav {
     margin-top: 60px;
@@ -28,13 +31,23 @@
     //   display: flex;
     // }
     &-icons {
-      @media (max-width: $min-width-mob) {
+      @media (max-width: $min-width-large) {
         display: none;
       }
     }
   }
   &__pagination {
     padding-bottom: 20px;
+  }
+  &__tab-block {
+    @media (max-width: $min-width-large) {
+      &[data-content="card"] {
+        display: block!important;
+      }
+      &[data-content="list"] {
+        display: none!important;
+      }
+    }
   }
 }
 .pagination {

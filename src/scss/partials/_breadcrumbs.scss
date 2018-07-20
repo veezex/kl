@@ -1,13 +1,20 @@
 .breadcrumbs {
-  padding: 30px 0;
+  padding: 30px 0 25px;
   &__link {
     margin-right: 20px;
     color: $black;
+    white-space: nowrap;
     @include typo($size:12px,$line:15px);
   }
-  &__item:last-child {
-    .breadcrumbs__link {
-      color: $blue;
+  &__list {
+    flex-wrap: wrap;
+  }
+  &__item { 
+    margin-bottom: 5px;
+    &:last-child {
+      .breadcrumbs__link {
+        color: $blue;
+      }
     }
   }
   &--map {

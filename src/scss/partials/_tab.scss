@@ -4,6 +4,8 @@
     height: 43px;
     display: block;
     margin-bottom: -1px;
+    margin-right: 10px;
+    white-space: nowrap;
     @include typo($size:20px,$line:24px);
     @media (max-width: $min-width-mob) {
       @include typo($size:18px,$line:22px);
@@ -29,9 +31,13 @@
     }
   }
   &__nav {
+    flex-wrap: wrap;
     border-bottom: 1px solid rgba($nut-brown,0.4);
     &--clean {
       border: none;
+    }
+    li {
+      margin-bottom: 5px;
     }
   }
   &__block {

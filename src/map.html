@@ -19,7 +19,7 @@
     
     <section class="map">
       <div class="map__btn-block u-jc-sb">
-        <a href="javascript:;" data-modal="filter" class="js-map__btn map__btn u-jc-ce u-ai-ce">
+        <a href="javascript:;" data-modal="filter" class="js-modal__btn map__btn u-jc-ce u-ai-ce">
           <span class="svg__map-btn"><svg class="svg ">
             <use xlink:href="#map__btn--filter">
           </svg></span>
@@ -32,7 +32,7 @@
           Карточки
         </a>
       </div>
-      <div id="map" class="map__image" style="height: 1030px"></div>
+      <div id="map" class="map__image"></div>
       <a class="map__list-btn u-jc-sb u-ai-ce" href="#">
         <span class="svg__map-list"><svg class="svg ">
           <use xlink:href="#map__list">
@@ -42,39 +42,66 @@
       <div class="map__side filter filter--mob">
         <div class="tab" >
           <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
-            <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
             <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
+            <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
           </ul>
           <div class="filter__content tab__content">
             <div class="tab__block js-active" data-content="buy">
               <form action="">
                 <div class="filter__input-group u-jc-sb">
                   <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input " placeholder="Города"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Город</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input" placeholder="Улица"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Улица</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input" placeholder="Дома / Квартира"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Дом / Квартира</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--small">
-                    <input type="text" class="filter__input" placeholder="Цена От"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Цена От</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--small">
-                    <input type="text" class="filter__input" placeholder="Цена До"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Цена До</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Микрорайон"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Микрорайон</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Жилой комплекс"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Жилой комплекс</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Планировка"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Планировка</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Тип дома"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Тип дома</span>
+                    </div>
                   </div>
                 </div>
                 <div class="filter__footer u-jc-ce">
@@ -92,15 +119,15 @@
       </div>
     </section>
 
-		<div class="section filter filter--modal js-modal" id="filter">
-        <div class="filter__header">
-          <a href="javascript:;" id="modal-close" class="filter__header-close u-jc-fe">
-            <span class="svg__filter-close"><svg class="svg">
-              <use xlink:href="#map__close-filter">
-            </svg></span> 
-          </a>
-        </div>
-        <div class="container">
+		<div class="section filter modal js-modal" id="filter">
+      <div class="modal__header">
+        <a href="javascript:;" id="modal-close" class="modal__header-close u-jc-ce">
+          <span class="svg__filter-close"><svg class="svg">
+            <use xlink:href="#map__close-filter">
+          </svg></span> 
+        </a>
+      </div>
+      <div class="container">
         <div class="tab">
           <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
             <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
@@ -111,33 +138,60 @@
               <form action="">
                 <div class="filter__input-group u-jc-sb">
                   <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input " placeholder="Города"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Город</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input" placeholder="Улица"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Улица</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--normal">
-                    <input type="text" class="filter__input" placeholder="Дома / Квартира"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Дом / Квартира</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--small">
-                    <input type="text" class="filter__input" placeholder="Цена От"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Цена От</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--small">
-                    <input type="text" class="filter__input" placeholder="Цена До"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Цена До</span>
+                    </div>
                   </div>
                 </div>
                 <div class="filter__input-group filter__input-group--add u-jc-sb">
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Микрорайон"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Микрорайон</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Жилой комплекс"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Жилой комплекс</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Планировка"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Планировка</span>
+                    </div>
                   </div>
                   <div class="filter__input-block filter__input-block--big">
-                    <input type="text" class="filter__input " placeholder="Тип дома"/>
+                    <div class="filter__input-wrap">
+                      <input type="text" class="filter__input" required/>
+                      <span class="filter__floating-label">Тип дома</span>
+                    </div>
                   </div>
                 </div>
                 <div class="filter__footer u-jc-sb">
