@@ -154,3 +154,20 @@ input, textarea, select, button {
     // border-bottom: 1px solid rgba(#979797,0.2);
   }
 }
+
+.js-select {
+  &-block {
+    display: none;
+    &.isOpen {
+      display: block;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  &-btn {
+
+  }
+  &-item {
+
+  }
+}

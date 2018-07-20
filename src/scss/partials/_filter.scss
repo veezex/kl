@@ -103,6 +103,36 @@
       // font-size: 14px;
       // color: #C0C0C0;
       // opacity: 1;
+    }  
+  }
+  &__select {
+    &-btn, &-item {
+      background-color: #EAF4F6;
+      font-size: 14px;
+      display: block;
+      width: 500px;
+      height: 60px;
+    }
+    &-item {
+      padding: 0 20px 0;
+      color: black;
+      border-top: 2px solid $white;
+      line-height: 60px;
+      &:first-child {
+        border-radius: 8px 8px 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 8px 8px;
+      }
+    }
+    &-btn {
+      padding: 23px 20px 0;
+      color: black;
+      border-radius: 8px;
+      line-height: 37px;
+    }
+    &-label.floated {
+      top: 9px;
     }
   }
   &__textarea {

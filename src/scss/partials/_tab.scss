@@ -4,7 +4,7 @@
     height: 43px;
     display: block;
     margin-bottom: -1px;
-    margin-right: 10px;
+    // margin-right: 10px;
     white-space: nowrap;
     @include typo($size:20px,$line:24px);
     @media (max-width: $min-width-mob) {
@@ -36,9 +36,9 @@
     &--clean {
       border: none;
     }
-    li {
-      margin-bottom: 5px;
-    }
+    // li {
+    //   margin-bottom: 5px;
+    // }
   }
   &__block {
     display: none;

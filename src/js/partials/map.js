@@ -35,8 +35,8 @@ if (document.getElementById('map') !== null) {
         placemark = new ymaps.Placemark([55.760584, 37.639450], {}, {
             iconLayout: 'default#image',
             iconImageHref: 'images/map__baloon.png',
-            iconImageSize: [40, 50],
-            iconImageOffset: [-20, -50]
+            iconImageSize: [57, 51],
+            iconImageOffset: [-37, -50]
         }),
 
         // Создадим пользовательский макет ползунка масштаба.
