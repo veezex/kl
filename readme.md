@@ -6,7 +6,7 @@
 | **Каталог недвижимости** | Сделано | Сделано | **Сделано** | [http://klient-plus.2u4u.ru/catalog.html] |
 | **Поиск по карте** | Сделано | Сделано | **Сделано** | [http://klient-plus.2u4u.ru/map.html] |
 | **Название карточки** | Сделано | Сделано | **Сделано** | [http://klient-plus.2u4u.ru/item.html] |
-| **О нас** | Сделано | Нет дизайна | Частично | [http://klient-plus.2u4u.ru/about.html] |
+| **О нас** | Сделано | Не сделано | Частично | [http://klient-plus.2u4u.ru/about-us.html] |
 | **Акредитация** | Сделано | Сделано | **Сделано** | [http://klient-plus.2u4u.ru/acred.html] |
 | **История** | Cделано | Сделано | **Сделано** | [http://klient-plus.2u4u.ru/history.html] |
 | **Сотрудники** | Cделано | Сделано | **Сделано** | [http://klient-plus.2u4u.ru/employees.html] |
@@ -26,7 +26,7 @@
 [http://klient-plus.2u4u.ru/catalog.html]: <http://klient-plus.2u4u.ru/catalog.html>
 [http://klient-plus.2u4u.ru/map.html]: <http://klient-plus.2u4u.ru/map.html>
 [http://klient-plus.2u4u.ru/item.html]: <http://klient-plus.2u4u.ru/item.html>
-[http://klient-plus.2u4u.ru/about.html]: <http://klient-plus.2u4u.ru/about.html>
+[http://klient-plus.2u4u.ru/about-us.html]: <http://klient-plus.2u4u.ru/about-us.html>
 [http://klient-plus.2u4u.ru/acred.html]: <http://klient-plus.2u4u.ru/acred.html>
 [http://klient-plus.2u4u.ru/history.html]: <http://klient-plus.2u4u.ru/history.html>
 [http://klient-plus.2u4u.ru/employees.html]: <http://klient-plus.2u4u.ru/employees.html>
