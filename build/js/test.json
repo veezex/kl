@@ -1,0 +1,362 @@
+[
+    {
+        "serialNumber": "78503",
+        "isActive": true,
+        "lat": 55.847970759419354,
+        "long": 37.443230598391445
+    },
+    {
+        "serialNumber": "42107-7690",
+        "isActive": true,
+        "lat": 55.832463911722755,
+        "long": 37.50722855720111
+    },
+    {
+        "serialNumber": "68301-4856",
+        "isActive": true,
+        "lat": 55.87494165641105,
+        "long": 37.4506301041736
+    },
+    {
+        "serialNumber": "48641",
+        "isActive": true,
+        "lat": 55.870565313150536,
+        "long": 37.76432344326789
+    },
+    {
+        "serialNumber": "24689",
+        "isActive": true,
+        "lat": 55.8711584442736,
+        "long": 37.78753731786021
+    },
+    {
+        "serialNumber": "80615-6953",
+        "isActive": true,
+        "lat": 55.65244296556721,
+        "long": 37.46735516249412
+    },
+    {
+        "serialNumber": "59806-6673",
+        "isActive": true,
+        "lat": 55.66436777868713,
+        "long": 37.52282031630489
+    },
+    {
+        "serialNumber": "02834-1347",
+        "isActive": true,
+        "lat": 55.856618144454146,
+        "long": 37.46367892120961
+    },
+    {
+        "serialNumber": "69295-9039",
+        "isActive": true,
+        "lat": 55.647948252575134,
+        "long": 37.491053518627695
+    },
+    {
+        "serialNumber": "51604",
+        "isActive": true,
+        "lat": 55.84501654126174,
+        "long": 37.51603251273419
+    },
+    {
+        "serialNumber": "24743",
+        "isActive": true,
+        "lat": 55.665322860030464,
+        "long": 37.78563093193973
+    },
+    {
+        "serialNumber": "77925",
+        "isActive": true,
+        "lat": 55.6639251246288,
+        "long": 37.71966005670023
+    },
+    {
+        "serialNumber": "71310",
+        "isActive": true,
+        "lat": 55.66970077331562,
+        "long": 37.51818290279945
+    },
+    {
+        "serialNumber": "63231",
+        "isActive": true,
+        "lat": 55.85888336700342,
+        "long": 37.78132464979776
+    },
+    {
+        "serialNumber": "48928-7851",
+        "isActive": true,
+        "lat": 55.66354626342607,
+        "long": 37.55212889576838
+    },
+    {
+        "serialNumber": "86987-7950",
+        "isActive": true,
+        "lat": 55.85029444292573,
+        "long": 37.45266249471864
+    },
+    {
+        "serialNumber": "75361-5708",
+        "isActive": false,
+        "lat": 55.65857291399821,
+        "long": 37.762345243029465
+    },
+    {
+        "serialNumber": "98130",
+        "isActive": true,
+        "lat": 55.802538006842056,
+        "long": 37.51577448556852
+    },
+    {
+        "serialNumber": "34218-5181",
+        "isActive": true,
+        "lat": 55.67029996768297,
+        "long": 37.46062685591987
+    },
+    {
+        "serialNumber": "77633-6405",
+        "isActive": true,
+        "lat": 55.69213275113615,
+        "long": 37.69486302238808
+    },
+    {
+        "serialNumber": "98829",
+        "isActive": true,
+        "lat": 55.82476322009942,
+        "long": 37.477740662460185
+    },
+    {
+        "serialNumber": "08186-1119",
+        "isActive": true,
+        "lat": 55.65371131080438,
+        "long": 37.484240813580975
+    },
+    {
+        "serialNumber": "48415",
+        "isActive": true,
+        "lat": 55.66749555103815,
+        "long": 37.750585618248714
+    },
+    {
+        "serialNumber": "76579-9347",
+        "isActive": true,
+        "lat": 55.656992858167804,
+        "long": 37.467322708506
+    },
+    {
+        "serialNumber": "37885",
+        "isActive": true,
+        "lat": 55.814396719937086,
+        "long": 37.762717611909515
+    },
+    {
+        "serialNumber": "33202",
+        "isActive": true,
+        "lat": 55.843082792397965,
+        "long": 37.519173127260224
+    },
+    {
+        "serialNumber": "12471-6826",
+        "isActive": true,
+        "lat": 55.76518319642707,
+        "long": 37.75605100687726
+    },
+    {
+        "serialNumber": "58394-0815",
+        "isActive": true,
+        "lat": 55.64460038685085,
+        "long": 37.44359442161493
+    },
+    {
+        "serialNumber": "86161",
+        "isActive": true,
+        "lat": 55.850241378039925,
+        "long": 37.51215349817709
+    },
+    {
+        "serialNumber": "24093-6912",
+        "isActive": true,
+        "lat": 55.66140076514955,
+        "long": 37.45600964585262
+    },
+    {
+        "serialNumber": "14909",
+        "isActive": true,
+        "lat": 55.82890748579944,
+        "long": 37.78382332693762
+    },
+    {
+        "serialNumber": "84434",
+        "isActive": true,
+        "lat": 55.81791012160271,
+        "long": 37.67752622937038
+    },
+    {
+        "serialNumber": "12948-2204",
+        "isActive": true,
+        "lat": 55.87265794136658,
+        "long": 37.559386825297565
+    },
+    {
+        "serialNumber": "49419-1532",
+        "isActive": true,
+        "lat": 55.71467872825759,
+        "long": 37.470990835535304
+    },
+    {
+        "serialNumber": "09005",
+        "isActive": true,
+        "lat": 55.80579284218278,
+        "long": 37.53639736983006
+    },
+    {
+        "serialNumber": "89294",
+        "isActive": true,
+        "lat": 55.70203575605448,
+        "long": 37.54647936956003
+    },
+    {
+        "serialNumber": "62140-3849",
+        "isActive": true,
+        "lat": 55.640580079289165,
+        "long": 37.444591437240334
+    },
+    {
+        "serialNumber": "19259-0632",
+        "isActive": true,
+        "lat": 55.697332680913135,
+        "long": 37.75652185504242
+    },
+    {
+        "serialNumber": "81988-1658",
+        "isActive": true,
+        "lat": 55.672895609492585,
+        "long": 37.678489805087814
+    },
+    {
+        "serialNumber": "31928",
+        "isActive": true,
+        "lat": 55.64374214024589,
+        "long": 37.52377367691768
+    },
+    {
+        "serialNumber": "23006",
+        "isActive": false,
+        "lat": 55.65756735728209,
+        "long": 37.467629060611294
+    },
+    {
+        "serialNumber": "47508",
+        "isActive": true,
+        "lat": 55.695135400225304,
+        "long": 37.44597835651451
+    },
+    {
+        "serialNumber": "72575",
+        "isActive": true,
+        "lat": 55.82403239966721,
+        "long": 37.44454159934634
+    },
+    {
+        "serialNumber": "63913-0556",
+        "isActive": true,
+        "lat": 55.86714476995577,
+        "long": 37.49449667951415
+    },
+    {
+        "serialNumber": "30199",
+        "isActive": true,
+        "lat": 55.85369985404295,
+        "long": 37.50345237293479
+    },
+    {
+        "serialNumber": "61959",
+        "isActive": true,
+        "lat": 55.64910404489965,
+        "long": 37.73736303316609
+    },
+    {
+        "serialNumber": "70294",
+        "isActive": true,
+        "lat": 55.647186098789156,
+        "long": 37.46261562087261
+    },
+    {
+        "serialNumber": "61921-5039",
+        "isActive": true,
+        "lat": 55.71110583216581,
+        "long": 37.50232031214414
+    },
+    {
+        "serialNumber": "72579-1048",
+        "isActive": true,
+        "lat": 55.66053231011371,
+        "long": 37.75761473936006
+    },
+    {
+        "serialNumber": "19653",
+        "isActive": true,
+        "lat": 55.83705211075773,
+        "long": 37.78487178515993
+    },
+    {
+        "serialNumber": "20891",
+        "isActive": true,
+        "lat": 55.84262265944743,
+        "long": 37.7375826729975
+    },
+    {
+        "serialNumber": "96584-5508",
+        "isActive": true,
+        "lat": 55.78325218230541,
+        "long": 37.56345940360424
+    },
+    {
+        "serialNumber": "24152-3041",
+        "isActive": true,
+        "lat": 55.66632614230797,
+        "long": 37.72979595686043
+    },
+    {
+        "serialNumber": "69366-7742",
+        "isActive": true,
+        "lat": 55.667041070075555,
+        "long": 37.76725701263873
+    },
+    {
+        "serialNumber": "51356",
+        "isActive": true,
+        "lat": 55.86449254510927,
+        "long": 37.771829461170185
+    },
+    {
+        "serialNumber": "40324-4189",
+        "isActive": true,
+        "lat": 55.87605931470447,
+        "long": 37.72066845243013
+    },
+    {
+        "serialNumber": "52577",
+        "isActive": true,
+        "lat": 55.7963042197646,
+        "long": 37.44726739601552
+    },
+    {
+        "serialNumber": "83338-1942",
+        "isActive": true,
+        "lat": 55.864245379245695,
+        "long": 37.44317050464416
+    },
+    {
+        "serialNumber": "23306-3907",
+        "isActive": true,
+        "lat": 55.82204349073193,
+        "long": 37.46410041765692
+    },
+    {
+        "serialNumber": "98773",
+        "isActive": true,
+        "lat": 55.66005665818038,
+        "long": 37.754896738765424
+    }
+]

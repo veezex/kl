@@ -94,13 +94,13 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наши *.scss
         .pipe(rigger()) //Прогоним через rigger
-        .pipe(sourcemaps.init()) //То же самое что и с js
+        // .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer({
             browsers: ['last 4 versions']
         })) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
 });
@@ -133,12 +133,10 @@ gulp.task('copysvg', function() {
       .pipe(gulp.dest('build/images/'));
 });
 
-// gulp.task('copycss', function() {
-//     gulp.src('./src/scss/**/*.css')
-//         .pipe(cssmin()) //Сожмем
-//         .pipe(gulp.dest('build/css/'))
-//         // .pipe(gulp.dest('wp/css/'));
-// });
+gulp.task('copyjson', function() {
+    gulp.src('./src/js/**/*.json')
+        .pipe(gulp.dest('build/js/'))
+});
 
 gulp.task('build', [
     'internalsvg',
@@ -147,7 +145,8 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'copyjson'
     // 'svgstore'
     // 'copysvg',
     // 'copycss'

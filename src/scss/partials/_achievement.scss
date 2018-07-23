@@ -3,15 +3,39 @@
   &__header {
     margin-bottom: 35px;
   }
+  &__block {
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-grow: 1;
+    @media (max-width: $min-width-large) {
+      flex-wrap: wrap;
+    }
+  }
   &__item {
-    width: 180px;
+    width: 16%;
+    max-width: 200px;
+    padding: 0 10px 20px;
+    text-align: center;
+    flex-grow: 1;
+    @media (max-width: $min-width-large) {
+      flex-basis: 30%;
+      max-width: none;
+    }
+    @media (max-width: $min-width-small) {
+      flex-basis: 45%;
+    }
   }
   &__img {
     margin-bottom: 20px;
+    width: 100%;
   }
   &__text {
-    padding: 0 15px;
+    padding: 0 7%;
+    width: 100%;
     text-align: center;
     @include typo($size:16px,$line:19px);
+    @media (max-width: $min-width-small) {
+      @include typo($size:14px,$line:16px);
+    }
   }
 }
