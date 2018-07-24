@@ -3,10 +3,10 @@
   color: $white;
   height: 300px;
   padding: 40px 30px;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   @media (max-width: $min-width-mob) {
     height: 225px;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     padding: 18px 25px;
   }
   &.preset--full {

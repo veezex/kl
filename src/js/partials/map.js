@@ -15,15 +15,15 @@ if (document.getElementById('map') !== null) {
             // от 0 (весь мир) до 19.
             zoom: 10,
             controls: []
-        }), 
+        }); 
 
         // Метка, содержимое балуна которой загружается с помощью AJAX.
-        placemark = new ymaps.Placemark([55.760584, 37.639450], {}, {
-            iconLayout: 'default#image',
-            iconImageHref: 'images/map__baloon.png',
-            iconImageSize: [57, 51],
-            iconImageOffset: [-37, -50]
-        });
+        // var placemark = new ymaps.Placemark([55.760584, 37.639450], {}, {
+        //     iconLayout: 'default#image',
+        //     iconImageHref: 'images/map__baloon.png',
+        //     iconImageSize: [57, 51],
+        //     iconImageOffset: [-37, -50]
+        // });
 
         var ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='map__zoom-block u-jc-sbu-fd-col'>" +
         "<div id='zoom-in' class='map__zoom u-jc-ce u-ai-ce'>" +
@@ -101,7 +101,8 @@ if (document.getElementById('map') !== null) {
                 }
             });        
         }).resize();
-        myMap.geoObjects.add(placemark);
+        
+        // myMap.geoObjects.add(placemark);
 
         function mapServerData(serverData) {
             return {
@@ -172,6 +173,79 @@ if (document.getElementById('map') !== null) {
         });
 
         myMap.geoObjects.add(objectManager);
+    }
+} else if (document.getElementById('item-map') !== null) {
+    ymaps.ready(init);
+
+    var lng = $('#item-map').attr('data-lng');
+    var lat = $('#item-map').attr('data-lat');
+
+    function init(){ 
+        var myMap = new ymaps.Map("item-map", {
+            center: [lng, lat],
+            zoom: 13,
+            controls: []
+        }); 
+
+        var placemark = new ymaps.Placemark([lng, lat], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'images/map__baloon.png',
+            iconImageSize: [57, 51],
+            iconImageOffset: [-37, -50]
+        });
+
+        var ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='map__zoom-block u-jc-sbu-fd-col'>" +
+        "<div id='zoom-in' class='map__zoom u-jc-ce u-ai-ce'>" +
+        "<svg class='svg' width='12px' height='12px' viewBox='0 0 12 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>" +
+        "<g id='Group' ><rect id='Rectangle-3' x='0' y='5' width='12' height='2'></rect>" +
+        "<rect id='Rectangle-3' transform='translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) ' x='0' y='5' width='12' height='2'></rect></g>" +
+        "</svg></div><br>" +
+        "<div id='zoom-out' class='map__zoom map__zoom--minus u-jc-ce u-ai-ce'>" +
+        "<svg class='svg' width='8px' height='2px' viewBox='0 0 8 2' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>" +
+        "<rect id='map__minus' width='8' height='2'></rect>" +
+        "</svg></div>", {
+            build: function () {
+                ZoomLayout.superclass.build.call(this);
+
+                this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
+                this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this);
+
+                $('#zoom-in').bind('click', this.zoomInCallback);
+                $('#zoom-out').bind('click', this.zoomOutCallback);
+            },
+
+            clear: function () {
+                $('#zoom-in').unbind('click', this.zoomInCallback);
+                $('#zoom-out').unbind('click', this.zoomOutCallback);
+
+                ZoomLayout.superclass.clear.call(this);
+            },
+
+            zoomIn: function () {
+                var map = this.getData().control.getMap();
+                map.setZoom(map.getZoom() + 1, {checkZoomRange: true});
+            },
+
+            zoomOut: function () {
+                var map = this.getData().control.getMap();
+                map.setZoom(map.getZoom() - 1, {checkZoomRange: true});
+            }
+        });
+
+        $( window ).on('resize', function() {   
+            var centerPos = ( document.getElementById("item-map").offsetHeight / 2 ) - 50;    
+
+            myMap.controls.remove('zoomControl');
+            myMap.controls.add('zoomControl', {
+                layout: ZoomLayout,
+                position: {
+                    left: '30px',
+                    top: centerPos
+                }
+            });        
+        }).resize();
+        
+        myMap.geoObjects.add(placemark);
     }
 }
         

@@ -4,6 +4,12 @@
   @media (max-width: $min-width-mob) {
     margin: 30px 0;
   }
+  &__preset-block {
+    padding-bottom: 60px;
+    @media (max-width: $min-width-mob) {
+      padding-bottom: 50px;
+    }
+  }
   &__preset-btn {
     display: flex;
   }

@@ -16,10 +16,10 @@
     }
   }
   &__img-block {
-    margin-bottom: 65px;
-    &--last {
-      margin-bottom: 65px;
-    }
+    padding-bottom: 65px;
+    // &--last {
+    //   padding-bottom: 65px;
+    // }
     @media (max-width: $min-width-mob) {
       &--last {
         margin: 0;

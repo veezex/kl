@@ -39,6 +39,18 @@ input, textarea, select, button {
   }
 }
 
+.scrollable {
+  &-parent {
+    // height: 275px;//temp
+    //height: auto!important;
+    overflow: hidden;
+  }
+  &-child {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
 .section {
   .section__header {
     @include typo($size:24px,$line:29px);
