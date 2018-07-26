@@ -6,8 +6,8 @@
   &__nav {
     width: 460px;
     margin-bottom: 40px;
-    @media (max-width: $min-width-mob) {
-      width: 340px;      
+    @media (max-width: $min-width-small) {
+      width: 280px;      
     }
   }
   &__scrollable-div {

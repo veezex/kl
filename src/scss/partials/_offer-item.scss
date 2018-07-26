@@ -176,11 +176,18 @@
       padding-bottom: 40px;
       margin-bottom: 40px;
       flex-direction: column;
+      text-align: center;
       @include typo($size:20px,$line:24px);
-      &--disabled {
+      &--disabled, &.isActive {
         filter: grayscale(100%);
         opacity: 0.6;
         color: #424242;
+      }
+      &--clickable {
+        cursor: pointer;
+      }
+      &--small {
+        @include typo($size:16px,$line:20px);
       }
       &-text {
         padding: 15px 25px;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-«Я-хочу-продать»" transform="translate(-1037.000000, -2727.000000)" fill="#027993">
+            <g id="4.-Инфо-о-квартире-" transform="translate(370.000000, 2120.000000)">
+                <g id="6" transform="translate(2.000000, 579.000000)">
+                    <g id="По-умолчанию">
+                        <path d="M668.217552,32.7426667 C667.941631,32.4702308 667.941631,32.0300877 668.217552,31.7569441 L674.766082,25.2849994 C675.164399,24.8908519 675.81246,24.8908519 676.211484,25.2849994 C676.609801,25.6791469 676.609801,26.3188406 676.211484,26.7129881 L670.609577,32.2501593 L676.211484,37.7859152 C676.609801,38.1807703 676.609801,38.8204639 676.211484,39.2146115 C675.81246,39.608759 675.164399,39.608759 674.766082,39.2146115 L668.217552,32.7426667 Z" id="Chevron" transform="translate(672.260417, 32.249805) rotate(-90.000000) translate(-672.260417, -32.249805) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -25,6 +25,7 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/images/',
+        svgforcss: 'build/images/svg/',
         fonts: 'build/fonts/'
     },
     src: { //Пути откуда брать исходники
@@ -32,7 +33,8 @@ var path = {
         js: 'src/js/*.js', //В стилях и скриптах нам понадобятся только main файлы
         style: 'src/scss/[^_]*.scss',
         img: 'src/images/*.{jpg,jpeg,png}', 
-        svg: 'src/images/*.svg', 
+        svg: 'src/images/*.svg',
+        svgforcss: 'src/images/svg/*.svg', 
         fonts: 'src/fonts/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -40,7 +42,8 @@ var path = {
         js: 'src/js/**/*.js',
         style: 'src/scss/**/*.{scss,css}',
         img: 'src/images/*.*',
-        fonts: 'src/fonts/*.*'
+        fonts: 'src/fonts/*.*',
+        svgforcss: 'src/images/svg/*.*'
     },
     clean: './build'
 };
@@ -129,8 +132,8 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('copysvg', function() {
-   gulp.src('./src/images/**/*.svg')
-      .pipe(gulp.dest('build/images/'));
+    gulp.src(path.src.svgforcss)
+        .pipe(gulp.dest(path.build.svgforcss));
 });
 
 gulp.task('copyjson', function() {
@@ -146,7 +149,8 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'image:build',
-    'copyjson'
+    'copyjson',
+    'copysvg'
     // 'svgstore'
     // 'copysvg',
     // 'copycss'

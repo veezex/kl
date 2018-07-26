@@ -12,12 +12,14 @@
 		    <!-- temp before I understand exact needed weight-->
 		
 		    <script src="js/jquery-3.3.1.min.js"></script>
+		    <script src="js/jquery.maskedinput.js"></script>
 		    <script src="js/main.js"></script>
 		
 		    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	</head>
 	<body>
-		<div class="header">  <div class="header__top">
+		<div class="header js-header">  
+		  <div class="header__top">
 		    <div class="container">
 		      <ul class="header__top-list u-jc-fe">
 		        <li>
@@ -56,25 +58,41 @@
 		        </svg></span></a>
 		      <ul class="header__nav list-inline u-jc-fe">
 		        <li>
-		          <a href="/about-us.html">О компании</a>
+		          <span class="header__nav-link js-nav-link" data-link="about">О компании</span>
+		          <ul class="header__dropdown" data-drop="about">
+		            <li><a href="/about-us.html">О нас</a></li>
+		            <li><a href="/acred.html">Акредитация</a></li>
+		            <li><a href="/history.html">История</a></li>
+		            <li><a href="/employees.html">Сотрудники</a></li>
+		            <li><a href="/vacancies.html">Вакансии</a></li>
+		            <li><a href="/partners.html">Партнеры</a></li>
+		          </ul>
 		        </li>
 		        <li>
-		          <a href="/catalog.html">Каталог недвижимости</a>
+		          <a class="header__nav-link" href="/catalog.html">Каталог недвижимости</a>
 		        </li>
 		        <li>
-		          <a href="/score.html">Услуги</a>
+		          <span class="header__nav-link js-nav-link" data-link="services">Услуги</span>
+		          <ul class="header__dropdown" data-drop="services">
+		            <li><a href="/score.html">Оценка недвижимости</a></li>
+		            <li><a href="/egrn.html">Выписка из ЕГРН</a></li>
+		          </ul>
 		        </li>
 		        <li>
-		          <a href="/vopros-otvet.html">Юридическая консультация</a>
+		          <span class="header__nav-link js-nav-link" data-link="consult">Юридическая консультация</span>
+		          <ul class="header__dropdown" data-drop="consult" >
+		            <li><a href="/vopros-otvet.html">Вопрос-Ответ</a></a></li>
+		            <li><a href="/docs.html">Документы</a></li>
+		          </ul>
 		        </li>
 		        <li>
-		          <a href="/news.html">Новости</a>
+		          <a class="header__nav-link" href="/news.html">Новости</a>
 		        </li>
 		        <li>
-		          <a href="/contacts.html">Контакты</a>
+		          <a class="header__nav-link" href="/contacts.html">Контакты</a>
 		        </li>
 		      </ul>
-		      <a href="#" class="header__menu-mob"><img src="/images/menu.png"></a>
+		      <a href="#" class="header__menu-mob"><img src="/images/menu.png">
 		    </div> 
 		  </div>
 		</div>
@@ -446,6 +464,22 @@
 		        <rect id="Rectangle-3" x="0" y="5" width="12" height="2"/>
 		        <rect id="Rectangle-3" transform="translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) " x="0" y="5" width="12" height="2"/>
 		    </g>
+		</symbol><symbol id="select__arrow" viewBox="0 0 15 9">
+		    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+		    <title>Chevron</title>
+		    <desc>Created with Sketch.</desc>
+		    
+		    <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		        <g id="3.-&#xAB;&#x42F;-&#x445;&#x43E;&#x447;&#x443;-&#x43F;&#x440;&#x43E;&#x434;&#x430;&#x442;&#x44C;&#xBB;" transform="translate(-1037.000000, -2727.000000)" fill="#027993">
+		            <g id="4.-&#x418;&#x43D;&#x444;&#x43E;-&#x43E;-&#x43A;&#x432;&#x430;&#x440;&#x442;&#x438;&#x440;&#x435;-" transform="translate(370.000000, 2120.000000)">
+		                <g id="6" transform="translate(2.000000, 579.000000)">
+		                    <g id="&#x41F;&#x43E;-&#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E;">
+		                        <path d="M668.217552,32.7426667 C667.941631,32.4702308 667.941631,32.0300877 668.217552,31.7569441 L674.766082,25.2849994 C675.164399,24.8908519 675.81246,24.8908519 676.211484,25.2849994 C676.609801,25.6791469 676.609801,26.3188406 676.211484,26.7129881 L670.609577,32.2501593 L676.211484,37.7859152 C676.609801,38.1807703 676.609801,38.8204639 676.211484,39.2146115 C675.81246,39.608759 675.164399,39.608759 674.766082,39.2146115 L668.217552,32.7426667 Z" id="Chevron" transform="translate(672.260417, 32.249805) rotate(-90.000000) translate(-672.260417, -32.249805) "/>
+		                    </g>
+		                </g>
+		            </g>
+		        </g>
+		    </g>
 		</symbol><symbol id="slider__arrow--left" viewBox="0 0 10 20">
 		    <g id="Dekstope-(1440-px)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g id="-g-1.-&#x413;&#x43B;&#x430;&#x432;&#x43D;&#x430;&#x44F;-&#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430;" transform="translate(-1275.000000, -412.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -633,31 +667,31 @@
 								<div class="filter__input-group u-jc-sb">
 									<div class="filter__input-block filter__input-block--normal">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Город</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--normal">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Улица</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--normal">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Дом / Квартира</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--small">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="number" class="filter__input" />
 											<span class="filter__floating-label">Цена От</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--small">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="number" class="filter__input" />
 											<span class="filter__floating-label">Цена До</span>
 										</div>
 									</div>
@@ -665,25 +699,25 @@
 								<div class="filter__input-group filter__input-group--add u-jc-sb">
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Микрорайон</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Жилой комплекс</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Планировка</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Тип дома</span>
 										</div>
 									</div>
@@ -711,31 +745,31 @@
 								<div class="filter__input-group u-jc-sb">
 									<div class="filter__input-block filter__input-block--normal">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Город</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--normal">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Улица</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--normal">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Дом / Квартира</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--small">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="number" class="filter__input" />
 											<span class="filter__floating-label">Цена От</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--small">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="number" class="filter__input" />
 											<span class="filter__floating-label">Цена До</span>
 										</div>
 									</div>
@@ -743,25 +777,25 @@
 								<div class="filter__input-group filter__input-group--add u-jc-sb">
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Микрорайон</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Жилой комплекс</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Планировка</span>
 										</div>
 									</div>
 									<div class="filter__input-block filter__input-block--big">
 										<div class="filter__input-wrap">
-											<input type="text" class="filter__input" required/>
+											<input type="text" class="filter__input" />
 											<span class="filter__floating-label">Тип дома</span>
 										</div>
 									</div>
@@ -1071,11 +1105,720 @@
 				</div>
 			</div>
 		</section>
-
+		
 		<section class="register">
-			<p class="register__header">Хочу продать свою недвижимость</p>
-			<a href="#" class="btn btn--empty register__btn">Начать продажу</a>
+		  <p class="register__header">Хочу продать свою недвижимость</p>
+		  <a href="javascript:;" data-modal="sell" class="js-modal__btn btn btn--empty register__btn">Начать продажу</a>
 		</section>
+		
+		<section class="section mail-us modal js-modal" id="sell">
+		  <div class="modal__header">
+		      <a href="javascript:;" id="modal-close" class="modal__header-close u-jc-ce">
+		        <span class="svg__filter-close"><svg class="svg">
+		          <use xlink:href="#map__close-filter">
+		        </svg></span> 
+		      </a>
+		    </div>
+		  <div class="tab">    
+		    <div class="container container--small u-fw-wr">
+		      <p class="section__header mail-us__header">Я хочу подать объявление</p>
+		      <ul class="filter__nav tab__nav u-jc-sb u-as-ce">
+		        <li><a href="javascript:;" data-tab="buy" class="tab__item js-tab__item js-active">Купить</a></li>
+		        <li><a href="javascript:;" data-tab="rent" class="tab__item js-tab__item">Арендовать</a></li>
+		      </ul>
+		    </div>
+		
+		    <div class="tab__content">
+		      <div class="tab__block js-active" data-content="buy">
+		        <div class="container container--small">
+		          <form action="">
+		            <div class="filter__header">Личные данные</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="name" class="filter__label">Ваше Имя Фамилия</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="name" required/>
+		                <span class="filter__floating-label">Иван Тургенев</span>
+		                <!-- <span class="filter__empty">Поле обязательно для заполнения</span> -->
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="tel" class="filter__label">Ваше телефон</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="tel" required/>
+		                <span class="filter__floating-label">+7(999) 123-45-67 </span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="email" class="filter__label">Ваше e-mail</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="email" required/>
+		                <span class="filter__floating-label">name@domain.ru</span>
+		              </div>
+		            </div>
+		            <div class="filter__header">Общие данные</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="city" class="filter__label">Город</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="city" required/>
+		                <span class="filter__floating-label">Южно-Сахалинск</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="region" class="filter__label">Район</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="region" required/>
+		                <span class="filter__floating-label">Центральный</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="street" class="filter__label">Улица</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="street" required/>
+		                <span class="filter__floating-label">Чуйковского</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="zhk" class="filter__label">ЖК</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="zhk"/>
+		                <span class="filter__floating-label">Счастье (не обязательно)</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="bulding-type" class="filter__label">Тип дома</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="bulding-type" class="js-filter-hidden" name="bulding-type" required/>
+		                <a href="javascript:;" data-group="bulding-type" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип дома</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Бесшовная технология</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Блочная</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Брежневка</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Деревянный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Индивидуальный проект</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Каркасный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Кирпичный монолитный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Корабль</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Коттедж</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Монолитный панельный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Монолитный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Панельный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Реконструкция</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Сталинский</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Старый фонд</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Старый фон без КP</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Старый фонд с КP</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Хрущевка</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="year" class="filter__label">Год постройки</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="year" required/>
+		                <span class="filter__floating-label">1980</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="mat-type" class="filter__label">Строительный мат.</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="mat-type" class="js-filter-hidden" name="mat-type"/>
+		                <a href="javascript:;" data-group="mat-type" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Строительный мат. (не обязательно)</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Блочные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Деревянные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Каркасные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Кирпично монолитные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Монолитнопанельные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Монолитные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Панельные</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="floors" class="filter__label">Этажность</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--nolabel filter__input--full" name="floors" required/ >
+		                <span class="filter__floating-label">11</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="musor" class="filter__label">Мусоропровод</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="musor" class="js-filter-hidden" name="musor"/>
+		                <a href="javascript:;" data-group="musor" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Наличие мусоропровода (не обязательно)</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="musor" class="js-select-item filter__select-item">Есть мусоропровод</a>
+		                  <a href="javascript:;" data-group="musor" class="js-select-item filter__select-item">Нет мусоропровода</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="gaz" class="filter__label">Газ в доме</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="gaz" class="js-filter-hidden" name="gaz" required/>
+		                <a href="javascript:;" data-group="gaz" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Наличие газа в доме</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="gaz" class="js-select-item filter__select-item">Есть газ</a>
+		                  <a href="javascript:;" data-group="gaz" class="js-select-item filter__select-item">Нет газа</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="security" class="filter__label">Охрана в доме</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="security" class="js-filter-hidden" name="security"/>
+		                <a href="javascript:;" data-group="security" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Наличие охраны в доме (не обязательно)</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="security" class="js-select-item filter__select-item">Есть охрана</a>
+		                  <a href="javascript:;" data-group="security" class="js-select-item filter__select-item">Нет охраны</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__header">Инфраструктура</div>
+		            <div class="filter__checkbox-wrap">
+		              <div class="offer-item">
+		                <div class="benefits__block u-jc-sb u-fw-wr">
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="school">
+		                    <span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-school">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Школа</p>
+		                  </div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="kinder">
+		                    <span class="svg__item-infra-small">
+		                      <svg class="svg">
+		                        <use xlink:href="#item__icon-kinder">
+		                      </svg>
+		                    </span>
+		                    <p class="benefits__item-header benefits__item-header--small">Детский сад</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="drugstore">
+		                    <span class="svg__item-infra-small">
+		                      <svg class="svg">
+		                        <use xlink:href="#item__icon-drugstore">
+		                      </svg>
+		                    </span>
+		                    <p class="benefits__item-header benefits__item-header--small">Аптека</p>
+		                  </div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="hospital">
+		                    <span class="svg__item-infra-small">
+		                      <svg class="svg">
+		                        <use xlink:href="#item__icon-hospital">
+		                      </svg></span>
+		                      <p class="benefits__item-header benefits__item-header--small">Поликлиника</p>
+		                    </div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce"  data-name="shop"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-shops">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Магазины</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="bank"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-bank">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Банк</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="cafe"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-cafe">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Кафе</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="rest"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-rest">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Места для отдыха</p></div>
+		                </div>
+		              </div>
+		              <fieldset>
+		                <div>
+		                  <input type="checkbox" id="school" name="infra" value="school">
+		                  <!-- <label for="school">Школа</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="kinder" name="infra" value="kinder">
+		                  <!-- <label for="kinder">Детский сад</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="drugstore" name="infra" value="drugstore">
+		                  <!-- <label for="drugstore">Аптека</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="hospital" name="infra" value="hospital">
+		                  <!-- <label for="hospital">Поликлиника</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="shop" name="infra" value="shop">
+		                  <!-- <label for="shop">Магазины</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="bank" name="infra" value="bank">
+		                  <!-- <label for="bank">Банк</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="cafe" name="infra" value="cafe">
+		                  <!-- <label for="cafe">Кафе</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="rest" name="infra" value="rest">
+		                  <!-- <label for="rest">Места для отдыха</label> -->
+		                </div>
+		              </fieldset>
+		            </div>
+		            <div class="filter__header">Данные о квартире</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-rooms" class="filter__label">Кол-во комнат</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-rooms" required/>
+		                <span class="filter__floating-label">2</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-area" class="filter__label">Общая площадь</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-area" required/>
+		                <span class="filter__floating-label">56</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-dining" class="filter__label">Площадь кухни</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-dining" required/>
+		                <span class="filter__floating-label">56</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-leaving" class="filter__label">Жилая площадь</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-leaving" required/>
+		                <span class="filter__floating-label">26</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-floor" class="filter__label">Этаж</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-floor" required/>
+		                <span class="filter__floating-label">2</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="balcony" class="filter__label">Балкон</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="balcony" class="js-filter-hidden" name="balcony" required/>
+		                <a href="javascript:;" data-group="balcony" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип балкона</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="balcony" class="js-select-item filter__select-item">Есть балкон</a>
+		                  <a href="javascript:;" data-group="balcony" class="js-select-item filter__select-item">Нет балкона</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="lodzh" class="filter__label">Лоджия</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="lodzh" class="js-filter-hidden" name="lodzh" required/>
+		                <a href="javascript:;" data-group="lodzh" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип лоджии</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="lodzh" class="js-select-item filter__select-item">Есть лоджия</a>
+		                  <a href="javascript:;" data-group="lodzh" class="js-select-item filter__select-item">Нет лоджии</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="toilet" class="filter__label">Санузел</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="toilet" class="js-filter-hidden" name="toilet" required/>
+		                <a href="javascript:;" data-group="toilet" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип санузла</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="toilet" class="js-select-item filter__select-item">Раздельный</a>
+		                  <a href="javascript:;" data-group="toilet" class="js-select-item filter__select-item">Совмещенный</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-price" class="filter__label">Стоимость</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-price" required/>
+		                <span class="filter__floating-label">5 000 000</span>
+		              </div>
+		            </div>
+		            <div class="filter__header">Дополнительное описание</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-descr" class="filter__label">Описание</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <textarea name="app-descr" class="filter__input filter__input--full filter__textarea"></textarea>
+		                <span class="filter__floating-label">Описание</span>
+		              </div>
+		            </div>
+		            <div class="filter__radio">
+		              <input type="checkbox" id="checkbox" class="filter__radio-input" required />
+		              <label for="checkbox" class="filter__radio-label">я принимаю <a href="#">условия</a> передачи информации</label>
+		            </div>
+		            <div class="mail-us__btn-block u-jc-ce">
+		              <button class="btn btn--regular mail-us__btn">Отправить</button>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		      <div class="tab__block" data-content="rent">
+		        <div class="container container--small">
+		          <form action="">
+		            <div class="filter__header">Личные данные</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="name" class="filter__label">Ваше Имя Фамилия</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="name" required/>
+		                <span class="filter__floating-label">Иван Тургенев</span>
+		                <!-- <span class="filter__empty">Поле обязательно для заполнения</span> -->
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="tel" class="filter__label">Ваше телефон</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="tel" required/>
+		                <span class="filter__floating-label">+7(999) 123-45-67 </span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="email" class="filter__label">Ваше e-mail</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="email" required/>
+		                <span class="filter__floating-label">name@domain.ru</span>
+		              </div>
+		            </div>
+		            <div class="filter__header">Общие данные</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="city" class="filter__label">Город</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="city" required/>
+		                <span class="filter__floating-label">Южно-Сахалинск</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="region" class="filter__label">Район</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="region" required/>
+		                <span class="filter__floating-label">Центральный</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="street" class="filter__label">Улица</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="street" required/>
+		                <span class="filter__floating-label">Чуйковского</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="zhk" class="filter__label">ЖК</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="text" class="filter__input filter__input--full" name="zhk"/>
+		                <span class="filter__floating-label">Счастье (не обязательно)</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="bulding-type" class="filter__label">Тип дома</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="bulding-type" class="js-filter-hidden" name="bulding-type" required/>
+		                <a href="javascript:;" data-group="bulding-type" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип дома</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Бесшовная технология</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Блочная</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Брежневка</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Деревянный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Индивидуальный проект</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Каркасный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Кирпичный монолитный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Корабль</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Коттедж</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Монолитный панельный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Монолитный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Панельный</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Реконструкция</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Сталинский</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Старый фонд</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Старый фон без КP</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Старый фонд с КP</a>
+		                  <a href="javascript:;" data-group="bulding-type" class="js-select-item filter__select-item">Хрущевка</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="year" class="filter__label">Год постройки</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="year" required/>
+		                <span class="filter__floating-label">1980</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="mat-type" class="filter__label">Строительный мат.</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="mat-type" class="js-filter-hidden" name="mat-type"/>
+		                <a href="javascript:;" data-group="mat-type" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Строительный мат. (не обязательно)</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Блочные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Деревянные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Каркасные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Кирпично монолитные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Монолитнопанельные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Монолитные</a>
+		                  <a href="javascript:;" data-group="mat-type" class="js-select-item filter__select-item">Панельные</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="floors" class="filter__label">Этажность</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--nolabel filter__input--full" name="floors" required/ >
+		                <span class="filter__floating-label">11</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="musor" class="filter__label">Мусоропровод</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="musor" class="js-filter-hidden" name="musor"/>
+		                <a href="javascript:;" data-group="musor" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Наличие мусоропровода (не обязательно)</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="musor" class="js-select-item filter__select-item">Есть мусоропровод</a>
+		                  <a href="javascript:;" data-group="musor" class="js-select-item filter__select-item">Нет мусоропровода</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="gaz" class="filter__label">Газ в доме</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="gaz" class="js-filter-hidden" name="gaz" required/>
+		                <a href="javascript:;" data-group="gaz" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Наличие газа в доме</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="gaz" class="js-select-item filter__select-item">Есть газ</a>
+		                  <a href="javascript:;" data-group="gaz" class="js-select-item filter__select-item">Нет газа</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="security" class="filter__label">Охрана в доме</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="security" class="js-filter-hidden" name="security"/>
+		                <a href="javascript:;" data-group="security" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Наличие охраны в доме (не обязательно)</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="security" class="js-select-item filter__select-item">Есть охрана</a>
+		                  <a href="javascript:;" data-group="security" class="js-select-item filter__select-item">Нет охраны</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__header">Инфраструктура</div>
+		            <div class="filter__checkbox-wrap">
+		              <div class="offer-item">
+		                <div class="benefits__block u-jc-sb u-fw-wr">
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="school">
+		                    <span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-school">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Школа</p>
+		                  </div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="kinder">
+		                    <span class="svg__item-infra-small">
+		                      <svg class="svg">
+		                        <use xlink:href="#item__icon-kinder">
+		                      </svg>
+		                    </span>
+		                    <p class="benefits__item-header benefits__item-header--small">Детский сад</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="drugstore">
+		                    <span class="svg__item-infra-small">
+		                      <svg class="svg">
+		                        <use xlink:href="#item__icon-drugstore">
+		                      </svg>
+		                    </span>
+		                    <p class="benefits__item-header benefits__item-header--small">Аптека</p>
+		                  </div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="hospital">
+		                    <span class="svg__item-infra-small">
+		                      <svg class="svg">
+		                        <use xlink:href="#item__icon-hospital">
+		                      </svg></span>
+		                      <p class="benefits__item-header benefits__item-header--small">Поликлиника</p>
+		                    </div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce"  data-name="shop"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-shops">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Магазины</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="bank"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-bank">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Банк</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="cafe"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-cafe">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Кафе</p></div>
+		                  <div class="benefits__item benefits__item--clickable js-toggle-item u-ai-ce" data-name="rest"><span class="svg__item-infra-small">
+		                    <svg class="svg">
+		                      <use xlink:href="#item__icon-rest">
+		                    </svg></span>
+		                    <p class="benefits__item-header benefits__item-header--small">Места для отдыха</p></div>
+		                </div>
+		              </div>
+		              <fieldset>
+		                <div>
+		                  <input type="checkbox" id="school" name="infra" value="school">
+		                  <!-- <label for="school">Школа</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="kinder" name="infra" value="kinder">
+		                  <!-- <label for="kinder">Детский сад</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="drugstore" name="infra" value="drugstore">
+		                  <!-- <label for="drugstore">Аптека</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="hospital" name="infra" value="hospital">
+		                  <!-- <label for="hospital">Поликлиника</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="shop" name="infra" value="shop">
+		                  <!-- <label for="shop">Магазины</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="bank" name="infra" value="bank">
+		                  <!-- <label for="bank">Банк</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="cafe" name="infra" value="cafe">
+		                  <!-- <label for="cafe">Кафе</label> -->
+		                </div>
+		                <div>
+		                  <input type="checkbox" id="rest" name="infra" value="rest">
+		                  <!-- <label for="rest">Места для отдыха</label> -->
+		                </div>
+		              </fieldset>
+		            </div>
+		            <div class="filter__header">Данные о квартире</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-rooms" class="filter__label">Кол-во комнат</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-rooms" required/>
+		                <span class="filter__floating-label">2</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-area" class="filter__label">Общая площадь</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-area" required/>
+		                <span class="filter__floating-label">56</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-dining" class="filter__label">Площадь кухни</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-dining" required/>
+		                <span class="filter__floating-label">56</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-leaving" class="filter__label">Жилая площадь</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-leaving" required/>
+		                <span class="filter__floating-label">26</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-floor" class="filter__label">Этаж</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-floor" required/>
+		                <span class="filter__floating-label">2</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="balcony" class="filter__label">Балкон</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="balcony" class="js-filter-hidden" name="balcony" required/>
+		                <a href="javascript:;" data-group="balcony" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип балкона</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="balcony" class="js-select-item filter__select-item">Есть балкон</a>
+		                  <a href="javascript:;" data-group="balcony" class="js-select-item filter__select-item">Нет балкона</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="lodzh" class="filter__label">Лоджия</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="lodzh" class="js-filter-hidden" name="lodzh" required/>
+		                <a href="javascript:;" data-group="lodzh" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип лоджии</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="lodzh" class="js-select-item filter__select-item">Есть лоджия</a>
+		                  <a href="javascript:;" data-group="lodzh" class="js-select-item filter__select-item">Нет лоджии</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="toilet" class="filter__label">Санузел</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="toilet" class="js-filter-hidden" name="toilet" required/>
+		                <a href="javascript:;" data-group="toilet" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Тип санузла</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="toilet" class="js-select-item filter__select-item">Раздельный</a>
+		                  <a href="javascript:;" data-group="toilet" class="js-select-item filter__select-item">Совмещенный</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-price" class="filter__label">Стоимость</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="number" class="filter__input filter__input--full" name="app-price" required/>
+		                <span class="filter__floating-label">30 000</span>
+		              </div>
+		            </div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="rent-time" class="filter__label">Время аренды</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <input type="hidden" data-group="rent-time" class="js-filter-hidden" name="rent-time" required/>
+		                <a href="javascript:;" data-group="rent-time" class="js-select-btn filter__select-btn filter__input--full"></a>
+		                <span class="filter__floating-label filter__select-label js-select-label">Время аренды</span>
+		                <div class="filter__select-block js-select-block">
+		                  <a href="javascript:;" data-group="rent-time" class="js-select-item filter__select-item">Посуточно</a>
+		                  <a href="javascript:;" data-group="rent-time" class="js-select-item filter__select-item">Помесячно</a>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="filter__header">Дополнительное описание</div>
+		            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+		              <label for="app-descr" class="filter__label">Описание</label>
+		              <div class="filter__input-wrap filter__input-wrap--full">
+		                <textarea name="app-descr" class="filter__input filter__input--full filter__textarea"></textarea>
+		                <span class="filter__floating-label">Описание</span>
+		              </div>
+		            </div>
+		            <div class="filter__radio">
+		              <input type="checkbox" id="checkbox" class="filter__radio-input" required />
+		              <label for="checkbox" class="filter__radio-label">я принимаю <a href="#">условия</a> передачи информации</label>
+		            </div>
+		            <div class="mail-us__btn-block u-jc-ce">
+		              <button class="btn btn--regular mail-us__btn">Отправить</button>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+		
 		<footer>
 		  <div class="prefooter">
 		    <div class="container prefooter__container">

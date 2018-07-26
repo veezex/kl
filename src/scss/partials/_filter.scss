@@ -70,40 +70,63 @@
       display: none;
     }
   }
+  &__header {
+    margin-bottom: 60px;
+    @include typo($size:20px,$line:24px);
+    @media (max-width: $min-width-small) {
+      margin: 30px 0 20px;
+    }
+  }
   &__input {
     background-color: #EAF4F6;
     border-radius: 8px;
     border: none;
     height: 60px;
-    padding: 0 20px 0;
+    // padding: 0 20px 0;
+    padding: 23px 20px 0;
     font-size: 14px;
     line-height: 18px;
     color: $black;
     // margin-bottom: 40px;
     width: 100%;
+    border: 1px solid transparent;
     &--full {
       width: 500px;
       @media (max-width: $min-width-small) {
         width: 100%;
       }
     }
+    &[type="number"], &[type=number] {
+      -moz-appearance: textfield;
+      &::-webkit-inner-spin-button, 
+      &::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+      &:hover, &:focus {
+        -moz-appearance: number-input;
+      }
+    }
     // @include placeholder{
     //   font-size: 14px;
     //   color: #9B9B9B;
     // }
-    &:focus,
-    &:not(:focus):valid {
-      padding: 23px 20px 0;
-    }
-    &:focus ~ .filter__floating-label,
-    &:not(:focus):valid ~ .filter__floating-label{
-      top: 9px;
-      // bottom: auto;
-      // left: 20px;
-      // font-size: 14px;
-      // color: #C0C0C0;
-      // opacity: 1;
-    }  
+    // &:focus {
+    //   padding: 23px 20px 0;
+    // }
+    // &:focus,
+    // &:not(:focus):valid {
+    //   padding: 23px 20px 0;
+    // }
+    // &:focus ~ .filter__floating-label,
+    // &:not(:focus):valid ~ .filter__floating-label{
+    //   top: 9px;
+    //   // bottom: auto;
+    //   // left: 20px;
+    //   // font-size: 14px;
+    //   // color: #C0C0C0;
+    //   // opacity: 1;
+    // }  
   }
   &__select {
     &-btn, &-item {
@@ -112,6 +135,9 @@
       display: block;
       width: 500px;
       height: 60px;
+      @media (max-width: $min-width-small) {
+        width: 100%;
+      }
     }
     &-item {
       padding: 0 20px 0;
@@ -130,6 +156,24 @@
       color: black;
       border-radius: 8px;
       line-height: 37px;
+      border: 1px solid transparent;
+      &:after {
+        content: " ";
+        background-image: url(../images/svg/select__arrow.svg);
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &.isOpen {
+        border: 1px solid #EAF4F6;
+        background-color: transparent;
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
     }
     &-label.floated {
       top: 9px;
@@ -146,6 +190,20 @@
   }
   &__input-wrap {
     position: relative;
+    flex-direction: column;
+    display: flex;
+    &.validated:after {
+      content: " ";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);  
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/svg/input__checked.svg);
+    }
     @media (max-width: $min-width-small) {
       &--full {
         width: 100%;
@@ -157,13 +215,22 @@
     position: absolute;
     pointer-events: none;
     left: 0;
-    padding: 0 20px; 
-    line-height: 18px;
+    padding: 0 45px 0 20px; 
     color: #C0C0C0;
-    font-size: 14px;
     top: 21px;
     transition: 0.2s ease all;
+    @include typo($size:14px,$line:18px);
     @include text-overflow;
+    &.floated {
+      top: 9px;
+    }
+  }
+  &__empty {
+    margin-top: 3px;
+    position: absolute;
+    top: 100%;
+    color: #dd5656;
+    @include typo($size:13px,$line:15px);
   }
   &__link {
     color: $blue;
@@ -274,7 +341,9 @@
         }
       }
       &:checked + label:after {
-        background-image: url(../images/mark.png);
+        background-image: url(../images/svg/input__checked.svg);
+        background-position: center;
+        background-repeat: no-repeat;
       }
       // &:checked + label:before {
       //   background: #9FD468;
@@ -288,6 +357,14 @@
         color: $nut-brown;
         border-bottom: 1px solid rgba($nut-brown,0.3);
       }
+    }
+  }
+  &__danger {
+    border-color: #dd5656;
+  }
+  &__checkbox-wrap {
+    fieldset {
+      display: none;
     }
   }
 }

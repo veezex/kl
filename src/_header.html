@@ -1,4 +1,5 @@
-<div class="header">  <div class="header__top">
+<div class="header js-header">  
+  <div class="header__top">
     <div class="container">
       <ul class="header__top-list u-jc-fe">
         <li>
@@ -37,25 +38,41 @@
         </svg></span></a>
       <ul class="header__nav list-inline u-jc-fe">
         <li>
-          <a href="/about-us.html">О компании</a>
+          <span class="header__nav-link js-nav-link" data-link="about">О компании</span>
+          <ul class="header__dropdown" data-drop="about">
+            <li><a href="/about-us.html">О нас</a></li>
+            <li><a href="/acred.html">Акредитация</a></li>
+            <li><a href="/history.html">История</a></li>
+            <li><a href="/employees.html">Сотрудники</a></li>
+            <li><a href="/vacancies.html">Вакансии</a></li>
+            <li><a href="/partners.html">Партнеры</a></li>
+          </ul>
         </li>
         <li>
-          <a href="/catalog.html">Каталог недвижимости</a>
+          <a class="header__nav-link" href="/catalog.html">Каталог недвижимости</a>
         </li>
         <li>
-          <a href="/score.html">Услуги</a>
+          <span class="header__nav-link js-nav-link" data-link="services">Услуги</span>
+          <ul class="header__dropdown" data-drop="services">
+            <li><a href="/score.html">Оценка недвижимости</a></li>
+            <li><a href="/egrn.html">Выписка из ЕГРН</a></li>
+          </ul>
         </li>
         <li>
-          <a href="/vopros-otvet.html">Юридическая консультация</a>
+          <span class="header__nav-link js-nav-link" data-link="consult">Юридическая консультация</span>
+          <ul class="header__dropdown" data-drop="consult" >
+            <li><a href="/vopros-otvet.html">Вопрос-Ответ</a></a></li>
+            <li><a href="/docs.html">Документы</a></li>
+          </ul>
         </li>
         <li>
-          <a href="/news.html">Новости</a>
+          <a class="header__nav-link" href="/news.html">Новости</a>
         </li>
         <li>
-          <a href="/contacts.html">Контакты</a>
+          <a class="header__nav-link" href="/contacts.html">Контакты</a>
         </li>
       </ul>
-      <a href="#" class="header__menu-mob"><img src="/images/menu.png"></a>
+      <a href="#" class="header__menu-mob"><img src="/images/menu.png">
     </div> 
   </div>
 </div>

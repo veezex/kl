@@ -19,6 +19,9 @@
       @media (max-width: $min-width-mob) {
         @include typo($size:18px,$line:22px);
       }
+      @media (max-width: $min-width-small) {
+        @include typo($size:14px,$line:18px);
+      }
     }
     &--clean {
       color: $nut-brown;

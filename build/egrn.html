@@ -12,12 +12,14 @@
 		    <!-- temp before I understand exact needed weight-->
 		
 		    <script src="js/jquery-3.3.1.min.js"></script>
+		    <script src="js/jquery.maskedinput.js"></script>
 		    <script src="js/main.js"></script>
 		
 		    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	</head>
 	<body>
-		<div class="header">  <div class="header__top">
+		<div class="header js-header">  
+		  <div class="header__top">
 		    <div class="container">
 		      <ul class="header__top-list u-jc-fe">
 		        <li>
@@ -56,25 +58,41 @@
 		        </svg></span></a>
 		      <ul class="header__nav list-inline u-jc-fe">
 		        <li>
-		          <a href="/about-us.html">О компании</a>
+		          <span class="header__nav-link js-nav-link" data-link="about">О компании</span>
+		          <ul class="header__dropdown" data-drop="about">
+		            <li><a href="/about-us.html">О нас</a></li>
+		            <li><a href="/acred.html">Акредитация</a></li>
+		            <li><a href="/history.html">История</a></li>
+		            <li><a href="/employees.html">Сотрудники</a></li>
+		            <li><a href="/vacancies.html">Вакансии</a></li>
+		            <li><a href="/partners.html">Партнеры</a></li>
+		          </ul>
 		        </li>
 		        <li>
-		          <a href="/catalog.html">Каталог недвижимости</a>
+		          <a class="header__nav-link" href="/catalog.html">Каталог недвижимости</a>
 		        </li>
 		        <li>
-		          <a href="/score.html">Услуги</a>
+		          <span class="header__nav-link js-nav-link" data-link="services">Услуги</span>
+		          <ul class="header__dropdown" data-drop="services">
+		            <li><a href="/score.html">Оценка недвижимости</a></li>
+		            <li><a href="/egrn.html">Выписка из ЕГРН</a></li>
+		          </ul>
 		        </li>
 		        <li>
-		          <a href="/vopros-otvet.html">Юридическая консультация</a>
+		          <span class="header__nav-link js-nav-link" data-link="consult">Юридическая консультация</span>
+		          <ul class="header__dropdown" data-drop="consult" >
+		            <li><a href="/vopros-otvet.html">Вопрос-Ответ</a></a></li>
+		            <li><a href="/docs.html">Документы</a></li>
+		          </ul>
 		        </li>
 		        <li>
-		          <a href="/news.html">Новости</a>
+		          <a class="header__nav-link" href="/news.html">Новости</a>
 		        </li>
 		        <li>
-		          <a href="/contacts.html">Контакты</a>
+		          <a class="header__nav-link" href="/contacts.html">Контакты</a>
 		        </li>
 		      </ul>
-		      <a href="#" class="header__menu-mob"><img src="/images/menu.png"></a>
+		      <a href="#" class="header__menu-mob"><img src="/images/menu.png">
 		    </div> 
 		  </div>
 		</div>
@@ -446,6 +464,22 @@
             <rect id="Rectangle-3" x="0" y="5" width="12" height="2"/>
             <rect id="Rectangle-3" transform="translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) " x="0" y="5" width="12" height="2"/>
         </g>
+    </symbol><symbol id="select__arrow" viewBox="0 0 15 9">
+        <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+        <title>Chevron</title>
+        <desc>Created with Sketch.</desc>
+        
+        <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="3.-&#xAB;&#x42F;-&#x445;&#x43E;&#x447;&#x443;-&#x43F;&#x440;&#x43E;&#x434;&#x430;&#x442;&#x44C;&#xBB;" transform="translate(-1037.000000, -2727.000000)" fill="#027993">
+                <g id="4.-&#x418;&#x43D;&#x444;&#x43E;-&#x43E;-&#x43A;&#x432;&#x430;&#x440;&#x442;&#x438;&#x440;&#x435;-" transform="translate(370.000000, 2120.000000)">
+                    <g id="6" transform="translate(2.000000, 579.000000)">
+                        <g id="&#x41F;&#x43E;-&#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E;">
+                            <path d="M668.217552,32.7426667 C667.941631,32.4702308 667.941631,32.0300877 668.217552,31.7569441 L674.766082,25.2849994 C675.164399,24.8908519 675.81246,24.8908519 676.211484,25.2849994 C676.609801,25.6791469 676.609801,26.3188406 676.211484,26.7129881 L670.609577,32.2501593 L676.211484,37.7859152 C676.609801,38.1807703 676.609801,38.8204639 676.211484,39.2146115 C675.81246,39.608759 675.164399,39.608759 674.766082,39.2146115 L668.217552,32.7426667 Z" id="Chevron" transform="translate(672.260417, 32.249805) rotate(-90.000000) translate(-672.260417, -32.249805) "/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
     </symbol><symbol id="slider__arrow--left" viewBox="0 0 10 20">
         <g id="Dekstope-(1440-px)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="-g-1.-&#x413;&#x43B;&#x430;&#x432;&#x43D;&#x430;&#x44F;-&#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430;" transform="translate(-1275.000000, -412.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -597,25 +631,25 @@
             <div class="filter__input-group u-jc-sb">
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
                 <div class="filter__input-wrap">
-                  <input type="text" class="filter__input" required/>
+                  <input type="text" class="filter__input" />
                   <span class="filter__floating-label">Кадастровый номер</span>
                 </div>
               </div>
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
                 <div class="filter__input-wrap">
-                  <input type="text" class="filter__input" required/>
+                  <input type="text" class="filter__input" />
                   <span class="filter__floating-label">Ваше Имя</span>
                 </div>
               </div>
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
                 <div class="filter__input-wrap">
-                  <input type="text" class="filter__input" required/>
+                  <input type="text" class="filter__input" />
                   <span class="filter__floating-label">Телефон</span>
                 </div>
               </div>
               <div class="filter__input-block filter__input-block--inline filter__input-block--normal">
                 <div class="filter__input-wrap">
-                  <input type="text" class="filter__input" required/>
+                  <input type="text" class="filter__input" />
                   <span class="filter__floating-label">Выбор Whatsup/Почта</span>
                 </div>
               </div>
@@ -853,12 +887,12 @@
           <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
             <label for="text" class="filter__label">Тип консультации</label>
             <div class="filter__input-wrap filter__input-wrap--full">
-              <input type="hidden" class="filter__input filter__input--full" name="text" required/>
+              <input type="hidden" data-group="type" class="js-filter-hidden" name="text" required/>
               <a href="javascript:;" data-group="type" class="js-select-btn filter__select-btn filter__input--full"></a>
               <span class="filter__floating-label filter__select-label js-select-label">Тип консультации</span>
               <div class="filter__select-block js-select-block">
-                <a href="javascript:;" data-select="urid" data-group="type" class="js-select-item filter__select-item">Юридическая</a>
-                <a href="javascript:;" data-select="nedv" data-group="type" class="js-select-item filter__select-item">Недвижимость</a>
+                <a href="javascript:;" data-group="type" class="js-select-item filter__select-item">Юридическая</a>
+                <a href="javascript:;" data-group="type" class="js-select-item filter__select-item">Недвижимость</a>
               </div>
             </div>
           </div>

@@ -174,12 +174,14 @@ input, textarea, select, button {
       display: block;
       position: absolute;
       z-index: 1;
+      max-height: 215px;
+      overflow: scroll;
+      top: 100%;
+      width: 100%;
     }
   }
-  &-btn {
-
-  }
-  &-item {
-
-  }
+}
+body {
+  margin-top: 150px;
+  // transition: all .2s ease;
 }

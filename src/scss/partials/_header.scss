@@ -1,7 +1,26 @@
 .header {
+  background: white;
+  transition: all .5s ease-in;	
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  &.sticked {
+    .header {
+      &__logo {
+        height: 40px;
+        width: 200px;  
+      }
+      &__main-container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
   &__logo {
     height: 60px;
     width: 260px;
+    transition: all .5s ease-in;
     &--mobile {
       display: none;
     }
@@ -33,6 +52,7 @@
     border-bottom: 1px solid #E1E1E1;
   }
   &__main-container {
+    transition: all .5s ease-in;
     padding-top: 30px;
     padding-bottom: 30px;
     @media (max-width: $min-width-mob) {
@@ -54,7 +74,11 @@
   } 
   &__nav {
     display: flex;
-    a {
+    li {
+      position: relative;
+    }
+    &-link {
+      cursor: pointer;
       font-size: 15px;
       line-height: 20px;
       letter-spacing: 0.24px;
@@ -63,6 +87,30 @@
     }
     @media (max-width: $min-width-mob) {
       display: none;      
+    }
+  }
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 150%;
+    min-width: calc(100% + 30px);
+    background: white;
+    font-size: 14px;
+    padding: 5px 30px;
+    box-shadow: 0 6px 16px 0 rgba(0,0,0,.07);
+    li {
+      padding: 15px 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid #e1e1e1;
+      }
+      a {
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+    &.isOpened {
+      display: block;
     }
   }
 }
