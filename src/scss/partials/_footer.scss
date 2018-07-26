@@ -4,15 +4,15 @@
   @media (max-width: $min-width-mob) {
     padding: 20px 0;
   }
-  .prefooter__number {
+  &__number {
     margin-bottom: 10px;
     @include typo($size:24px,$line:29px);
   }
-  .prefooter__text {
+  &__text {
     color: #9B9B9B;
     @include typo($size:14px,$line:18px);
   }
-  .prefooter__block {
+  &__block {
     text-align: right;
     @media (max-width: $min-width-mob) {
       text-align: center;
@@ -120,10 +120,19 @@
   &__link {
     color: #9B9B9B;
     border-bottom: 1px solid rgba(#9B9B9B,0.3);
+    @include link-tansition;
+    &:hover {
+      opacity: 0.6;
+      border-color: transparent
+    }
   }
   &__social-link {
     color: #9B9B9B;
     @include typo($size:14px,$line:30px);
+    @include link-tansition;
+    &:hover {
+      opacity: 0.6;
+    }
   }
   &__top {
     margin-bottom: 35px;
@@ -138,25 +147,30 @@
     opacity: 0.6;
     margin-top: 25px;
   }
-  .main-footer__bottom-text {
+  &__bottom-text {
     color: #7B7B7B;
     text-transform: uppercase; 
     @include typo($size:10px,$line:20px);
-    &.main-footer__bottom-text--copyright {
+    &--copyright {
       max-width: none;
       margin-bottom: 20px;
     }    
     @media (max-width: $min-width-small) {
-      &.main-footer__bottom-text--copyright {
+      &--copyright {
         max-width: 230px;
       }
     }
   }
-  .main-footer__bottom-link {
+  &__bottom-link {
     color: #7B7B7B;
     border-bottom: 1px solid;
+    @include link-tansition;
+    &:hover {
+      opacity: 0.6;
+      border-color: transparent
+    }
   }
-  .main-footer__copyright  {
+  &__copyright  {
     margin-top: 25px;
     flex-direction: row;
     @media (max-width: $min-width-small) {

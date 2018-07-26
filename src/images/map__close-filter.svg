@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-    <title>1. Закрыть</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1.-«Получить-консультацию»" transform="translate(-707.000000, -41.000000)" fill="#027993" fill-rule="nonzero">
-            <g id="1.-Закрыть" transform="translate(707.000000, 41.000000)">
-                <polygon id="Shape" points="26.8983607 0.0459016393 14.0459016 12.9442623 1.14754098 0.0459016393 0.275409836 0.918032787 13.1278689 13.8163934 0.275409836 26.7147541 1.14754098 27.5868852 14.0459016 14.6885246 26.8983607 27.5868852 27.8163934 26.7147541 14.9180328 13.8163934 27.8163934 0.918032787"></polygon>
-            </g>
-        </g>
+    <g id="Forms">
+        <polygon id="Shape" points="26.8983607 0.0459016393 14.0459016 12.9442623 1.14754098 0.0459016393 0.275409836 0.918032787 13.1278689 13.8163934 0.275409836 26.7147541 1.14754098 27.5868852 14.0459016 14.6885246 26.8983607 27.5868852 27.8163934 26.7147541 14.9180328 13.8163934 27.8163934 0.918032787"></polygon>
     </g>
 </svg>

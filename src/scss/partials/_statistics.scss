@@ -28,7 +28,12 @@
     @include typo($size:72px,$line:88px);
   }
   &__card-text {
+    opacity: 0;
+    transition: all 2s ease;//0.3
     @include typo($size:20px,$line:24px);
+    &.isAnimated {
+      opacity: 1;
+    }
   }
   &__scrollable-div {
     width: 100%;

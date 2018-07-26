@@ -35,10 +35,11 @@
       <a href="/" class="header__logo header__logo--mobile">
         <span class="svg__logo-mobile"><svg class="svg ">
           <use xlink:href="#logo-mob">
-        </svg></span></a>
+        </svg></span>
+      </a>
       <ul class="header__nav list-inline u-jc-fe">
-        <li>
-          <span class="header__nav-link js-nav-link" data-link="about">О компании</span>
+        <li class="header__nav-item js-nav-link">
+          <span class="header__nav-link " data-link="about">О компании</span>
           <ul class="header__dropdown" data-drop="about">
             <li><a href="/about-us.html">О нас</a></li>
             <li><a href="/acred.html">Акредитация</a></li>
@@ -48,31 +49,38 @@
             <li><a href="/partners.html">Партнеры</a></li>
           </ul>
         </li>
-        <li>
+        <li class="header__nav-item">
           <a class="header__nav-link" href="/catalog.html">Каталог недвижимости</a>
         </li>
-        <li>
-          <span class="header__nav-link js-nav-link" data-link="services">Услуги</span>
+        <li class="header__nav-item js-nav-link">
+          <span class="header__nav-link " data-link="services">Услуги</span>
           <ul class="header__dropdown" data-drop="services">
             <li><a href="/score.html">Оценка недвижимости</a></li>
             <li><a href="/egrn.html">Выписка из ЕГРН</a></li>
           </ul>
         </li>
-        <li>
-          <span class="header__nav-link js-nav-link" data-link="consult">Юридическая консультация</span>
+        <li class="header__nav-item js-nav-link">
+          <span class="header__nav-link " data-link="consult">Юридическая консультация</span>
           <ul class="header__dropdown" data-drop="consult" >
             <li><a href="/vopros-otvet.html">Вопрос-Ответ</a></li>
             <li><a href="/docs.html">Документы</a></li>
           </ul>
         </li>
-        <li>
+        <li class="header__nav-item" >
           <a class="header__nav-link" href="/news.html">Новости</a>
         </li>
-        <li>
+        <li class="header__nav-item">
           <a class="header__nav-link" href="/contacts.html">Контакты</a>
         </li>
       </ul>
-      <a href="#" class="header__menu-mob"><img src="/images/menu.png"></a>
+      <a href="#" class="header__menu-mob menu-mob u-ai-ce">
+        <span class="menu-mob__text">Меню</span>
+        <span class="menu-mob__icon u-jc-sb u-fd-col u-ai-fe">
+          <span class="menu-mob__line"></span>
+          <span class="menu-mob__line"></span>
+          <span class="menu-mob__line"></span>
+        </span>
+      </a>
     </div> 
   </div>
 </div>

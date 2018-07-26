@@ -25,9 +25,13 @@
   width: 40px;
   height: 40px;
   padding: 10px;
-  background-color: #339FB3;
+  background-color: rgba(255,255,255,0.2);
   border-radius: 50%;
   color: $white;
+  @include link-tansition;
+  &:hover, &:active {
+    background-color: rgba(255,255,255,0.4);
+  } 
 }
 .svg__users-info {
   width: 60px;
@@ -87,6 +91,11 @@
   width: 28px;
   height: 28px;
   color: $blue;
+  @include link-tansition;
+  &:hover {
+    transform: scale(0.7);
+    color: $nut-brown;
+  }
 }
 .small-slider__arrow-img {
   width: 40px;

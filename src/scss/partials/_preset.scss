@@ -4,21 +4,27 @@
   height: 300px;
   padding: 40px 30px;
   // margin-bottom: 60px;
+  @include link-tansition;
+  &:hover {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    box-shadow: 0 9px 25px 0 #9B9B9B;
+  }
   @media (max-width: $min-width-mob) {
     height: 225px;
     // margin-bottom: 50px;
     padding: 18px 25px;
   }
-  &.preset--full {
+  &--full {
     width: 100%;
   }
-  &.preset--small {
+  &--small {
     width: 400px;
     @media (max-width: $min-width-mob) {
       width: 300px;
     }
   }
-  &.preset--first {
+  &--first {
     background-color: #ADA07A;
   }
   &.preset--second {
@@ -49,13 +55,17 @@
       }
     }
   }
-  .preset__text {
+  &__text {
     font-size: 14px;
     color: $white;    
     line-height: 22px;
     a {
       color: $white;   
       border-bottom: 1px solid rgba($white, 0.3);
+      @include link-tansition;
+      &:hover {
+        border-color: transparent;
+      }
     }
   }
   .preset__rooms {

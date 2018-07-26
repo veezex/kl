@@ -12,7 +12,6 @@
 		    <!-- temp before I understand exact needed weight-->
 		
 		    <script src="js/jquery-3.3.1.min.js"></script>
-		    <script src="js/jquery.maskedinput.js"></script>
 		    <script src="js/main.js"></script>
 		
 		    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -55,10 +54,11 @@
 		      <a href="/" class="header__logo header__logo--mobile">
 		        <span class="svg__logo-mobile"><svg class="svg ">
 		          <use xlink:href="#logo-mob">
-		        </svg></span></a>
+		        </svg></span>
+		      </a>
 		      <ul class="header__nav list-inline u-jc-fe">
-		        <li>
-		          <span class="header__nav-link js-nav-link" data-link="about">О компании</span>
+		        <li class="header__nav-item js-nav-link">
+		          <span class="header__nav-link " data-link="about">О компании</span>
 		          <ul class="header__dropdown" data-drop="about">
 		            <li><a href="/about-us.html">О нас</a></li>
 		            <li><a href="/acred.html">Акредитация</a></li>
@@ -68,31 +68,38 @@
 		            <li><a href="/partners.html">Партнеры</a></li>
 		          </ul>
 		        </li>
-		        <li>
+		        <li class="header__nav-item">
 		          <a class="header__nav-link" href="/catalog.html">Каталог недвижимости</a>
 		        </li>
-		        <li>
-		          <span class="header__nav-link js-nav-link" data-link="services">Услуги</span>
+		        <li class="header__nav-item js-nav-link">
+		          <span class="header__nav-link " data-link="services">Услуги</span>
 		          <ul class="header__dropdown" data-drop="services">
 		            <li><a href="/score.html">Оценка недвижимости</a></li>
 		            <li><a href="/egrn.html">Выписка из ЕГРН</a></li>
 		          </ul>
 		        </li>
-		        <li>
-		          <span class="header__nav-link js-nav-link" data-link="consult">Юридическая консультация</span>
+		        <li class="header__nav-item js-nav-link">
+		          <span class="header__nav-link " data-link="consult">Юридическая консультация</span>
 		          <ul class="header__dropdown" data-drop="consult" >
 		            <li><a href="/vopros-otvet.html">Вопрос-Ответ</a></li>
 		            <li><a href="/docs.html">Документы</a></li>
 		          </ul>
 		        </li>
-		        <li>
+		        <li class="header__nav-item" >
 		          <a class="header__nav-link" href="/news.html">Новости</a>
 		        </li>
-		        <li>
+		        <li class="header__nav-item">
 		          <a class="header__nav-link" href="/contacts.html">Контакты</a>
 		        </li>
 		      </ul>
-		      <a href="#" class="header__menu-mob"><img src="/images/menu.png"></a>
+		      <a href="#" class="header__menu-mob menu-mob u-ai-ce">
+		        <span class="menu-mob__text">Меню</span>
+		        <span class="menu-mob__icon u-jc-sb u-fd-col u-ai-fe">
+		          <span class="menu-mob__line"></span>
+		          <span class="menu-mob__line"></span>
+		          <span class="menu-mob__line"></span>
+		        </span>
+		      </a>
 		    </div> 
 		  </div>
 		</div>
@@ -443,16 +450,8 @@
             </g>
         </g>
     </symbol><symbol id="map__close-filter" viewBox="0 0 28 28">
-        <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-        <title>1. &#x417;&#x430;&#x43A;&#x440;&#x44B;&#x442;&#x44C;</title>
-        <desc>Created with Sketch.</desc>
-        
-        <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="1.-&#xAB;&#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x44C;-&#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44E;&#xBB;" transform="translate(-707.000000, -41.000000)" fill="#027993" fill-rule="nonzero">
-                <g id="1.-&#x417;&#x430;&#x43A;&#x440;&#x44B;&#x442;&#x44C;" transform="translate(707.000000, 41.000000)">
-                    <polygon id="Shape" points="26.8983607 0.0459016393 14.0459016 12.9442623 1.14754098 0.0459016393 0.275409836 0.918032787 13.1278689 13.8163934 0.275409836 26.7147541 1.14754098 27.5868852 14.0459016 14.6885246 26.8983607 27.5868852 27.8163934 26.7147541 14.9180328 13.8163934 27.8163934 0.918032787"/>
-                </g>
-            </g>
+        <g id="Forms">
+            <polygon id="Shape" points="26.8983607 0.0459016393 14.0459016 12.9442623 1.14754098 0.0459016393 0.275409836 0.918032787 13.1278689 13.8163934 0.275409836 26.7147541 1.14754098 27.5868852 14.0459016 14.6885246 26.8983607 27.5868852 27.8163934 26.7147541 14.9180328 13.8163934 27.8163934 0.918032787"/>
         </g>
     </symbol><symbol id="map__list" viewBox="0 0 40 20">
         <rect id="Rectangle" x="0" y="0" width="40" height="6"/>
@@ -618,20 +617,64 @@
       </div>
     </section>
 
-    <section class="section partners-page">
+    <!-- <section class="section partners-page">
       <div class="container">
         <div class="partners-page__block">
           <div class="partners-page__img-block u-fw-wr u-jc-sb">
+            <div class="partners-page__item">
               <img class="partners__img" src="images/pertners__logo1.png" alt="">
-							<img class="partners__img" src="images/pertners__logo2.png" alt="">
-							<img class="partners__img" src="images/pertners__logo3.png" alt="">
-							<img class="partners__img" src="images/pertners__logo4.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo2.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo3.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo4.png" alt="">
+            </div>
+            <div class="partners-page__item">
               <img class="partners__img" src="images/pertners__logo5.png" alt="">
-							<img class="partners__img" src="images/pertners__logo6.png" alt="">
-							<img class="partners__img" src="images/pertners__logo7.png" alt="">
-							<img class="partners__img" src="images/pertners__logo8.png" alt="">
-							<img class="partners__img" src="images/pertners__logo9.png" alt="">
-							<img class="partners__img" src="images/pertners__logo10.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo6.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo7.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo8.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo9.png" alt="">
+            </div>
+            <div class="partners-page__item">
+              <img class="partners__img" src="images/pertners__logo10.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="section partners partners--page">
+      <div class="scrollable-parent" data-pscroll="partners">
+        <div class="container container--scroll scrollable-child">
+          <div class="partners__scrollable-div scrollable-inner" data-iscroll="partners">
+            <div class="partners__block"> 
+              <div class="partners__img-block u-jc-sb"> 
+                <img class="partners__img" src="images/pertners__logo1.png" alt="">
+                <img class="partners__img" src="images/pertners__logo2.png" alt="">
+                <img class="partners__img" src="images/pertners__logo3.png" alt="">
+                <img class="partners__img" src="images/pertners__logo4.png" alt="">
+                <img class="partners__img" src="images/pertners__logo5.png" alt="">
+              </div>
+              <div class="partners__img-block u-jc-sb partners__img-block--last"> 
+                <img class="partners__img" src="images/pertners__logo6.png" alt="">
+                <img class="partners__img" src="images/pertners__logo7.png" alt="">
+                <img class="partners__img" src="images/pertners__logo8.png" alt="">
+                <img class="partners__img" src="images/pertners__logo9.png" alt="">
+                <img class="partners__img" src="images/pertners__logo10.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>

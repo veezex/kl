@@ -44,14 +44,19 @@ $max-width-medium: 980px;
 // .h4 {font-size: 20px;}
 // .h5 {font-size: 18px;font-weight: bold;}
 
+@mixin link-tansition {
+  transition: all 0.8s ease;//0.3
+}
+
 %link-like {
   color: $black;
   // line-height: 20px;
   text-decoration: none;
   border-bottom: 1px solid rgba($black,0.3);
+  @include link-tansition;
   &:hover {
     color: $blue;
-    border: none;
+    border-color: transparent;
   }
 }
 @mixin gradient ($dir:top,$start:$white,$end:$black,$startplace:0%,$endplace:100%) {

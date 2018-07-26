@@ -71,6 +71,7 @@ input, textarea, select, button {
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
+  @include link-tansition;
 }
 .btn--white {
   padding: 10px 28px;
@@ -78,6 +79,9 @@ input, textarea, select, button {
   background: transparent;
   border: 1px solid $white;
   text-transform: uppercase;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 .btn--empty {
   padding: 12px 20px;
@@ -184,4 +188,7 @@ input, textarea, select, button {
 body {
   margin-top: 150px;
   // transition: all .2s ease;
+  @media (max-width: $min-width-mob) {
+    margin-top: 100px;
+  }
 }

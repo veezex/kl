@@ -44,6 +44,10 @@
       &[aria-expanded="false"] {
         color: $nut-brown;  
         border-bottom: 1px solid rgba($nut-brown,0.3);
+        @include link-tansition;
+        &:hover {
+          border-color: transparent;
+        }
       }
     }
   }

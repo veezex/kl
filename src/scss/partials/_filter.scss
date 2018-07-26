@@ -54,6 +54,7 @@
     }
     &--add {
       display: none;
+      @include link-tansition;
       &.js-isVisible {
         display: flex;
       }

@@ -5,6 +5,16 @@
       min-width: 1280px;
     }
   }
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+    @include link-tansition;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
   &__card {
     position: relative;
     height: 410px;
@@ -12,8 +22,7 @@
     margin-bottom: 60px;
     // background-color: #441E1C;
     overflow: hidden;
-    background-position: top center;
-    background-size: cover;
+    @include link-tansition;
     &:hover {
       box-shadow: 0 25px 40px 0 rgba(0,0,0,0.31);
       .employees__text {
@@ -31,6 +40,7 @@
     position: absolute;
     bottom: 0;
     background-color: #441E1C;
+    @include link-tansition;
     @include typo($size:14px,$line:18px);
   }
   &__img {

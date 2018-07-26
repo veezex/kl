@@ -5,9 +5,13 @@
     @include typo($size:24px,$line:29px);
     a {
       color: $blue;
+      @include link-tansition;
       &[aria-expanded="false"] {
         color: $nut-brown;  
         border-bottom: 1px solid rgba($nut-brown,0.3);
+      }
+      &:hover {
+        border-color: transparent;
       }
     }
   }
@@ -21,7 +25,11 @@
     }
     a {
       color: $nut-brown;
+      @include link-tansition;
       border-bottom: 1px solid rgba($nut-brown, 0.3);
+      &:hover {
+        border-color: transparent;
+      }
     }
   }
   &__item-header {

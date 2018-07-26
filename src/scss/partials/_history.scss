@@ -32,6 +32,11 @@
   &__card-text {
     @include typo($size:15px,$line:18px);
     padding: 0 6.6666% 3.33333%;
+    opacity: 0;
+    transition: all 2s ease;//0.3
+    &.isAnimated {
+      opacity: 1;
+    }
     p {
       margin-bottom: 3.33333%;
     }
