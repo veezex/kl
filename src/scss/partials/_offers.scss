@@ -59,6 +59,10 @@
     background-color: $nut-brown;
     border-radius: 50%;
     @include typo($size:20px,$line:40px);
+    @include link-tansition;
+    &:hover {
+      opacity: 0.6;
+    }
     &.iSactive {
       background-color: $blue;
     }

@@ -9,7 +9,11 @@
     .header {
       &__logo {
         height: 40px;
-        width: 200px;  
+        width: 200px;   
+      }
+      &__main {
+        border-color: transparent; 
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
       }
       &__main-container {
         padding-top: 15px;
@@ -20,7 +24,11 @@
   &__logo {
     height: 60px;
     width: 260px;
-    transition: all .5s ease-in;
+    // transition: all .5s ease-in; 
+    @include link-tansition;
+    &:hover {
+      opacity: 0.6;
+    }
     &--mobile {
       display: none;
     }

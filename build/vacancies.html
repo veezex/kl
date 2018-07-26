@@ -104,29 +104,31 @@
 		  </div>
 		  <div class="header__side side u-jc-fe">
 		    <div class="side__wrapper">
-		      <div class="side__inner u-fd-col u-jc-fs">
-		        <span class="side__label">О компании</span>
-		        <ul class="side__list">
-		          <li class="side__item"><a href="/about-us.html" class="side__link">О нас</a></li>
-		          <li class="side__item"><a href="/acred.html" class="side__link">Акредитация</a></li>
-		          <li class="side__item"><a href="/history.html" class="side__link">История</a></li>
-		          <li class="side__item"><a href="/employees.html" class="side__link">Сотрудники</a></li>
-		          <li class="side__item"><a href="/vacancies.html" class="side__link">Вакансии</a></li>
-		          <li class="side__item"><a href="/partners.html" class="side__link">Партнеры</a></li>  
-		        </ul>
-		        <a class="side__label" href="/catalog.html">Каталог недвижимости</a>
-		        <span class="side__label">Услуги</span>
-		        <ul class="side__list">
-		          <li class="side__item"><a href="/score.html" class="side__link">Оценка недвижимости</a></li>
-		          <li class="side__item"><a href="/egrn.html" class="side__link">Выписка из ЕГРН</a></li>
-		        </ul>
-		        <span class="side__label">Юридическая консультация</span>
-		        <ul class="side__list">
-		          <li class="side__item"><a href="/vopros-otvet.html" class="side__link">Вопрос–Ответ</a></li>
-		          <li class="side__item"><a href="/docs.html" class="side__link">Документы</a></li>
-		        </ul>
-		        <a class="side__label" href="/news.html">Новости</a>
-		        <a class="side__label" href="/contants.html">Контакты</a>
+		      <div class="side__inner u-ai-ce">
+		        <div class="side__container u-fd-col u-jc-fs">
+		          <span class="side__label">О компании</span>
+		          <ul class="side__list">
+		            <li class="side__item"><a href="/about-us.html" class="side__link">О нас</a></li>
+		            <li class="side__item"><a href="/acred.html" class="side__link">Акредитация</a></li>
+		            <li class="side__item"><a href="/history.html" class="side__link">История</a></li>
+		            <li class="side__item"><a href="/employees.html" class="side__link">Сотрудники</a></li>
+		            <li class="side__item"><a href="/vacancies.html" class="side__link">Вакансии</a></li>
+		            <li class="side__item"><a href="/partners.html" class="side__link">Партнеры</a></li>  
+		          </ul>
+		          <a class="side__label" href="/catalog.html">Каталог недвижимости</a>
+		          <span class="side__label">Услуги</span>
+		          <ul class="side__list">
+		            <li class="side__item"><a href="/score.html" class="side__link">Оценка недвижимости</a></li>
+		            <li class="side__item"><a href="/egrn.html" class="side__link">Выписка из ЕГРН</a></li>
+		          </ul>
+		          <span class="side__label">Юридическая консультация</span>
+		          <ul class="side__list">
+		            <li class="side__item"><a href="/vopros-otvet.html" class="side__link">Вопрос–Ответ</a></li>
+		            <li class="side__item"><a href="/docs.html" class="side__link">Документы</a></li>
+		          </ul>
+		          <a class="side__label" href="/news.html">Новости</a>
+		          <a class="side__label" href="/contants.html">Контакты</a>
+		        </div>
 		      </div>
 		    </div>
 		  </div>
@@ -825,60 +827,62 @@
       <a href="javascript:;" data-modal="consult" class="js-modal__btn btn btn--empty register__btn register__btn--big">Получить консультацию</a>
     </section>
     
-    <section class="section mail-us modal js-modal" id="consult">
-      <div class="modal__header">
-          <a href="javascript:;" id="modal-close" class="modal__header-close u-jc-ce">
-            <span class="svg__filter-close"><svg class="svg">
-              <use xlink:href="#map__close-filter">
-            </svg></span> 
-          </a>
+    <section class="section mail-us modal js-modal u-ai-ce u-jc-ce" id="consult">
+      <div class="u-ai-ce u-fd-col">
+        <div class="modal__header">
+            <a href="javascript:;" id="modal-close" class="modal__header-close u-jc-ce">
+              <span class="svg__filter-close"><svg class="svg">
+                <use xlink:href="#map__close-filter">
+              </svg></span> 
+            </a>
+          </div>
+        <div class="container container--small">
+          <p class="section__header mail-us__header">Я хочу получить консультацию</p>
         </div>
-      <div class="container container--small">
-        <p class="section__header mail-us__header">Я хочу получить консультацию</p>
-      </div>
-      <div class="container container--small">
-        <form action="">
-          <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
-            <label for="name" class="filter__label">Ваше Имя Фамилия</label>
-            <div class="filter__input-wrap filter__input-wrap--full">
-              <input type="text" class="filter__input filter__input--full" name="name" required/>
-              <span class="filter__floating-label">Иван Тургенев</span>
-            </div>
-          </div>
-          <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
-            <label for="tel" class="filter__label">Ваше телефон</label>
-            <div class="filter__input-wrap filter__input-wrap--full">
-              <input type="text" class="filter__input filter__input--full" name="tel" required/>
-              <span class="filter__floating-label">+7(999) 123-45-67 </span>
-            </div>
-          </div>
-          <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
-            <label for="email" class="filter__label">Ваше e-mail</label>
-            <div class="filter__input-wrap filter__input-wrap--full">
-              <input type="text" class="filter__input filter__input--full" name="email" required/>
-              <span class="filter__floating-label">name@domain.ru</span>
-            </div>
-          </div>
-          <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
-            <label for="text" class="filter__label">Тип консультации</label>
-            <div class="filter__input-wrap filter__input-wrap--full">
-              <input type="hidden" data-group="type" class="js-filter-hidden" name="text" required/>
-              <a href="javascript:;" data-group="type" class="js-select-btn filter__select-btn filter__input--full"></a>
-              <span class="filter__floating-label filter__select-label js-select-label">Тип консультации</span>
-              <div class="filter__select-block js-select-block">
-                <a href="javascript:;" data-group="type" class="js-select-item filter__select-item">Юридическая</a>
-                <a href="javascript:;" data-group="type" class="js-select-item filter__select-item">Недвижимость</a>
+        <div class="container container--small">
+          <form action="">
+            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+              <label for="name" class="filter__label">Ваше Имя Фамилия</label>
+              <div class="filter__input-wrap filter__input-wrap--full">
+                <input type="text" class="filter__input filter__input--full" name="name" required/>
+                <span class="filter__floating-label">Иван Тургенев</span>
               </div>
             </div>
-          </div>
-          <div class="filter__radio">
-            <input type="checkbox" id="checkbox" class="filter__radio-input" />
-            <label for="checkbox" class="filter__radio-label">я принимаю <a href="#">условия</a> передачи информации</label>
-          </div>
-          <div class="mail-us__btn-block u-jc-ce">
-            <button class="btn btn--regular mail-us__btn">Отправить</button>
-          </div>
-        </form>
+            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+              <label for="tel" class="filter__label">Ваше телефон</label>
+              <div class="filter__input-wrap filter__input-wrap--full">
+                <input type="text" class="filter__input filter__input--full" name="tel" required/>
+                <span class="filter__floating-label">+7(999) 123-45-67 </span>
+              </div>
+            </div>
+            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+              <label for="email" class="filter__label">Ваше e-mail</label>
+              <div class="filter__input-wrap filter__input-wrap--full">
+                <input type="text" class="filter__input filter__input--full" name="email" required/>
+                <span class="filter__floating-label">name@domain.ru</span>
+              </div>
+            </div>
+            <div class="filter__input-block filter__input-block--full u-jc-sb u-ai-ce">
+              <label for="text" class="filter__label">Тип консультации</label>
+              <div class="filter__input-wrap filter__input-wrap--full">
+                <input type="hidden" data-group="type" class="js-filter-hidden" name="text" required/>
+                <a href="javascript:;" data-group="type" class="js-select-btn filter__select-btn filter__input--full"></a>
+                <span class="filter__floating-label filter__select-label js-select-label">Тип консультации</span>
+                <div class="filter__select-block js-select-block">
+                  <a href="javascript:;" data-group="type" class="js-select-item filter__select-item">Юридическая</a>
+                  <a href="javascript:;" data-group="type" class="js-select-item filter__select-item">Недвижимость</a>
+                </div>
+              </div>
+            </div>
+            <div class="filter__radio">
+              <input type="checkbox" id="checkbox" class="filter__radio-input" />
+              <label for="checkbox" class="filter__radio-label">я принимаю <a href="#">условия</a> передачи информации</label>
+            </div>
+            <div class="mail-us__btn-block u-jc-ce">
+              <button class="btn btn--regular mail-us__btn">Отправить</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 

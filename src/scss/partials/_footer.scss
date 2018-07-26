@@ -135,10 +135,20 @@
     }
   }
   &__top {
+    position: relative;
     margin-bottom: 35px;
-    border-bottom: 1px solid rgba(#9B9B9B,0.2);
+    // border-bottom: 1px solid rgba(#9B9B9B,0.2);
     flex-direction: row;
     margin: 0 -10px;
+    &:after {
+      content: " ";
+      position: absolute;
+      border-bottom: 1px solid rgba(155,155,155,.2);
+      bottom: 0;
+      width: calc(100% - 20px);
+      height: 1px;
+      margin: 0 10px;
+    }
     @media (max-width: $min-width-medium) {
       flex-direction: column;
     }

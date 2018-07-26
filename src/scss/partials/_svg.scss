@@ -54,6 +54,10 @@
   padding-top: 9px;
   margin-left: 20px;
   color: $blue;
+  @include link-tansition;
+  &:hover {
+    transform: scale(0.7);
+  }
 }
 .js-active {
   .svg__offers {
@@ -144,6 +148,10 @@
 .svg__logo-desktop {
   height: 100%;
   width: 100%;
+  @include link-tansition;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 .svg__logo-mobile {
   height: 100%;
