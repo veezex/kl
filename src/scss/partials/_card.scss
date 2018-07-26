@@ -11,10 +11,11 @@
   }
   &:hover {
     border-color: rgba($nut-brown,0.3);
+    box-shadow: 0 9px 25px 0 rgba(186,117,48,0.40);
   }
   &:active {
-    box-shadow: 0 9px 25px 0 rgba(186,117,48,0.40);
     border-color: transparent;
+    box-shadow: 0 9px 25px 0 rgba(186,117,48,0.60);
   }
   &__image {
     min-width: 100%;
