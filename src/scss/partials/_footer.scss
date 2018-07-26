@@ -141,7 +141,7 @@
   .main-footer__bottom-text {
     color: #7B7B7B;
     text-transform: uppercase; 
-    @include typo($size:11px,$line:20px);
+    @include typo($size:10px,$line:20px);
     &.main-footer__bottom-text--copyright {
       max-width: none;
       margin-bottom: 20px;
