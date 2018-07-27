@@ -158,6 +158,9 @@
       border-radius: 8px;
       line-height: 37px;
       border: 1px solid transparent;
+      &--small {
+        width: 100%;
+      }
       &:after {
         content: " ";
         background-image: url(../images/svg/select__arrow.svg);

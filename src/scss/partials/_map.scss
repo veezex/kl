@@ -3,9 +3,11 @@
   &__image {
     position: relative;
     width: calc(100% - 340px);
-    height: 1030px;
+    min-height: 1030px;
+    height: 100vh;
     @media (max-width: $min-width-medium) {
       width: 100%;
+      min-height: 0;
       height: calc(100vh - 161px)!important;
     }
   }
