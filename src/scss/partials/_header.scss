@@ -10,6 +10,9 @@
       &__logo {
         height: 40px;
         width: 200px;   
+        @media (max-width: $min-width-mob) {
+          width: 60px;   
+        }
       }
       &__main {
         border-color: transparent; 

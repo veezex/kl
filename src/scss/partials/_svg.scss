@@ -148,10 +148,6 @@
 .svg__logo-desktop {
   height: 100%;
   width: 100%;
-  @include link-tansition;
-  &:hover {
-    opacity: 0.6;
-  }
 }
 .svg__logo-mobile {
   height: 100%;

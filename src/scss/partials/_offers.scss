@@ -37,7 +37,7 @@
     }
   }
   &__pagination {
-    padding-bottom: 20px;
+    padding: 20px 0;
   }
   &__tab-block {
     @media (max-width: $min-width-large) {
@@ -48,6 +48,9 @@
         display: none!important;
       }
     }
+  }
+  &.modal {
+    margin: 0;
   }
 }
 .pagination {
