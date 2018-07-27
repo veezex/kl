@@ -3,3 +3,4 @@ $('#modal-close-btn').on('click',function() {
 
   $this.closest('.js-modal').removeClass('isOpened');
 }); 
+
