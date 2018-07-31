@@ -58,7 +58,14 @@
 		      </a>
 		      <ul class="header__nav list-inline u-jc-fe">
 		        <li class="header__nav-item js-nav-link">
-		          <span class="header__nav-link " data-link="about">О компании</span>
+		          <span class="header__nav-link-block" data-link="about">
+		            <span class="svg__header-arrow">
+		              <svg class="svg">
+		                <use xlink:href="#select__arrow">
+		              </svg>
+		            </span>
+		            <span class="header__nav-link">О компании</span>
+		          </span>
 		          <ul class="header__dropdown" data-drop="about">
 		            <li><a href="/about-us.html">О нас</a></li>
 		            <li><a href="/acred.html">Акредитация</a></li>
@@ -69,27 +76,41 @@
 		          </ul>
 		        </li>
 		        <li class="header__nav-item">
-		          <a class="header__nav-link" href="/catalog.html">Каталог недвижимости</a>
+		          <a class="header__nav-link header__nav-link-block" href="/catalog.html">Каталог недвижимости</a>
 		        </li>
 		        <li class="header__nav-item js-nav-link">
-		          <span class="header__nav-link " data-link="services">Услуги</span>
+		          <span class="header__nav-link-block" data-link="services">
+		            <span class="svg__header-arrow">
+		              <svg class="svg">
+		                <use xlink:href="#select__arrow">
+		              </svg>
+		            </span>
+		            <span class="header__nav-link">Услуги</span>
+		          </span>
 		          <ul class="header__dropdown" data-drop="services">
 		            <li><a href="/score.html">Оценка недвижимости</a></li>
 		            <li><a href="/egrn.html">Выписка из ЕГРН</a></li>
 		          </ul>
 		        </li>
 		        <li class="header__nav-item js-nav-link">
-		          <span class="header__nav-link " data-link="consult">Юридическая консультация</span>
+		          <span class="header__nav-link-block" data-link="consult">
+		            <span class="svg__header-arrow">
+		              <svg class="svg">
+		                <use xlink:href="#select__arrow">
+		              </svg>
+		            </span>
+		            <span class="header__nav-link">Юридическая консультация</span>
+		          </span>
 		          <ul class="header__dropdown" data-drop="consult" >
 		            <li><a href="/vopros-otvet.html">Вопрос-Ответ</a></li>
 		            <li><a href="/docs.html">Документы</a></li>
 		          </ul>
 		        </li>
 		        <li class="header__nav-item" >
-		          <a class="header__nav-link" href="/news.html">Новости</a>
+		          <a class="header__nav-link header__nav-link-block" href="/news.html">Новости</a>
 		        </li>
 		        <li class="header__nav-item">
-		          <a class="header__nav-link" href="/contacts.html">Контакты</a>
+		          <a class="header__nav-link header__nav-link-block" href="/contacts.html">Контакты</a>
 		        </li>
 		      </ul>
 		      <a href="javascript:;" class="js-header-menu header__menu-mob menu-mob u-ai-ce">
@@ -106,6 +127,15 @@
 		    <div class="side-modal__wrapper">
 		      <div class="side-modal__inner u-ai-ce">
 		        <div class="side-modal__container u-fd-col u-jc-fs">
+		          <div class="u-jc-sb side-modal__header-block u-ai-ce">
+		            <div class="side-modal__header-wrapper">
+		            </div>
+		            <a href="javascript:;" id="modal-close-menu" class="modal__header-close u-jc-ce">
+		              <span class="svg__filter-close"><svg class="svg">
+		                <use xlink:href="#map__close-filter">
+		              </svg></span> 
+		            </a>
+		          </div>
 		          <span class="side-modal__label">О компании</span>
 		          <ul class="side-modal__list">
 		            <li class="side-modal__item"><a href="/about-us.html" class="side-modal__link">О нас</a></li>
@@ -133,10 +163,10 @@
 		    </div>
 		  </div>
 		</div>
-		<section class="section offers modal js-modal u-ai-ce u-jc-ce" id="izbrannoe">
+		<section class="section offers modal js-modal u-jc-ce" id="izbrannoe">
 		  <div class="u-ai-ce u-fd-col">
 		    <div class="modal__header">
-		      <a href="javascript:;" id="modal-close" class="modal__header-close u-jc-ce">
+		      <a href="javascript:;" class="js-modal-close-btn modal__header-close u-jc-ce">
 		        <span class="svg__filter-close"><svg class="svg">
 		          <use xlink:href="#map__close-filter">
 		        </svg></span> 
@@ -715,12 +745,8 @@
             <rect id="Rectangle-3" transform="translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) " x="0" y="5" width="12" height="2"/>
         </g>
     </symbol><symbol id="select__arrow" viewBox="0 0 15 9">
-        <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-        <title>Chevron</title>
-        <desc>Created with Sketch.</desc>
-        
-        <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="3.-&#xAB;&#x42F;-&#x445;&#x43E;&#x447;&#x443;-&#x43F;&#x440;&#x43E;&#x434;&#x430;&#x442;&#x44C;&#xBB;" transform="translate(-1037.000000, -2727.000000)" fill="#027993">
+        <g id="Forms">
+            <g id="3.-&#xAB;&#x42F;-&#x445;&#x43E;&#x447;&#x443;-&#x43F;&#x440;&#x43E;&#x434;&#x430;&#x442;&#x44C;&#xBB;" transform="translate(-1037.000000, -2727.000000)">
                 <g id="4.-&#x418;&#x43D;&#x444;&#x43E;-&#x43E;-&#x43A;&#x432;&#x430;&#x440;&#x442;&#x438;&#x440;&#x435;-" transform="translate(370.000000, 2120.000000)">
                     <g id="6" transform="translate(2.000000, 579.000000)">
                         <g id="&#x41F;&#x43E;-&#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E;">
@@ -998,7 +1024,7 @@
     <section class="section mail-us modal js-modal u-ai-fs u-jc-ce" id="consult">
       <div class="u-ai-ce u-fd-col modal__centerer">
         <div class="modal__header">
-          <a href="javascript:;" id="modal-close-btn" class="modal__header-close u-jc-ce">
+          <a href="javascript:;" class="js-modal-close-btn modal__header-close u-jc-ce">
             <span class="svg__filter-close"><svg class="svg">
               <use xlink:href="#map__close-filter">
             </svg></span> 
@@ -1059,7 +1085,7 @@
     
     <div class="side-modal side-modal--help u-jc-fe js-modal js-modal-load" id="help">
       <div class="side-modal__wrapper">
-        <div class="side-modal__inner side-modal__inner--modal u-ai-ce">
+        <div class="side-modal__inner side-modal__inner--modal">
           <div class="side-modal__container u-fd-col u-jc-fs">
             <div class="u-jc-sb side-modal__header-block u-ai-ce">
               <div class="side-modal__header-wrapper">

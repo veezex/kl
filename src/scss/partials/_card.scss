@@ -69,6 +69,7 @@
 .line {
   padding-bottom: 35px;
   padding-top: 35px;
+  margin-top: -1px;
   width: 100%;
   @include link-tansition;
   &:hover {
@@ -90,6 +91,7 @@
   }
   &__inner {
     max-width: 960px;
+    padding-right: 30px;
   }
   // &__rooms {
   //   width: 180px;
