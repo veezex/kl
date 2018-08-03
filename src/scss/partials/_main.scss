@@ -70,6 +70,7 @@ input, textarea, select, button {
   line-height: 15px;
   padding: 12px 20px;
   border-radius: 8px;
+  display: inline-block;
   cursor: pointer;
   @include link-tansition;
 }
@@ -103,7 +104,7 @@ input, textarea, select, button {
   padding: 12px 40px;
 }
 .btn--regular {
-  padding: 20px 45px;
+  padding: 21px 45px;
   color: $white;
   background: $nut-brown;
   border: 1px solid $nut-brown;
@@ -162,6 +163,20 @@ input, textarea, select, button {
   width: 100%;
   &__centerer {
     margin: auto;
+  }
+  &__content {
+
+  }
+  &__success {
+    color: #BA7530;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    &-block {
+      margin: 70px auto;
+      max-width: 600px;
+      width: 90%;
+    }
   }
   &.isOpened {
     visibility: visible;

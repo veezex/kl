@@ -21,9 +21,13 @@
     border-radius: 8px 0 0 8px;
     color: $white;
     right: 0;
+    transition: all .3s ease;
     @include typo($size:14px,$line:19px);
     a {
       padding: 15px;
+    }
+    &:hover, &:focus, &:active {
+      box-shadow: 0 9px 10px 0 rgba(208,2,27,0.60);
     }
   }
 }

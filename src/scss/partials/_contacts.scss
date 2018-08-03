@@ -1,0 +1,46 @@
+.contacts {
+  margin-bottom: 40px;
+  &__page-header {
+    margin-top: 60px;
+  }
+}
+.mail-us {
+  &__header {
+    margin-bottom: 50px;
+    margin-right: 40px;
+    &--subtheme {
+      margin: 15px auto;
+      text-align: center;
+      @include typo($size:24px,$line:36px);
+    }
+  }
+  &__btn-block {
+    margin-top: 70px;
+    &--subtheme {
+      margin: 30px 0;
+    }
+    @media (max-width: $min-width-small) {
+      margin-top: 30px;
+    }
+  }
+}
+.our-contacts {
+  margin-bottom: 95px;
+  &__header {
+    margin: 105px 0 30px;
+  }
+  &__text {
+    @include typo($size:16px,$line:19px);
+    h5 {
+      font-weight: 700;
+    }
+    a {
+      color: $nut-brown;
+      border-bottom: 1px solid rgba($nut-brown,0.3);
+      @include link-tansition;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}

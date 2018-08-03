@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Галочка</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Forms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-«Я-хочу-продать»" transform="translate(-1040.000000, -2627.000000)" fill="#027993">
+            <g id="4.-Инфо-о-квартире-" transform="translate(370.000000, 2120.000000)">
+                <g id="5" transform="translate(2.000000, 480.000000)">
+                    <g id="Результат">
+                        <g id="Галочка" transform="translate(668.000000, 27.000000)">
+                            <path d="M0.175763543,5.56549291 C-0.0585878477,5.3261825 -0.0585878477,4.9382306 0.175763543,4.69894413 C0.410091497,4.45965766 0.789966218,4.45963372 1.02427073,4.69894413 L3.78736246,7.52078677 L10.9757556,0.179500758 C11.2100836,-0.0598335861 11.5899583,-0.0598335861 11.8242628,0.179500758 C12.0585673,0.418811167 12.0585908,0.806763068 11.8242628,1.04604954 L4.21162777,8.82059797 C3.97751076,9.05971689 3.59733135,9.05988444 3.36309715,8.82059797 L0.175763543,5.56549291 Z" id="Fill-1"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

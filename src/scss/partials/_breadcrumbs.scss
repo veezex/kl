@@ -5,6 +5,9 @@
     color: $black;
     white-space: nowrap;
     @include typo($size:12px,$line:15px);
+    &--modal {
+      white-space: normal;
+    }
   }
   &__list {
     flex-wrap: wrap;

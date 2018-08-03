@@ -1,0 +1,21 @@
+.page-404 {
+  height: 100vh;
+  width: 100vw;
+  &__num {
+    color: rgba(#027993,0.2);
+    @include typo($size:300px,$line:365px,$weight:700);
+  }
+  &__list {
+    letter-spacing: 0.24px;
+    @include typo($size:15px,$line:19px);
+    li {
+      margin: 0 13px;
+    }
+  }
+}
+.page-403 {
+  &__num {
+    color: rgba(#6F1F8A,0.2);
+    @include typo($size:300px,$line:365px,$weight:700);
+  }
+}

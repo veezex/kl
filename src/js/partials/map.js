@@ -135,7 +135,7 @@ if (document.getElementById('map') !== null) {
           
     
         function loadList() {
-            return fetch("../js/test.json")
+            return fetch(config.mapLinks)
                 .then(function(response) {
                     return response.json();
                 })
@@ -167,7 +167,7 @@ if (document.getElementById('map') !== null) {
         
         objectManager.objects.options.set({
             iconLayout: 'default#image',
-            iconImageHref: 'images/map__baloon.png',
+            iconImageHref: config.mapBaloon,
             iconImageSize: [57, 51],
             iconImageOffset: [-37, -50]
         });

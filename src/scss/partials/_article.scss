@@ -1,0 +1,102 @@
+.article {
+  margin: 55px 0 25px;
+  &__container {
+    @media (max-width: $min-width-medium) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__item {
+    @media (max-width: $min-width-medium) {
+      border: 1px solid rgba(#979797, 0.3);
+      border-bottom: 0;
+      &:last-child {
+        border-bottom: 1px solid rgba(#979797, 0.3);
+      }
+    }
+  }
+  &__group {
+    width: 400px;
+    @media (max-width: $min-width-medium) {
+      width: 100%;
+    }
+  }
+  &__header-news {
+    padding: 45px 0 30px;
+    border-top: 1px solid rgba(#979797, 0.3);
+  }
+  &__news {
+    margin-bottom: 90px;
+  }
+  &__link {
+    color: $nut-brown;
+    margin-bottom: 15px;
+    height: 25px;
+    display: inline-block;
+    @include typo($size:16px,$line:25px);
+    @media (max-width: $min-width-medium) {
+      margin: 0;
+      padding: 15px;
+      height: auto;
+    }
+  }
+  &__text {
+    margin-bottom: 50px;
+  }
+  &__num {
+    height: 25px;
+    margin-left: 10px;
+    padding: 0 10px;
+    border-radius: 4px;
+    color: $dark-blue;
+    border: 1px solid rgba(#002649, 0.3);
+    @media (max-width: $min-width-medium) {
+      display: none;
+    }
+  }
+  &__tag-link {
+    margin-right: 20px;
+    color: $nut-brown;
+    @include typo($size:16px,$line:19px);
+  }
+  &__content {
+    max-width: 700px;
+    margin-bottom: 30px;
+    @include typo($size:16px,$line:24px);
+    @media (max-width: $min-width-medium) {
+      max-width: none;
+    }
+    h1 {
+      @include typo($size:30px,$line:37px);
+      margin-bottom: 2em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    img {
+      margin: 35px 0 50px;
+      width: 100%;
+    }
+    blockquote {
+      padding: 100px 15% 115px;
+      color: $dark-blue;
+      text-align: center;
+      position: relative;
+      @include typo($size:20px,$line:30px);
+      &:before, &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        font-size: 48px;
+      }
+      &:before {
+        content: "\00ab";
+        top: 20px;
+      }
+      &:after {
+        content: "\00bb";
+        bottom: 40px;
+      }
+    }
+  }
+}
