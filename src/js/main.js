@@ -3,7 +3,6 @@ $(document).ready(function () {
 });
 $(document).ajaxComplete(function () {
   //= ajax_partials
-  //= partials/config.js
   //= partials/tabs.js
+  //= partials/form-contacts-ajax-load.js
 })
-

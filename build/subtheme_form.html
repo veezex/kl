@@ -1,6 +1,6 @@
-<div class="">
+<div class="" id="form-help">
   <p class="section__header mail-us__header mail-us__header--subtheme">Я хочу получить консультацию</p>
-  <form action="">
+  <form action="" id="help">
     <div class="filter__input-block filter__input-block--full">
       <div class="filter__input-wrap filter__input-wrap--full">
         <input type="text" class="filter__input " name="name" required/>
@@ -31,11 +31,11 @@
       </div>
     </div>
     <div class="filter__radio">
-      <input type="checkbox" id="checkbox-modal" class="filter__radio-input" />
+      <input type="checkbox" id="checkbox-modal" class="filter__radio-input" required/>
       <label for="checkbox-modal" class="filter__radio-label">я принимаю <a href="#">условия</a> передачи информации</label>
     </div>
     <div class="mail-us__btn-block mail-us__btn-block--subtheme u-jc-ce">
-      <button class="btn btn--regular mail-us__btn">Отправить</button>
+      <button type="submit" class="btn btn--regular mail-us__btn" data-modal="help-modal">Отправить</button>
     </div>
   </form>
 </div>

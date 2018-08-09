@@ -1,6 +1,9 @@
 if (document.getElementById('map') !== null) {
+    var lng = $('#map').attr('data-lng');
+    var lat = $('#map').attr('data-lat');
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+
     ymaps.ready(init);
 
     function init(){ 
@@ -10,7 +13,8 @@ if (document.getElementById('map') !== null) {
             // Порядок по умолчнию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [55.76, 37.64],
+            // center: [55.76, 37.64],
+            center: [lng, lat],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 10,
@@ -103,77 +107,112 @@ if (document.getElementById('map') !== null) {
         }).resize();
         
         // myMap.geoObjects.add(placemark);
-
-        function mapServerData(serverData) {
-            return {
-                type: "FeatureCollection",
-                features: serverData.map(function(obj, index) {
-                    return {
-                        id: index,
-                        type: "Feature",
-                        geometry: { 
-                            type: "Point", 
-                            coordinates: [obj.lat, obj.long] 
-                            },
-                        properties: { 
-                            iconCaption: obj.serialNumber 
-                        }
-                        // ,
-                        // options: { 
-                        //     preset: getObjectPreset(obj) 
-                        // }
-                    };
-                })
+        var linkToObjects = config.mapLinks;
+        function addObjects(link) {
+            function mapServerData(serverData) {
+                return {
+                    type: "FeatureCollection",
+                    features: serverData.map(function(obj, index) {
+                        return {
+                            id: index,
+                            type: "Feature",
+                            geometry: { 
+                                type: "Point", 
+                                coordinates: [obj.lat, obj.long] 
+                                },
+                            properties: { 
+                                iconCaption: obj.serialNumber,
+                                balloonContent: '<a target="_blank" class="" href="' +
+                                obj.link +
+                                '">' +
+                                '<div class="balloon__image-block"><div class="balloon__image" style="background-image:url(' +
+                                obj.image +
+                                ')">' +
+                                '</div></div>' + 
+                                '<div class="balloon__inner">' +
+                                '<p class="balloon__price">' +
+                                obj.price +
+                                '</p>' +
+                                '<ul class="balloon__list">' +
+                                '<li class="balloon__item ">' + 
+                                obj.rooms +
+                                '</li>' +
+                                '<li class="balloon__item ">' +
+                                obj.square +    
+                                '&nbsp;м<sup>2</sup></li>' +
+                                '<li class="balloon__item ">' +
+                                obj.floor +    
+                                '</li>' +
+                                '</ul>' +
+                                '<p class="balloon__address">' +
+                                obj.address +
+                                '</p>' +
+                                '</div>' +
+                                '</a>'
+                            }
+                            // ,
+                            // options: { 
+                            //     preset: getObjectPreset(obj) 
+                            // }
+                        };
+                    })
+                };
             };
-        };
     
-        // function getObjectPreset(obj) {
-        //     return obj.isActive
-        //         ? 'islands#blueCircleDotIconWithCaption'
-        //         : 'islands#redCircleDotIconWithCaption';
-        // }
-          
+            function loadList() {
+                return fetch(link)
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        return mapServerData(data);
+                    });
+            }
     
-        function loadList() {
-            return fetch(config.mapLinks)
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(data) {
-                    return mapServerData(data);
-                });
-        }
+            var objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                gridSize: 64,
+                clusterIconLayout: 'default#pieChart',
+                // clusterIconImageHref: 'images/map__baloon.png',
+                clusterDisableClickZoom: false
+                // geoObjectOpenBalloonOnClick: true,
+                // geoObjectHideIconOnBalloonOpen: true,
+            });
+            
+            // objectManager.clusters.options.set({
+            //     clusterIconLayout: 'default#image',
+            //     clusterIconImageHref: 'images/map__baloon.png',
+            //     clusterIconImageSize: [57, 51],
+            //     clusterIconImageOffset: [-37, -50]
+            // });
+            
+            loadList().then(function(data) {
+                objectManager.add(data);
+            }),
+            
+            objectManager.objects.options.set({
+                iconLayout: 'default#image',
+                iconImageHref: config.mapBaloon,
+                iconImageSize: [57, 51],
+                iconImageOffset: [-18, -45]
+            });
     
-        var objectManager = new ymaps.ObjectManager({
-            clusterize: true,
-            gridSize: 64,
-            clusterIconLayout: 'default#pieChart',
-            // clusterIconImageHref: 'images/map__baloon.png',
-            clusterDisableClickZoom: false
-            // geoObjectOpenBalloonOnClick: true,
-            // geoObjectHideIconOnBalloonOpen: true,
-        });
-        
-        // objectManager.clusters.options.set({
-        //     clusterIconLayout: 'default#image',
-        //     clusterIconImageHref: 'images/map__baloon.png',
-        //     clusterIconImageSize: [57, 51],
-        //     clusterIconImageOffset: [-37, -50]
-        // });
-        
-        loadList().then(function(data) {
-            objectManager.add(data);
-        }),
-        
-        objectManager.objects.options.set({
-            iconLayout: 'default#image',
-            iconImageHref: config.mapBaloon,
-            iconImageSize: [57, 51],
-            iconImageOffset: [-37, -50]
-        });
+            myMap.geoObjects.add(objectManager);
 
-        myMap.geoObjects.add(objectManager);
-    }
+        }; 
+        addObjects(linkToObjects);
+
+        $("#buy-form").submit(function() {
+            var linkToNewObjects = config.mapNewLinks;
+
+            myMap.geoObjects.removeAll();
+
+            addObjects(linkToNewObjects);
+
+            return false;
+        })
+    };
+
 } else if (document.getElementById('item-map') !== null) {
     ymaps.ready(init);
 

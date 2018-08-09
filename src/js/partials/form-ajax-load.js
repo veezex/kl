@@ -46,7 +46,7 @@ $('.js-modal__btn[data-modal="otzyv"]').on('click', function(){
   });
 });
 
-$('#form-egrn').on('click', function(){
+$('#form-egrn .js-modal__btn').on('click', function(){
   $.ajax({
     url: config.egrnTemplate,             
     dataType : "html",                    
@@ -60,7 +60,7 @@ $('.js-modal__btn[data-modal="employee"]').on('click', function(){
   var $this = $( this );
   var name = $this.attr("data-name");
   $.ajax({
-    url: config.empName + name + '.html',             
+    url: config.empName + name,             
     dataType : "html",                    
     success: function (data) {
       $('.modal__content').html( data );

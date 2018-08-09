@@ -209,7 +209,8 @@ input, textarea, select, button {
       position: absolute;
       z-index: 1;
       max-height: 215px;
-      overflow: scroll;
+      overflow-x: scroll;
+      overflow-y: hidden;
       top: 100%;
       width: 100%;
     }

@@ -10,11 +10,6 @@
 		    <!-- temp before I understand exact needed weight-->
 		    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 		    <!-- temp before I understand exact needed weight-->
-		
-		    <script src="js/jquery-3.3.1.min.js"></script>
-		    <script src="js/main.js"></script>
-		
-		    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="header js-header">  
@@ -202,10 +197,37 @@
 		    </div>
 		  </div>
 		</section>
-		<script type="text/javascript">
+		<script type='text/javascript' > 
 		  var config = {
-		    mapLinks: "../js/test.json",
-		    mapBaloon: "images/map__baloon.png"
+		    // mapLinks: "../js/test.json", //точки на карте
+		    mapLinks: "../js/test-points1.json", //точки на карте после запроса фильтра
+		    mapBaloon: "images/map__baloon.png", //метка на карте
+		    mapNewLinks: "../js/test-points2.json", //точки на карте после запроса фильтра
+		
+		    izbrannoeTemplateList: "izbrannoe_list.html", //ссылка на шаблон для избранного (лист)
+		    izbrannoeTemplateCard: "izbrannoe_list.html", //ссылка на шаблон для избранного (карточки)
+		
+		    sellTemplateSell: "form-sell.html", //ссылка на шаблон формы продажи/аренды в модальном окне
+		    consultTemplate: "form-consult.html", //ссылка на шаблон формы консультации в модальном окне
+		    otzyvTemplate: "form-otzyv.html", //ссылка на шаблон формы отзыва в модальном окне
+		    egrnTemplate: "form-egrn.html", //ссылка на шаблон модального окна егрн
+		    contactsTemplate: "form-egrn.html", //ссылка на шаблон модального окна ответа на странице контакты
+		    helpTemplate: "form-egrn.html", //ссылка на шаблон модального окна ответа на заполнение заявки в боковом меню
+		
+		    formOtzyv: "../js/test-otzyv.json", //ссылка на скрипт для формы отправки отзыва
+		    formConsult: "../js/test-consult.json", //ссылка на скрипт для формы отправки запроса на консультацию
+		    formSell: "../js/test-consult.json", //ссылка на скрипт для формы отправки продажи/аренды
+		
+		    empName: "modal-", //ссылка на скрипт для формы сотрудников
+		
+		    formHelpYes: "./subtheme_yes.html", //страница спасибо для блока Юридическая помощь
+		    formHelpForm: "./subtheme_form.html", //страница формы для блока Юридическая помощь 
+		    
+		    themesList: "./js/theme.json", //ссылка на json со списком тем для Юридическая помощь 
+		    themeLink: "subtheme", //будет указан в data-attr для передачи id подтемы, формирует ссылку типа themeLink + id темы, тут можно написать article.php?id=
+		    subthemeList: "./js/", //ссылка на json со списком подтем, формирует ссылку типа subthemeList + link + '.json', link берется из переменной выше - themeLink
+		    subthemeLink: "subtheme", //будет указан в data-attr для передачи id контента подтемы, формирует ссылку типа subthemeLink + id подтемы, тут можно написать article.php?id=
+		    subthemeContent: "./", //ссылка на html c контентом подтемы, формирует ссылку  subthemeContent + link + '.html', link берется из переменной выше - subthemeLink
 		  }
 		</script>
     <div style="height: 0; width: 0; position: absolute; visibility: hidden">
@@ -1044,6 +1066,16 @@
         </div>
       </div>
     </div>
+    <section class="section mail-us modal js-modal" id="help-modal">
+      <div class="modal__header">
+          <a href="javascript:;" class="js-modal-close-btn modal__header-close u-jc-ce">
+            <span class="svg__filter-close"><svg class="svg">
+              <use xlink:href="#map__close-filter">
+            </svg></span> 
+          </a>
+        </div>
+      <div class="modal__content"></div>
+    </section>
     <footer>
       <div class="prefooter">
         <div class="container prefooter__container">
@@ -1201,6 +1233,43 @@
           </div> 
         </div>
       </div>
+      <script type='text/javascript' > 
+        var config = {
+          // mapLinks: "../js/test.json", //точки на карте
+          mapLinks: "../js/test-points1.json", //точки на карте после запроса фильтра
+          mapBaloon: "images/map__baloon.png", //метка на карте
+          mapNewLinks: "../js/test-points2.json", //точки на карте после запроса фильтра
+      
+          izbrannoeTemplateList: "izbrannoe_list.html", //ссылка на шаблон для избранного (лист)
+          izbrannoeTemplateCard: "izbrannoe_list.html", //ссылка на шаблон для избранного (карточки)
+      
+          sellTemplateSell: "form-sell.html", //ссылка на шаблон формы продажи/аренды в модальном окне
+          consultTemplate: "form-consult.html", //ссылка на шаблон формы консультации в модальном окне
+          otzyvTemplate: "form-otzyv.html", //ссылка на шаблон формы отзыва в модальном окне
+          egrnTemplate: "form-egrn.html", //ссылка на шаблон модального окна егрн
+          contactsTemplate: "form-egrn.html", //ссылка на шаблон модального окна ответа на странице контакты
+          helpTemplate: "form-egrn.html", //ссылка на шаблон модального окна ответа на заполнение заявки в боковом меню
+      
+          formOtzyv: "../js/test-otzyv.json", //ссылка на скрипт для формы отправки отзыва
+          formConsult: "../js/test-consult.json", //ссылка на скрипт для формы отправки запроса на консультацию
+          formSell: "../js/test-consult.json", //ссылка на скрипт для формы отправки продажи/аренды
+      
+          empName: "modal-", //ссылка на скрипт для формы сотрудников
+      
+          formHelpYes: "./subtheme_yes.html", //страница спасибо для блока Юридическая помощь
+          formHelpForm: "./subtheme_form.html", //страница формы для блока Юридическая помощь 
+          
+          themesList: "./js/theme.json", //ссылка на json со списком тем для Юридическая помощь 
+          themeLink: "subtheme", //будет указан в data-attr для передачи id подтемы, формирует ссылку типа themeLink + id темы, тут можно написать article.php?id=
+          subthemeList: "./js/", //ссылка на json со списком подтем, формирует ссылку типа subthemeList + link + '.json', link берется из переменной выше - themeLink
+          subthemeLink: "subtheme", //будет указан в data-attr для передачи id контента подтемы, формирует ссылку типа subthemeLink + id подтемы, тут можно написать article.php?id=
+          subthemeContent: "./", //ссылка на html c контентом подтемы, формирует ссылку  subthemeContent + link + '.html', link берется из переменной выше - subthemeLink
+        }
+      </script>
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/main.js"></script>
+      
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     </footer>
 	</body>
 </html>

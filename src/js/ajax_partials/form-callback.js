@@ -68,4 +68,4 @@ $("#sell form").submit(function() {
     }
   });
   return false;
-})
+});
