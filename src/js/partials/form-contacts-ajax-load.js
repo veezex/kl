@@ -1,6 +1,6 @@
 $('#contacts').submit(function(e) {
   $('#contacts-modal').addClass('isOpened');
-  event.preventDefault();
+  e.preventDefault();
   $.ajax({
     url: config.contactsTemplate,             
     dataType : "html",                    
@@ -12,7 +12,7 @@ $('#contacts').submit(function(e) {
 
 $('#help').submit(function(e) {
   $('#help-modal').addClass('isOpened');
-  event.preventDefault();
+  e.preventDefault();
   $.ajax({
     url: config.helpTemplate,             
     dataType : "html",                    
