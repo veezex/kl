@@ -83,12 +83,12 @@ if ( $('.js-select-btn.isOpen').length > 0 ) {
   });
 }
 
-$('.filter__input').on('focus', function() {
+$('body').on('focus', '.filter__input', function() {
   var $this = $( this );
   $this.closest('.filter__input-wrap').find('.filter__floating-label').addClass('floated');
 })
 
-$('.filter__input').on('blur', function() {
+$('body').on('blur', '.filter__input', function() {
   var $this = $( this );
   var $parent = $this.closest('.filter__input-wrap');
   var $input = $parent.find('.filter__input');
@@ -104,7 +104,7 @@ $('.filter__input').on('blur', function() {
     }
   } 
   else {
-    var name = $input.attr('name')
+    var name = $input.data('validate')
     if ( name === 'name' ) {
       if ( $input.val().indexOf(' ') > -1) {
         $parent.addClass('validated');

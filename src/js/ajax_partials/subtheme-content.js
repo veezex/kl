@@ -7,7 +7,7 @@ $('.js-open-subtheme-content').on('click', function() {
   '<a href="#" class="breadcrumbs__link breadcrumbs__link--modal">'+text+'</a></li>');
 
   $.ajax({
-    url: config.subthemeContent + link + '.html',             
+    url: config.subthemeContent + link,             
     dataType : "html",                    
     success: function (data) {
       $('.side-modal__content').html( data );
