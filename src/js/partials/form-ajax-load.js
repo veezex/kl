@@ -27,17 +27,6 @@ $('.js-modal__btn[data-modal="sell"]').on('click', function(){
 
 
 
-$('.js-modal__btn[data-modal="otzyv"]').on('click', function(){
-  $.ajax({
-    url: config.otzyvTemplate,             
-    dataType : "html",                    
-    success: function (data) {
-      $('.modal__content').html( data );
-    }
-  });
-});
-
-
 $('#form-egrn').off('submit').on('submit', function(e) {
   $('#egrn').addClass('isOpened');
   e.preventDefault();

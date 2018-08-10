@@ -1,28 +1,6 @@
-$("#otzyv form").submit(function() {
-  $.ajax({
-    url: config.formOtzyv,
-    dataType: "json",
-    success: function(data) {
-      var thanks = '<div class="modal__success-block"><p class="modal__success">'+
-      data.text +
-      '</p><p class="modal__success">' +
-      data.header +
-      '</p></div>';
-      $('#otzyv .modal__content').html( thanks );
-    },
-    error: function (err) { 
-      var thanks = '<div class="modal__success-block"><p class="modal__success">'+
-      data.text +
-      '</p><p class="modal__error">' +
-      data.header +
-      '</p></div>';
-      $('#otzyv .modal__content').html( thanks );
-    }
-  });
-  return false;
-})
 
-$("#consult form").off('submit').on('submit', function(e) {
+
+$("#consult form,#form-otzyv").off('submit').on('submit', function(e) {
   e.preventDefault();
   var form = this;
 
@@ -33,10 +11,10 @@ $("#consult form").off('submit').on('submit', function(e) {
     dataType: "html",
     success: function(data) {
 
-      $('#consult .modal__content').html( data );
+      $($(form).data('cont') + ' .modal__content').html( data );
     },
     error: function (err) { 
-      $('#consult .modal__content').html( data );
+      $($(form).data('cont') + ' .modal__content').html( data );
     }
   });
   return false;
