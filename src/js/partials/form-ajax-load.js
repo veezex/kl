@@ -37,15 +37,24 @@ $('.js-modal__btn[data-modal="otzyv"]').on('click', function(){
   });
 });
 
-$('#form-egrn .js-modal__btn').on('click', function(){
+
+$('#form-egrn').off('submit').on('submit', function(e) {
+  $('#egrn').addClass('isOpened');
+  e.preventDefault();
+  var form = this;
+
   $.ajax({
-    url: config.egrnTemplate,             
-    dataType : "html",                    
+    data: $(form).serialize(),
+    method: form.method,
+    url: form.action,             
+    dataType : "html",                        
     success: function (data) {
-      $('.modal__content').html( data );
+      $('#egrn .modal__content').html( data );
+      form.reset();
     }
   });
 });
+
 
 $('.js-modal__btn[data-modal="employee"]').on('click', function(){
   var $this = $( this );
