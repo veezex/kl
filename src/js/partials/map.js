@@ -228,7 +228,7 @@ if (document.getElementById('map') !== null) {
 
         var placemark = new ymaps.Placemark([lng, lat], {}, {
             iconLayout: 'default#image',
-            iconImageHref: 'images/map__baloon.png',
+            iconImageHref: config.mapBaloon,
             iconImageSize: [57, 51],
             iconImageOffset: [-37, -50]
         });
