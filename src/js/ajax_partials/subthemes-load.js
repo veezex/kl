@@ -14,7 +14,7 @@ $('.js-open-subtheme').on('click', function() {
   '">'+text+'</a></li>');
 
   $.ajax({
-    url: config.subthemeList + link + '.json',
+    url: config.subthemeList + link,
     dataType : "json",                    
     success: function (data) {
       $('.side-modal__content').html('<ul class="side-modal__list side-modal__list--help"></ul>');

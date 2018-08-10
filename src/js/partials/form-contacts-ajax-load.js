@@ -1,8 +1,10 @@
-$('#contacts').submit(function(e) {
+$('#contacts').off('submit').on('submit', function(e) {
   $('#contacts-modal').addClass('isOpened');
   e.preventDefault();
   $.ajax({
-    url: config.contactsTemplate,             
+    data: $(this).serialize(),
+    method: this.method,
+    url: this.action,             
     dataType : "html",                    
     success: function (data) {
       $('.modal__content').html( data );
@@ -10,11 +12,13 @@ $('#contacts').submit(function(e) {
   });
 }); 
 
-$('#help').submit(function(e) {
+$('#help_sidebar_form').off('submit').on('submit', function(e) {
   $('#help-modal').addClass('isOpened');
   e.preventDefault();
   $.ajax({
-    url: config.helpTemplate,             
+    data: $(this).serialize(),
+    method: this.method,
+    url: this.action,             
     dataType : "html",                    
     success: function (data) {
       $('.modal__content').html( data );
