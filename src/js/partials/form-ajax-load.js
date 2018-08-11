@@ -15,16 +15,6 @@ $('.js-modal__btn[data-modal="izbrannoe"]').on('click', function(){
   });
 });
 
-$('.js-modal__btn[data-modal="sell"]').on('click', function(){
-  $.ajax({
-    url: config.sellTemplateSell,             
-    dataType : "html",                    
-    success: function (data) {
-      $('.js-tab-load').html( data );
-    }
-  });
-});
-
 
 
 $('#form-egrn').off('submit').on('submit', function(e) {
