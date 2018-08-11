@@ -1,3 +1,29 @@
+
+// 2. Подстановка значения если оно указано в инпуте
+$('.js-select-btn').each(function() {
+  var button = $(this);
+  var wrapper = button.closest('.filter__input-wrap');
+
+  // 2.1 получаем значение инпута
+  var value = wrapper.find('input').val();
+
+  // 2.2 перебираем значения селекта
+  wrapper.find('.js-select-block .js-select-item').removeClass("js-selected").each(function() {
+    var item = $(this);
+
+    if (value == item.data('value')) {
+      button.text(item.text());
+      item.addClass('js-selected');
+      wrapper.find('.filter__floating-label').addClass('floated');
+      return false;
+    }
+  });
+});
+
+// 3. высота инпутов ограничена
+
+// 4. Ширина инпутов разная
+
 //when clicking/toggling dropdown menu btn
 $('.js-select-btn').on('click', function() {
   var $this = $( this );
@@ -35,13 +61,14 @@ $('.js-select-item').on('click', function() {
   var $this = $( this );
   $this.addClass('js-selected');
   var text = $this.text();
+  var value = $this.data('value');
   var group = $this.attr('data-group');
   $('.js-select-btn[data-group="' + group + '"]').text(text);
   $this.closest('.filter__input-block').find('.js-select-label').addClass('floated');
   $('.js-select-btn.isOpen').addClass('isClosed');
   $('.js-select-block.isOpen').removeClass('isOpen');
   $('.js-select-btn.isOpen').removeClass('isOpen');
-  $('.js-filter-hidden[data-group="' + group + '"]').val(text);   
+  $('.js-filter-hidden[data-group="' + group + '"]').val(value);   
   
   var $block = $this.closest('.filter__input-block')
   if ( $block.find('.js-filter-hidden').prop('required')) {
