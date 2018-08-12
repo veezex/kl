@@ -1,6 +1,6 @@
 
 
-$("#consult form,#form-otzyv").off('submit').on('submit', function(e) {
+$("#consult form,#form-otzyv,#sell form").off('submit').on('submit', function(e) {
   e.preventDefault();
   var form = this;
 
