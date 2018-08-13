@@ -1,10 +1,10 @@
 //when clicking/toggling dropdown menu btn
-$('.js-select-btn').on('click', function() {
+$('.js-select-btn').off('click').on('click', function() {
   var $this = $( this );
   var sybling = $this.closest('.filter__input-block').find('.js-select-block');
   if ( sybling.hasClass('isOpen') ) {
     $this.addClass('isClosed');
-    $this.removeClass('isOpen');
+    $this.removeClass('isOpen'); 
     sybling.removeClass('isOpen');
   } else {
     $('.js-select-block').removeClass('isOpen');
@@ -30,7 +30,7 @@ $('.js-select-btn').on('click', function() {
 });
 
 //when clicking on item in dropdown menu
-$('.js-select-item').on('click', function() {
+$('.js-select-item').off('click').on('click', function() {
   
   var $this = $( this );
   $this.addClass('js-selected');

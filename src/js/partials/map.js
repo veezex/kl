@@ -160,7 +160,7 @@ if (document.getElementById('map') !== null) {
             };
     
             function loadList() {
-                return new Promise(function(resolve, reject) {
+                return (new Promise(function(resolve, reject) {
                     $.ajax({
                       data: filterData,
                       method: 'GET',
@@ -170,8 +170,9 @@ if (document.getElementById('map') !== null) {
                       error: reject
                     });
 
-                  });
-
+                  })).then(function(data) {
+                    return mapServerData(data);
+                });;
             }
     
             var objectManager = new ymaps.ObjectManager({
@@ -207,8 +208,8 @@ if (document.getElementById('map') !== null) {
         }; 
         addObjects(linkToObjects, null);
 
-        $("#buy-form").submit(function() {
-            var linkToNewObjects = $(this).attr('action');
+        $(".js-map-filter-form").submit(function() {
+            var linkToNewObjects = config.mapNewLinks;
             var data = $(this).serialize();
 
             myMap.geoObjects.removeAll();
