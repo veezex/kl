@@ -108,7 +108,7 @@ if (document.getElementById('map') !== null) {
         
         // myMap.geoObjects.add(placemark);
         var linkToObjects = config.mapLinks;
-        function addObjects(link) {
+        function addObjects(link, filterData) {
             function mapServerData(serverData) {
                 return {
                     type: "FeatureCollection",
@@ -160,13 +160,18 @@ if (document.getElementById('map') !== null) {
             };
     
             function loadList() {
-                return fetch(link)
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(data) {
-                        return mapServerData(data);
+                return new Promise(function(resolve, reject) {
+                    $.ajax({
+                      data: filterData,
+                      method: 'GET',
+                      url: link,     
+                      dataType: "json",
+                      success: resolve,
+                      error: reject
                     });
+
+                  });
+
             }
     
             var objectManager = new ymaps.ObjectManager({
@@ -200,14 +205,15 @@ if (document.getElementById('map') !== null) {
             myMap.geoObjects.add(objectManager);
 
         }; 
-        addObjects(linkToObjects);
+        addObjects(linkToObjects, null);
 
         $("#buy-form").submit(function() {
-            var linkToNewObjects = config.mapNewLinks;
+            var linkToNewObjects = $(this).attr('action');
+            var data = $(this).serialize();
 
             myMap.geoObjects.removeAll();
 
-            addObjects(linkToNewObjects);
+            addObjects(linkToNewObjects, data);
 
             return false;
         })
