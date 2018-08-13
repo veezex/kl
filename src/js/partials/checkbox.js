@@ -1,10 +1,12 @@
 $('.benefits__item').on('click', function() {
   var $this = $( this );
   var checked = $this.attr('data-name');
+
+  var input = $this.closest('.filter__checkbox-wrap').find('#'+ checked);
   if ( !$this.hasClass('isActive')) {
-    $this.closest('.filter__checkbox-wrap').find('#'+ checked).prop('checked',false);
+    input.val(input.data('n'));
   } else {
-    $this.closest('.filter__checkbox-wrap').find('#'+ checked).prop('checked',true);
+    input.val(input.data('y'));
   }
   // console.log($('#school').is(':checked'));
   // console.log($('#kinder').is(':checked'));
