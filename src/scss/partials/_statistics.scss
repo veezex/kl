@@ -28,6 +28,7 @@
     @include typo($size:72px,$line:88px);
   }
   &__card-text {
+    text-align: center;
     opacity: 0;
     transition: all 2s ease;//0.3
     @include typo($size:20px,$line:24px);
