@@ -35,13 +35,14 @@ $('.js-select-item').off('click').on('click', function() {
   var $this = $( this );
   $this.addClass('js-selected');
   var text = $this.text();
+  var value = $this.data('value');
   var group = $this.attr('data-group');
   $('.js-select-btn[data-group="' + group + '"]').text(text);
   $this.closest('.filter__input-block').find('.js-select-label').addClass('floated');
   $('.js-select-btn.isOpen').addClass('isClosed');
   $('.js-select-block.isOpen').removeClass('isOpen');
   $('.js-select-btn.isOpen').removeClass('isOpen');
-  $('.js-filter-hidden[data-group="' + group + '"]').val(text);   
+  $('.js-filter-hidden[data-group="' + group + '"]').val(value);   
   
   var $block = $this.closest('.filter__input-block')
   if ( $block.find('.js-filter-hidden').prop('required')) {
