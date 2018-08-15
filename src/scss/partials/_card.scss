@@ -116,4 +116,7 @@
     color: $nut-brown;
     @include typo($size:16px,$line:40px);
   }
+  &__fav.is-favorite  {
+    opacity: .7;
+  }
 }
