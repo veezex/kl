@@ -1,21 +1,12 @@
 $('.js-modal__btn[data-modal="izbrannoe"]').on('click', function(){
   $.ajax({
-    url: config.izbrannoeTemplateList,             
+    url: config.favoriteList,             
     dataType : "html",                    
     success: function (data) {
       $('.tab__block[data-content="list"]').html( data );
     } 
   });
-  $.ajax({
-    url: config.izbrannoeTemplateCard,             
-    dataType : "html",                    
-    success: function (data) {
-      $('.tab__block[data-content="card"]').html( data );
-    } 
-  });
 });
-
-
 
 $('#form-egrn').off('submit').on('submit', function(e) {
   $('#egrn').addClass('isOpened');
