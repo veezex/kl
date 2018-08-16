@@ -3,26 +3,29 @@ $('body').on('click', '.js-add_favorite', function(e) {
     var el = $(this);
 
     if (el.hasClass('is-favorite')) {
-        action = 'remove';
+        var action = 'remove';
     } else {
-        action = 'add';
+        var action = 'add';
     }
+    var item = el.data('item');
 
     $.ajax({
         data: {
-            item: el.data('item'),
+            item: item,
             action: action
         },
         url: config.favoriteMod,
         method: 'POST',
         success: function(data) {
             if (data == 'true') {
+                var els = $('.js-add_favorite[data-item=' + item + ']');
+
                 if (action == 'add') {
-                    el.addClass('is-favorite');
+                    els.addClass('is-favorite');
                 }
 
                 if (action == 'remove') {
-                    el.removeClass('is-favorite');
+                    els.removeClass('is-favorite');
                 }
             }
         }
