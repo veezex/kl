@@ -87,6 +87,7 @@
     // display: block;
     margin-bottom: 35px;
     max-width: 576px;
+    min-height:90px;
     @include typo($size:20px,$line:30px);
     @media (max-width: $min-width-medium) {
       margin-bottom: 20px;
