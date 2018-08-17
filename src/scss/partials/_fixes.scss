@@ -9,3 +9,8 @@
         width: 350px;
     }
 }
+
+// для страницы услуг, текст в акордеоне вопрос-ответ
+#accordion .collapse__content {
+    line-height: 19px;
+}
