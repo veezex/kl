@@ -1,0 +1,15 @@
+.dropzone .dz-preview {
+    .dz-details {
+        display: none;
+    }
+    .dz-remove {
+        width: 120px;
+    }
+    .dz-error-message {
+        background: #ba7530;
+        top: 30px;
+        &:after {
+            content: none;
+        }
+    }
+}
