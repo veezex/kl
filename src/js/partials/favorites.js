@@ -7,9 +7,10 @@
                 action: action
             },
             url: config.favoriteMod,
+            dataType: 'json',
             method: 'POST',
             success: function(data) {
-                if (data == 'true') {
+                if (data.success) {
                     var els = $('.js-add_favorite[data-item=' + item + ']');
     
                     if (action == 'add') {
@@ -19,7 +20,11 @@
                     if (action == 'remove') {
                         els.removeClass('is-favorite');
                     }
+
+                    $('.js-top_show_izbrannoe')[ data.empty ? 'removeClass' : 'addClass' ]('hover');
                 }
+
+                
             }
         });
     }

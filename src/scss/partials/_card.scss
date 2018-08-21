@@ -115,8 +115,25 @@
     margin-top: 10px;
     color: $nut-brown;
     @include typo($size:16px,$line:40px);
+
+    .in {
+      display: none;
+    }
+    .out {
+      display: inline;
+    }
   }
   &__fav.is-favorite  {
     opacity: .7;
+
+    .svg__fav {
+      background-color: #BA7530;
+    }
+    .in {
+      display: inline;
+    }
+    .out {
+      display: none;
+    }
   }
 }

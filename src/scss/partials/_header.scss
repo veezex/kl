@@ -80,7 +80,7 @@
     // text-decoration: none;    
     @include link-tansition;
     @include typo($size:15px,$line:28px);
-    &:hover {
+    &:hover, &.hover {
       color: $black;
     }
   } 
