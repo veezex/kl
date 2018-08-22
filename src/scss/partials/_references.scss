@@ -13,6 +13,10 @@
     @media (max-width: $min-width-small) {
       margin: 0;
     }
+
+    h4 {
+      font-weight: bold;
+    }
   }
   &__slider {
     padding-bottom: 75px;
