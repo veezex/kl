@@ -1,10 +1,22 @@
+.dropzone {
+    border: 1px solid #ba7530;
+    border-radius: 8px;
+
+    .dz-message {
+        color: #ba7530;
+        font-size: 14px;
+    }
+}
 .dropzone .dz-preview {
+    
     .dz-details {
         display: none;
     }
+
     .dz-remove {
         width: 120px;
     }
+
     .dz-error-message {
         background: #ba7530;
         top: 30px;
