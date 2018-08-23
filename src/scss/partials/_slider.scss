@@ -68,7 +68,7 @@
   }
   &__header {
     width: 538px;
-    min-height: 143px;
+    min-height: 187px;
     padding: 30px 0 25px;
     @include typo($size:36px,$line:44px,$weight:500);
     @media (max-width: $min-width-medium) {
