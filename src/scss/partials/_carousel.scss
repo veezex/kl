@@ -165,6 +165,7 @@
   text-align: center;
   list-style: none;
 }
+
 .carousel-indicators li {
   display: inline-block;
   width: 10px;
@@ -176,6 +177,10 @@
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #fff;
   border-radius: 10px;
+
+  &:only-child {
+    display:none;
+  }
 }
 .carousel-indicators .active {
   width: 12px;
