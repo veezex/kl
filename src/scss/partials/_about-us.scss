@@ -6,7 +6,7 @@
   &__wrapper {
     column-count: 2;
     column-gap: 50px;
-    @include typo($size:14px,$line:18px);
+    @include typo($size:16px,$line:19px);
     p {
       margin-bottom: 10px;
     }
