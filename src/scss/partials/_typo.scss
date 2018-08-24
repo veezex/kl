@@ -23,5 +23,13 @@
             font-size: 18px;
             line-height: 22px;
         }
+        a {
+            color: #ba7530;
+            transition: all .8s ease;
+
+            &:hover {
+                color: #027993;
+            }
+        }
     }
 }
