@@ -144,11 +144,11 @@ gulp.task('copyjson', function() {
 gulp.task('build', [
     'internalsvg',
     'externalsvg',
-    'html:build',
+    //'html:build',
     'js:build',
     'style:build',
-    'fonts:build',
-    'image:build',
+    //'fonts:build',
+    //'image:build',
     'copyjson',
     'copysvg'
     // 'svgstore'
@@ -157,21 +157,26 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function(){
+    /*
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
-    });
+    });*/
+
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
+    /*
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });
+    */
+    /*
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
-    });
+    });*/
 });
 
 gulp.task('webserver', function () {

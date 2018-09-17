@@ -172,7 +172,7 @@ if (document.getElementById('map') !== null) {
 
                   })).then(function(data) {
                     return mapServerData(data);
-                });;
+                  });
             }
     
             var objectManager = new ymaps.ObjectManager({
@@ -194,7 +194,12 @@ if (document.getElementById('map') !== null) {
             
             loadList().then(function(data) {
                 objectManager.add(data);
-            }),
+            }).then(function(data) {
+                // закрыть все открытые модальные окна
+                $('.js-modal').removeClass('isOpened');
+                
+                return data;
+            });
             
             objectManager.objects.options.set({
                 iconLayout: 'default#image',

@@ -4,11 +4,31 @@
     }
 }
 
+.map__side {
+    .filter__select-item, .filter__select-btn {
+        width: 260px;
+    }
+}
+
+.u-select {
+    position: relative;
+}
+
 .filter__input-block--big {
     .filter__select-item, .filter__select-btn {
         width: 350px;
     }
 }
+
+@media (max-width: 767px) {
+    .filter__input-block--normal, .filter__input-block--big {
+        .filter__select-item, .filter__select-btn {
+            width: 100%;
+        }
+    }
+}
+
+
 
 // для страницы услуг, текст в акордеоне вопрос-ответ
 #accordion .collapse__content {
