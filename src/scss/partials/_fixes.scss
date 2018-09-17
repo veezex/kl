@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $min-width-small) {
     .filter__input-block--normal, .filter__input-block--big {
         .filter__select-item, .filter__select-btn {
             width: 100%;
