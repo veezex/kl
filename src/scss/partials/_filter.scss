@@ -9,7 +9,7 @@
     width: 235px;
     margin-bottom: 45px;
     @media (max-width: $min-width-large) {
-      margin-bottom: 35px;      
+      margin-bottom: 35px;
     }
   }
   &__input-block {
@@ -99,10 +99,10 @@
     }
     &[type="number"], &[type=number] {
       -moz-appearance: textfield;
-      &::-webkit-inner-spin-button, 
-      &::-webkit-outer-spin-button { 
-        -webkit-appearance: none; 
-        margin: 0; 
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
       &:hover, &:focus {
         -moz-appearance: number-input;
@@ -127,7 +127,7 @@
     //   // font-size: 14px;
     //   // color: #C0C0C0;
     //   // opacity: 1;
-    // }  
+    // }
   }
   &__select {
     &-btn, &-item {
@@ -163,7 +163,7 @@
       }
       &:after {
         content: " ";
-        background-image: url(../images/svg/select__arrow.svg);
+        // background-image: url(../images/svg/select__arrow.svg);
         width: 15px;
         height: 15px;
         position: absolute;
@@ -203,7 +203,7 @@
       position: absolute;
       right: 20px;
       top: 50%;
-      transform: translateY(-50%);  
+      transform: translateY(-50%);
       background-repeat: no-repeat;
       background-position: center;
       background-image: url(../images/svg/input__checked.svg);
@@ -219,7 +219,7 @@
     position: absolute;
     pointer-events: none;
     left: 0;
-    padding: 0 45px 0 20px; 
+    padding: 0 45px 0 20px;
     color: #C0C0C0;
     top: 21px;
     transition: 0.2s ease all;
@@ -277,14 +277,14 @@
   &__footer {
     // flex-direction: row;
     @media (max-width: $min-width-small) {
-      flex-direction: column-reverse;  
+      flex-direction: column-reverse;
     }
   }
   &--mob {
     padding: 25px 40px;
     border: none;
     .filter__nav {
-      margin-bottom: 35px;      
+      margin-bottom: 35px;
     }
     .filter__input-block {
       // width: 100%;

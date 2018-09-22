@@ -12,7 +12,7 @@
 		    <!-- temp before I understand exact needed weight-->
 	</head>
 	<body>
-		<div class="header js-header">  
+		<div class="header js-header">
 		  <div class="header__top">
 		    <div class="container">
 		      <ul class="header__top-list u-jc-fe">
@@ -32,10 +32,26 @@
 		            </span>Подать объявление</a>
 		        </li>
 		        <li>
-		          <a href="/" class="header__top-item header__top-item--city u-ai-ce">
-		            <span class="svg__header-top"><svg class="svg ">
-		              <use xlink:href="#header__city">
-		            </svg></span>Корсаков</a>
+		          <a class="header__top-item header__top-item--city u-ai-ce">
+		            <span class="svg__header-top">
+		              <svg class="svg ">
+		                <use xlink:href="#header__city">
+		              </svg>
+		            </span>
+		            <span class="current-city"></span>
+		            <div class="current-city-choose">
+		              <div class="your-city">
+		                Ваш город - <span></span>
+		              </div>
+		              <div class="city-controls">
+		                <button class="submit-city">Да</button>
+		                <button class="other-city">Выбрать другой город</button>
+		              </div>
+		              <div class="city-small-text">
+		                  От выбранного города зависит вывод предложений на сайте сервиса.
+		              </div>
+		            </div>
+		          </a>
 		        </li>
 		      </ul>
 		    </div>
@@ -116,7 +132,7 @@
 		          <span class="menu-mob__line"></span>
 		        </span>
 		      </a>
-		    </div> 
+		    </div>
 		  </div>
 		  <div class="header__side side-modal side-modal--header u-jc-fe">
 		    <div class="side-modal__wrapper">
@@ -128,7 +144,7 @@
 		            <a href="javascript:;" id="modal-close-menu" class="modal__header-close u-jc-ce">
 		              <span class="svg__filter-close"><svg class="svg">
 		                <use xlink:href="#map__close-filter">
-		              </svg></span> 
+		              </svg></span>
 		            </a>
 		          </div>
 		          <span class="side-modal__label">О компании</span>
@@ -138,7 +154,7 @@
 		            <li class="side-modal__item"><a href="/history.html" class="side-modal__link">История</a></li>
 		            <li class="side-modal__item"><a href="/employees.html" class="side-modal__link">Сотрудники</a></li>
 		            <li class="side-modal__item"><a href="/vacancies.html" class="side-modal__link">Вакансии</a></li>
-		            <li class="side-modal__item"><a href="/partners.html" class="side-modal__link">Партнеры</a></li>  
+		            <li class="side-modal__item"><a href="/partners.html" class="side-modal__link">Партнеры</a></li>
 		          </ul>
 		          <a class="side-modal__label" href="/catalog.html">Каталог недвижимости</a>
 		          <span class="side-modal__label">Услуги</span>
@@ -197,7 +213,7 @@
 		    </div>
 		  </div>
 		</section>
-		<script type='text/javascript' > 
+		<script type='text/javascript' >
 		  var config = {
 		    // mapLinks: "../js/test.json", //точки на карте
 		    mapLinks: "../js/test-points1.json", //точки на карте после запроса фильтра
@@ -221,13 +237,16 @@
 		    empName: "modal-", //ссылка на скрипт для формы сотрудников
 		
 		    formHelpYes: "./subtheme_yes.html", //страница спасибо для блока Юридическая помощь
-		    formHelpForm: "./subtheme_form.html", //страница формы для блока Юридическая помощь 
-		    
-		    themesList: "./js/theme.json", //ссылка на json со списком тем для Юридическая помощь 
+		    formHelpForm: "./subtheme_form.html", //страница формы для блока Юридическая помощь
+		
+		    themesList: "./js/theme.json", //ссылка на json со списком тем для Юридическая помощь
 		    themeLink: "subtheme", //будет указан в data-attr для передачи id подтемы, формирует ссылку типа themeLink + id темы, тут можно написать article.php?id=
 		    subthemeList: "./js/", //ссылка на json со списком подтем, формирует ссылку типа subthemeList + link + '.json', link берется из переменной выше - themeLink
 		    subthemeLink: "subtheme", //будет указан в data-attr для передачи id контента подтемы, формирует ссылку типа subthemeLink + id подтемы, тут можно написать article.php?id=
 		    subthemeContent: "./", //ссылка на html c контентом подтемы, формирует ссылку  subthemeContent + link + '.html', link берется из переменной выше - subthemeLink
+		    currentCity: {"name": "Москва", "id": 40, "rid" : 1}, //заглушка для текущего города
+		    geoRegions: "./js/regions.json", // список регионов
+		    geoCities: "./js/cities.json", // список городов
 		  }
 		</script>
     <div style="height: 0; width: 0; position: absolute; visibility: hidden">
@@ -978,10 +997,72 @@
                 <a href="#" class="main-footer__bottom-text">Сделано в DL</a>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
-      <script type='text/javascript' > 
+      <div class="modal-item">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+        <div class="modal-content-search modal-content-search--mobile">
+            <div class="search-wrapper">
+              <button class="close-modal">
+                <svg class="svg">
+                  <use xlink:href="#map__close-filter"></use>
+                </svg>
+              </button>
+              <div class="input-wrapper">
+                <div class="icon">
+                  <svg width="16" height="18" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
+                </div>
+                <input type="search" placeholder="Поиск города" />
+              </div>
+            </div>
+            <div class="modal-text">
+              От выбранного города зависит вывод предложений на сайте сервиса.
+            </div>
+          </div>
+          <div class="modal-content-regions">
+            <div class="regions-content">
+              <div class="all-cities">
+                Все города
+              </div>
+              <div class="main-regions">
+                <div class="region region-top" data-region="1">
+                  Москва и МО
+                </div>
+                <div class="region region-top" data-region="2">
+                  Санкт-Петербург и ЛО
+                </div>
+              </div>
+              <div class="all-regions"></div>
+            </div>
+          </div>
+          <div class="modal-content-cities">
+            <div class="cities-content">
+                <ul class="cities"></ul>
+            </div>
+          </div>
+          <div class="modal-content-search modal-content-search--desktop">
+            <div class="search-wrapper">
+              <button class="close-modal">
+                <svg class="svg">
+                  <use xlink:href="#map__close-filter"></use>
+                </svg>
+              </button>
+              <div class="input-wrapper">
+                <div class="icon">
+                  <svg width="16" height="18" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
+                </div>
+                <input type="search" placeholder="Поиск города" />
+              </div>
+            </div>
+            <div class="modal-text">
+              От выбранного города зависит вывод предложений на сайте сервиса.
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type='text/javascript' >
         var config = {
           // mapLinks: "../js/test.json", //точки на карте
           mapLinks: "../js/test-points1.json", //точки на карте после запроса фильтра
@@ -1005,18 +1086,216 @@
           empName: "modal-", //ссылка на скрипт для формы сотрудников
       
           formHelpYes: "./subtheme_yes.html", //страница спасибо для блока Юридическая помощь
-          formHelpForm: "./subtheme_form.html", //страница формы для блока Юридическая помощь 
-          
-          themesList: "./js/theme.json", //ссылка на json со списком тем для Юридическая помощь 
+          formHelpForm: "./subtheme_form.html", //страница формы для блока Юридическая помощь
+      
+          themesList: "./js/theme.json", //ссылка на json со списком тем для Юридическая помощь
           themeLink: "subtheme", //будет указан в data-attr для передачи id подтемы, формирует ссылку типа themeLink + id темы, тут можно написать article.php?id=
           subthemeList: "./js/", //ссылка на json со списком подтем, формирует ссылку типа subthemeList + link + '.json', link берется из переменной выше - themeLink
           subthemeLink: "subtheme", //будет указан в data-attr для передачи id контента подтемы, формирует ссылку типа subthemeLink + id подтемы, тут можно написать article.php?id=
           subthemeContent: "./", //ссылка на html c контентом подтемы, формирует ссылку  subthemeContent + link + '.html', link берется из переменной выше - subthemeLink
+          currentCity: {"name": "Москва", "id": 40, "rid" : 1}, //заглушка для текущего города
+          geoRegions: "./js/regions.json", // список регионов
+          geoCities: "./js/cities.json", // список городов
         }
       </script>
       <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/main.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          var currentCity = window.config.currentCity;
+          $('.current-city').text(currentCity.name); // Ставим актуальный город по геолокации
+          $('.your-city span').text(currentCity.name + '?'); // Ставим актуальный город по геолокации
       
+          //выводим табличку с подтвержденим актуального города
+          setTimeout(function() {
+            $('.current-city-choose').addClass('current-city-choose--active');
+          }, 700)
+      
+          //скрываем табличку
+          $('.submit-city').click(function(e) {
+            e.preventDefault();
+            $('.current-city-choose').removeClass('current-city-choose--active');
+          });
+      
+          // открываем модалку с выбором города
+          $('.other-city').click(function(e) {
+            e.preventDefault();
+            $('.current-city-choose').removeClass('current-city-choose--active');
+            $('.modal-item').addClass('modal-item--active');
+            $('body').addClass('overflow');
+          });
+      
+          $('.close-modal').click(function(e) {
+            e.preventDefault();
+            $('.modal-item').removeClass('modal-item--active');
+            $('body').removeClass('overflow');
+          });
+      
+          $('.modal-overlay').click(function(e) {
+            e.preventDefault();
+            $('.modal-item').removeClass('modal-item--active');
+            $('body').removeClass('overflow');
+          })
+      
+          var cities = window.config.geoCities;
+          var regions = window.config.geoRegions;
+      
+          function asc_sort(a, b){
+            return (b.name) < (a.name) ? 1 : -1;
+          }
+      
+          // загружаем список регионов
+          function regionsLoad(){
+            $.ajax({
+              url: regions,
+              dataType : "json",
+              success: function (data) {
+                data.sort(asc_sort);
+                var regionsArray = [];
+      
+                $.each(data, function(i, val) {
+                  var item = {};
+                  var letter = val.name.charAt(0);
+                  item.title = letter;
+                  item.items = data.filter(item => item.name.charAt(0) == letter);
+                  regionsArray.push(item);
+                });
+      
+               var nextRegions = regionsArray.sort(function(a,b){return a.title < b.title ? -1 : 1;}).reduce(function(arr, el){
+                  if(!arr.length || arr[arr.length - 1].title != el.title) {
+                    arr.push(el);
+                  }
+                  return arr;
+                }, []);
+      
+                $.each(nextRegions, function(i, val) {
+                  $('.all-regions').append(
+                    '<div class="region-row"><div class="first-letter">' + val.title + '</div><ul class="region-list" data-letter="' + val.title + '"></ul></div>'
+                  );
+      
+                  $.each(val.items, function(i, val) {
+                    var letter = val.name.charAt(0);
+                    $('.region-list[data-letter="' + letter + '"]').append(
+                      '<li class="region" data-region="' + val.id + '"><span>' + val.name + '</span></li>'
+                    );
+                  });
+                });
+      
+                $('.region').click(function(){
+                  var id = $(this).data('region');
+                  $('.cities').html('');
+                  $.ajax({
+                    url: cities,
+                    dataType : "json",
+                    success: function (data) {
+                      data.sort(asc_sort);
+                      var citiesArray = [];
+      
+                      $.each(data, function(i, val) {
+                        if(val.rid == id) {
+                          var item = {};
+                          var letter = val.name.charAt(0);
+                          item.title = letter;
+                          item.items = data.filter(item => item.name.charAt(0) == letter);
+                          citiesArray.push(item);
+                        }
+                      });
+      
+                      var nextCities = citiesArray.sort(function(a,b){return a.title < b.title ? -1 : 1;}).reduce(function(arr, el){
+                        if(!arr.length || arr[arr.length - 1].title != el.title) {
+                          arr.push(el);
+                        }
+                        return arr;
+                      }, []);
+      
+                      $.each(nextCities, function(i, val) {
+                        $('.cities').append(
+                          '<div class="cities-row"><div class="first-letter">' + val.title + '</div><ul class="cities-list" data-letter="' + val.title + '"></ul></div>'
+                        )
+      
+                        $.each(val.items, function(i, val) {
+                          var letter = val.name.charAt(0);
+                          $('.cities-list[data-letter="'+ letter +'"]').append(
+                            '<li class="city" data-region="' + val.id + '"><span>' + val.name + '</span></li>'
+                          )
+      
+                          //выбераем город
+                          $('.city').click(function(){
+                            var city = $(this).text();
+                            $('.current-city').text(city);
+                            $('.modal-item').removeClass('modal-item--active');
+                          });
+                        });
+                      });
+                    }
+                  });
+                });
+              }
+            });
+          }
+      
+          // загружаем список городов
+          function citiesLoad(){
+            $.ajax({
+              url: cities,
+              dataType : "json",
+              success: function (data) {
+                data.sort(asc_sort);
+                var citiesArray = [];
+      
+                $.each(data, function(i, val) {
+                  var item = {};
+                  var letter = val.name.charAt(0);
+                  item.title = letter;
+                  item.items = data.filter(item => item.name.charAt(0) == letter);
+                  citiesArray.push(item);
+                });
+      
+                var nextCities = citiesArray.sort(function(a,b){return a.title < b.title ? -1 : 1;}).reduce(function(arr, el){
+                  if(!arr.length || arr[arr.length - 1].title != el.title) {
+                    arr.push(el);
+                  }
+                  return arr;
+                }, []);
+      
+                $.each(nextCities, function(i, val) {
+                  $('.cities').append(
+                    '<div class="cities-row"><div class="first-letter">' + val.title + '</div><ul class="cities-list" data-letter="' + val.title + '"></ul></div>'
+                  )
+      
+                  $.each(val.items, function(i, val) {
+                    var letter = val.name.charAt(0);
+                    $('.cities-list[data-letter="'+ letter +'"]').append(
+                      '<li class="city" data-region="' + val.id + '"><span>' + val.name + '</span></li>'
+                    )
+                  });
+                });
+      
+                //выбераем город
+                $('.city').click(function(){
+                  var city = $(this).text();
+                  $('.current-city').text(city);
+                  $('.modal-item').removeClass('modal-item--active');
+                })
+              }
+            });
+          }
+      
+          regionsLoad();
+          citiesLoad();
+      
+          // Открываем выбор города
+          $('.current-city').click(function(){
+            $('.modal-item').addClass('modal-item--active');
+            $('body').addClass('overflow');
+          });
+      
+          $('.all-cities').click(function(){
+            $('.cities').html('');
+            citiesLoad();
+          });
+        });
+      </script>
       <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     </footer>
 	</body>

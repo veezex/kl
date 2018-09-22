@@ -32,9 +32,9 @@ var path = {
         html: 'src/[^_]*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html, а [^_] значит что нужно избегать файлов начинающихся с нижнего подчеркивания
         js: 'src/js/*.js', //В стилях и скриптах нам понадобятся только main файлы
         style: 'src/scss/[^_]*.scss',
-        img: 'src/images/*.{jpg,jpeg,png}', 
+        img: 'src/images/*.{jpg,jpeg,png}',
         svg: 'src/images/*.svg',
-        svgforcss: 'src/images/svg/*.svg', 
+        svgforcss: 'src/images/svg/*.svg',
         fonts: 'src/fonts/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -58,32 +58,36 @@ var config = {
     logPrefix: "kp"
 };
 
-gulp.task('internalsvg', function () {
+gulp.task('internalsvg', function (cb) {
     gulp.src('src/images/*.svg')
       .pipe(svgstore())
-      .pipe(gulp.dest('build/images'));
+        .pipe(gulp.dest('build/images'));
+    cb();
 });
 
-gulp.task('externalsvg', function () {
-    function fileContents (filePath, file) {
-      return file.contents.toString('utf8')
+gulp.task('externalsvg', function (cb) {
+    function fileContents (filePath, file, cb) {
+        return file.contents.toString('utf8');
+        cb();
     };
     var svgs = gulp
       .src('src/images/*.svg')
       .pipe(svgstore({ inlineSvg: true }));
     gulp.src('src/_svg.html')
       .pipe(inject(svgs, { transform: fileContents }))
-      .pipe(gulp.dest('src'));
+        .pipe(gulp.dest('src'));
+    cb();
 });
 
-gulp.task('html:build', function () {
+gulp.task('html:build', function (cb) {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(rigger()) //Прогоним через rigger
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+        .pipe(reload({ stream: true })); //И перезагрузим наш сервер для обновлений
+    cb();
 });
 
-gulp.task('js:build', function () {
+gulp.task('js:build', function (cb) {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
@@ -91,10 +95,11 @@ gulp.task('js:build', function () {
         .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         // .pipe(gulp.dest(path.wp.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
+        .pipe(reload({ stream: true })); //И перезагрузим сервер
+    cb();
 });
 
-gulp.task('style:build', function () {
+gulp.task('style:build', function (cb) {
     gulp.src(path.src.style) //Выберем наши *.scss
         .pipe(rigger()) //Прогоним через rigger
         // .pipe(sourcemaps.init()) //То же самое что и с js
@@ -105,10 +110,11 @@ gulp.task('style:build', function () {
         .pipe(cssmin()) //Сожмем
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
-        .pipe(reload({stream: true}));
+        .pipe(reload({ stream: true }));
+    cb();
 });
 
-gulp.task('image:build', function () {
+gulp.task('image:build', function (cb) {
     gulp.src(path.src.img) //Выберем наши картинки
         .pipe(imagemin({ //Сожмем их
             progressive: true,
@@ -123,50 +129,42 @@ gulp.task('image:build', function () {
             interlaced: true
         }))
         .pipe(gulp.dest(path.build.img)) //И бросим в build
-        .pipe(reload({stream: true}));
+        .pipe(reload({ stream: true }));
+    cb();
 });
 
-gulp.task('fonts:build', function() {
+gulp.task('fonts:build', function(cb) {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
+    cb();
 });
 
-gulp.task('copysvg', function() {
+gulp.task('copysvg', function(cb) {
     gulp.src(path.src.svgforcss)
         .pipe(gulp.dest(path.build.svgforcss));
+    cb();
 });
 
-gulp.task('copyjson', function() {
+gulp.task('copyjson', function(cb) {
     gulp.src('./src/js/**/*.json')
         .pipe(gulp.dest('build/js/'))
+    cb();
 });
 
-gulp.task('build', [
-    'internalsvg',
-    'externalsvg',
-    //'html:build',
-    'js:build',
-    'style:build',
-    //'fonts:build',
-    //'image:build',
-    'copyjson',
-    'copysvg'
-    // 'svgstore'
-    // 'copysvg',
-    // 'copycss'
-]);
-
-gulp.task('watch', function(){
+gulp.task('watch', function(cb){
     /*
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
-    });*/
-
+        cb();
+    });
+*/
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
+        cb();
     });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
+        cb();
     });
     /*
     watch([path.watch.fonts], function(event, cb) {
@@ -177,14 +175,31 @@ gulp.task('watch', function(){
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
     });*/
+    cb();
 });
 
-gulp.task('webserver', function () {
+gulp.task('webserver', function (cb) {
     browserSync(config);
+    cb();
 });
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['build', /*'webserver', */'watch']);
+gulp.task('all', gulp.parallel(
+    'internalsvg',
+    'externalsvg',
+    'js:build',
+    'style:build',
+    'copyjson',
+    'copysvg',
+    // 'copycss'
+    // 'svgstore'
+    'html:build',
+    'image:build',
+    'fonts:build'
+));
+gulp.task('build', gulp.series('clean', 'all'));
+
+gulp.task('default', gulp.series('build', 'webserver', 'watch'));

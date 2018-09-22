@@ -1,6 +1,6 @@
 .header {
   background: white;
-  transition: all .5s ease-in;	
+  transition: all .5s ease-in;
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,13 +9,13 @@
     .header {
       &__logo {
         height: 40px;
-        width: 200px;   
+        width: 200px;
         @media (max-width: $min-width-mob) {
-          width: 60px;   
+          width: 60px;
         }
       }
       &__main {
-        border-color: transparent; 
+        border-color: transparent;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
       }
       &__main-container {
@@ -27,7 +27,7 @@
   &__logo {
     height: 60px;
     width: 260px;
-    // transition: all .5s ease-in; 
+    // transition: all .5s ease-in;
     @include link-tansition;
     &:hover {
       opacity: 0.6;
@@ -45,6 +45,32 @@
       }
     }
   }
+
+  .header__top {
+    @media (max-width: $min-width-mob) {
+      display: block;
+    }
+  }
+
+  .header__top-list {
+    @media (max-width: $min-width-mob) {
+      display: block;
+      margin: 0 -20px;
+
+      li {
+        display: none;
+
+        &:last-child {
+          display: block;
+
+          a {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
   &__menu-mob {
     display: none;
     @media (max-width: $min-width-mob) {
@@ -77,13 +103,126 @@
     letter-spacing: 0.24px;
     margin-left: 30px;
     // padding-left: 31px;
-    // text-decoration: none;    
+    // text-decoration: none;
     @include link-tansition;
     @include typo($size:15px,$line:28px);
     &:hover, &.hover {
       color: $black;
     }
-  } 
+
+    .current-city {
+      z-index: 11;
+      cursor: pointer;
+    }
+
+    .current-city-choose {
+      position: absolute;
+      background: #fff;
+      width: 320px;
+      height: 170px;
+      z-index: 10;
+      right: 0;
+      top: 43px;
+      box-shadow: 0 9px 25px 0 rgba(186, 117, 48, 0.4);
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(-30px);
+      transition: 0.4s;
+      padding: 16px 19px;
+      box-sizing: border-box;
+
+      @media (max-width: $min-width-mob) {
+        width: 100%;
+        max-width: 320px;
+        right: 50%;
+        transform: translateX(47%);
+        height: auto;
+      }
+
+      &--active {
+        opacity: 1;
+        transform: translateY(0);
+
+        @media (max-width: $min-width-mob) {
+          transform: translateY(0) translateX(47%);
+        }
+      }
+
+      .your-city {
+        font-size: 15px;
+        margin-bottom: 22px;
+        color: #000;
+
+        span {
+          font-weight: 500;
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .city-controls {
+        border-bottom: 1px solid #ba7530;
+        margin-bottom: 20px;
+
+        &::after {
+          clear: both;
+          content: "";
+          display: block;
+        }
+
+        button {
+          float: left;
+          box-shadow: none;
+          padding-bottom: 13px;
+          border: none;
+          transition: 0.3s;
+          color: #ba7530;
+          font-size: 16px;
+          background: transparent;
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            content: '';
+            position: absolute;
+            opacity: 0;
+            transition: 0.3s;
+            width: 100%;
+            height: 2px;
+            background: #ba7530;
+            left: 0;
+            bottom: 0;
+          }
+
+          &.submit-city {
+            width: 35px;
+          }
+
+          &.other-city {
+            width: calc(100% - 35px);
+          }
+
+          &:hover {
+            color: #000;
+            &::after {
+              opacity: 1;
+            }
+          }
+
+          &:focus,
+          &:active {
+            outline: none;
+          }
+        }
+      }
+
+      .city-small-text {
+        font-size: 13px;
+        line-height: 1.4;
+        color: #9b9b9b;
+      }
+    }
+  }
+
   &__nav {
     display: flex;
     li {
@@ -113,7 +252,7 @@
       }
     }
     @media (max-width: $min-width-mob) {
-      display: none;      
+      display: none;
     }
   }
   &__dropdown {

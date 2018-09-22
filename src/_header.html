@@ -1,4 +1,4 @@
-<div class="header js-header">  
+<div class="header js-header">
   <div class="header__top">
     <div class="container">
       <ul class="header__top-list u-jc-fe">
@@ -18,10 +18,26 @@
             </span>Подать объявление</a>
         </li>
         <li>
-          <a href="/" class="header__top-item header__top-item--city u-ai-ce">
-            <span class="svg__header-top"><svg class="svg ">
-              <use xlink:href="#header__city">
-            </svg></span>Корсаков</a>
+          <a class="header__top-item header__top-item--city u-ai-ce">
+            <span class="svg__header-top">
+              <svg class="svg ">
+                <use xlink:href="#header__city">
+              </svg>
+            </span>
+            <span class="current-city"></span>
+            <div class="current-city-choose">
+              <div class="your-city">
+                Ваш город - <span></span>
+              </div>
+              <div class="city-controls">
+                <button class="submit-city">Да</button>
+                <button class="other-city">Выбрать другой город</button>
+              </div>
+              <div class="city-small-text">
+                  От выбранного города зависит вывод предложений на сайте сервиса.
+              </div>
+            </div>
+          </a>
         </li>
       </ul>
     </div>
@@ -102,7 +118,7 @@
           <span class="menu-mob__line"></span>
         </span>
       </a>
-    </div> 
+    </div>
   </div>
   <div class="header__side side-modal side-modal--header u-jc-fe">
     <div class="side-modal__wrapper">
@@ -114,7 +130,7 @@
             <a href="javascript:;" id="modal-close-menu" class="modal__header-close u-jc-ce">
               <span class="svg__filter-close"><svg class="svg">
                 <use xlink:href="#map__close-filter">
-              </svg></span> 
+              </svg></span>
             </a>
           </div>
           <span class="side-modal__label">О компании</span>
@@ -124,7 +140,7 @@
             <li class="side-modal__item"><a href="/history.html" class="side-modal__link">История</a></li>
             <li class="side-modal__item"><a href="/employees.html" class="side-modal__link">Сотрудники</a></li>
             <li class="side-modal__item"><a href="/vacancies.html" class="side-modal__link">Вакансии</a></li>
-            <li class="side-modal__item"><a href="/partners.html" class="side-modal__link">Партнеры</a></li>  
+            <li class="side-modal__item"><a href="/partners.html" class="side-modal__link">Партнеры</a></li>
           </ul>
           <a class="side-modal__label" href="/catalog.html">Каталог недвижимости</a>
           <span class="side-modal__label">Услуги</span>
