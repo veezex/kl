@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp        = require('gulp'),
+const gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     uglify      = require('gulp-uglify'),
     prefixer    = require('gulp-autoprefixer'),
@@ -17,9 +17,10 @@ var gulp        = require('gulp'),
     inject      = require('gulp-inject'),
     pathmod     = require('path'),
     browserSync = require("browser-sync"),
+    babel = require('gulp-babel'),
     reload      = browserSync.reload;
 
-var path = {
+const path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'build/',
         js: 'build/js/',
@@ -48,7 +49,7 @@ var path = {
     clean: './build'
 };
 
-var config = {
+const config = {
     server: {
         baseDir: "./build"
     },
@@ -91,6 +92,9 @@ gulp.task('js:build', function (cb) {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
