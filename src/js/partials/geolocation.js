@@ -51,7 +51,6 @@ $(document).ready(function(){
           success: function (data) {
             localStorage.setItem('regions', JSON.stringify(data));
             regionsRender(data);
-            console.log(data);
           }
         });
       } else {
@@ -211,6 +210,12 @@ $(document).ready(function(){
     $('.current-city').click(function(){
       $('.modal-item').addClass('modal-item--active');
       $('body').addClass('overflow');
+
+      $('.all-regions').html('');
+      $('.cities').html('');
+
+      regionsLoad();
+      citiesLoad();
     });
 
     $('.all-cities').click(function(){
@@ -220,12 +225,17 @@ $(document).ready(function(){
 
   $('.city-search-input').on('input', function () {
     var cityValue = $(this).val();
-    $.ajax({
-      url: window.config.geoCities + '?q='+ cityValue +'',
-      dataType: "json",
-      success: function (data) {
-        citiesRender(data);
-      }
-    });
+    if (cityValue.length >= 3) {
+      setTimeout(function () {
+        $.ajax({
+          url: window.config.geoCities + '?q=' + cityValue + '',
+          dataType: "json",
+          success: function (data) {
+            $('.cities').html('');
+            citiesRender(data);
+          }
+        });
+      }, 500);
+    }
   })
 });

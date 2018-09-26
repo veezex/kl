@@ -131,6 +131,19 @@
       padding: 16px 19px;
       box-sizing: border-box;
 
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: 74px;
+        pointer-events: none;
+        background: #fff;
+        width: 20px;
+        height: 20px;
+        transform: rotate(60deg) skew(25deg);
+      }
+
       @media (max-width: $min-width-mob) {
         width: 100%;
         max-width: 320px;
@@ -160,7 +173,7 @@
       }
 
       .city-controls {
-        border-bottom: 1px solid #ba7530;
+        border-bottom: 1px solid rgba(186,117,48,.4);
         margin-bottom: 20px;
 
         &::after {
@@ -219,6 +232,7 @@
         font-size: 13px;
         line-height: 1.4;
         color: #9b9b9b;
+        font-weight: 300;
       }
     }
   }

@@ -73,7 +73,7 @@ body.overflow {
     }
 
     .all-cities {
-      background: #d0021b;
+      background: #A2662B;
       color: #fff;
       box-sizing: border-box;
       font-weight: 500;
@@ -332,7 +332,6 @@ body.overflow {
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 
         &::placeholder {
-          font-weight: 700;
           color: gray;
         }
       }
@@ -343,6 +342,7 @@ body.overflow {
       line-height: 1.5;
       color: #9b9b9b;
       font-size: 14px;
+      font-weight: 300;
     }
 
     &--mobile {
