@@ -173,7 +173,6 @@
       }
 
       .city-controls {
-        border-bottom: 1px solid rgba(186,117,48,.4);
         margin-bottom: 20px;
 
         &::after {
@@ -185,40 +184,27 @@
         button {
           float: left;
           box-shadow: none;
-          padding-bottom: 13px;
+          padding-bottom: 3px;
           border: none;
           transition: 0.3s;
           color: #ba7530;
           font-size: 16px;
+          border-bottom: 1px solid rgba(186,117,48,.3);
           background: transparent;
           position: relative;
           cursor: pointer;
-
-          &::after {
-            content: '';
-            position: absolute;
-            opacity: 0;
-            transition: 0.3s;
-            width: 100%;
-            height: 2px;
-            background: #ba7530;
-            left: 0;
-            bottom: 0;
-          }
 
           &.submit-city {
             width: 35px;
           }
 
           &.other-city {
-            width: calc(100% - 35px);
+            width: calc(100% - 50px);
+            float: right;
           }
 
           &:hover {
-            color: #000;
-            &::after {
-              opacity: 1;
-            }
+            border-bottom:  1px solid rgba(186,117,48,.0);
           }
 
           &:focus,

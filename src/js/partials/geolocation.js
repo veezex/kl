@@ -237,5 +237,10 @@ $(document).ready(function(){
         });
       }, 500);
     }
-  })
+    if (cityValue.length == 0) {
+      $('.cities').html('');
+      var data = JSON.parse(localStorage.getItem('cities'));
+      citiesRender(data);
+    }
+  });
 });
