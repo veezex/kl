@@ -184,7 +184,7 @@
         button {
           float: left;
           box-shadow: none;
-          padding-bottom: 3px;
+          padding: 1px 0 3px;
           border: none;
           transition: 0.3s;
           color: #ba7530;
@@ -195,12 +195,13 @@
           cursor: pointer;
 
           &.submit-city {
-            width: 35px;
+            width: 24px;
+            padding: 1px 0 3px;
           }
 
           &.other-city {
-            width: calc(100% - 50px);
-            float: right;
+            width: calc(85% - 50px);
+            margin-left: 20px;
           }
 
           &:hover {
