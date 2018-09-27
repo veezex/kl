@@ -149,7 +149,7 @@ input, textarea, select, button {
   &:after, .col {
     margin-left: 10px;
     margin-right: 10px;
-    flex-grow: 0;
+    flex-grow: 1;
   }
 }
 .modal {
@@ -216,8 +216,16 @@ input, textarea, select, button {
     }
   }
 }
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 body {
   margin-top: 150px;
+  position: relative;
+  padding-bottom: 558px;
+  flex: 1;
   // transition: all .2s ease;
   @media (max-width: $min-width-mob) {
     margin-top: 100px;

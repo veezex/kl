@@ -1,3 +1,11 @@
+footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 558px;
+}
+
 .prefooter {
   padding: 40px 0;
   background-color: #F5F5F5;
@@ -19,7 +27,7 @@
     }
   }
   // .prefooter__logo {
-  //   @include grey; 
+  //   @include grey;
   // }
   .prefooter__logo-block {
     display: block;
@@ -159,12 +167,12 @@
   }
   &__bottom-text {
     color: #7B7B7B;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     @include typo($size:10px,$line:20px);
     &--copyright {
       max-width: none;
       margin-bottom: 20px;
-    }    
+    }
     @media (max-width: $min-width-small) {
       &--copyright {
         max-width: 230px;
@@ -184,7 +192,7 @@
     margin-top: 25px;
     flex-direction: row;
     @media (max-width: $min-width-small) {
-      flex-direction: column;      
+      flex-direction: column;
     }
   }
 }
