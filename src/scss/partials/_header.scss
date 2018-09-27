@@ -130,6 +130,7 @@
       transition: 0.4s;
       padding: 16px 19px;
       box-sizing: border-box;
+      pointer-events: none;
 
       &::before {
         content: '';
@@ -155,6 +156,7 @@
       &--active {
         opacity: 1;
         transform: translateY(0);
+        pointer-events: auto;
 
         @media (max-width: $min-width-mob) {
           transform: translateY(0) translateX(47%);

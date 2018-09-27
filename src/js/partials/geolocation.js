@@ -3,15 +3,28 @@ $(document).ready(function(){
     $('.current-city').text(currentCity.name); // Ставим актуальный город по геолокации
     $('.your-city span').text(currentCity.name + '?'); // Ставим актуальный город по геолокации
 
+    function getCookie(name) {
+      var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    var geoLocationCookie = getCookie("geolocationShow");
+    console.log(geoLocationCookie);
+
     //выводим табличку с подтвержденим актуального города
-    setTimeout(function() {
-      $('.current-city-choose').addClass('current-city-choose--active');
-    }, 700)
+    if (!geoLocationCookie) {
+      setTimeout(function() {
+        $('.current-city-choose').addClass('current-city-choose--active');
+      }, 700)
+    }
 
     //скрываем табличку
     $('.submit-city').click(function(e) {
       e.preventDefault();
       $('.current-city-choose').removeClass('current-city-choose--active');
+      document.cookie = "geolocationShow=true; path=/;";
     });
 
     // открываем модалку с выбором города
@@ -20,6 +33,7 @@ $(document).ready(function(){
       $('.current-city-choose').removeClass('current-city-choose--active');
       $('.modal-item').addClass('modal-item--active');
       $('body').addClass('overflow');
+      document.cookie = "geolocationShow=true; path=/;";
 
       regionsLoad();
       citiesLoad();
