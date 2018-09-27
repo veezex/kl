@@ -14,11 +14,23 @@
     margin-bottom: 60px;
     @include gradient ($dir:top,$start:#004E80,$end:#002649);
     @media (max-width: $min-width-mob) {
-      height: 250px;  
+      height: 250px;
     }
   }
   &__card, &__wrapper:after {
-    width: 300px;
+    width: calc(25% - 20px);
+
+    @media (max-width: 1024px) {
+      width: calc(33% -20px);
+    }
+
+    @media (max-width: 768px) {
+      width: calc(50% - 20px);
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
   &__card-header {
     position: absolute;
@@ -31,7 +43,7 @@
     }
     @include typo($size:72px,$line:88px);
     @media (max-width: $min-width-mob) {
-      top: 30px;  
+      top: 30px;
     }
   }
   &__card-text {
