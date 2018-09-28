@@ -159,16 +159,23 @@ $(document).ready(function(){
         $.each(val.items, function(i, val) {
           var letter = val.name.charAt(0);
           $('.cities-list[data-letter="'+ letter +'"]').append(
-            '<li class="city" data-region="' + val.id + '"><span>' + val.name + '</span></li>'
+            '<li class="city" data-id="' + val.id + '"><span>' + val.name + '</span></li>'
           )
         });
       });
+
+      function setSelectCity(id) {
+        console.log(id)
+        $.post(window.config.geoCitySet, {id: id});
+      }
 
       //выбераем город
       $('.city').click(function () {
         var city = $(this).text();
         $('.current-city').text(city);
         $('.modal-item').removeClass('modal-item--active');
+
+        setSelectCity( $(this).data('id') );
       });
     }
 
@@ -207,7 +214,7 @@ $(document).ready(function(){
         $.each(val.items, function(i, val) {
           var letter = val.name.charAt(0);
           $('.cities-list[data-letter="'+ letter +'"]').append(
-            '<li class="city" data-region="' + val.id + '"><span>' + val.name + '</span></li>'
+            '<li class="city" data-id="' + val.id + '"><span>' + val.name + '</span></li>'
           )
 
           //выбераем город
