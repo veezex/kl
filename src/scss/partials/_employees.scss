@@ -47,6 +47,10 @@
     height: 100%;
   }
   &__name {
+    @media (min-width: $min-width-xsmall) {
+      white-space: nowrap;
+    }
+
     margin-bottom: 16px;
     @include typo($size:24px,$line:29px);
   }
