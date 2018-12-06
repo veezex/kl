@@ -50,4 +50,7 @@
     margin-bottom: 16px;
     @include typo($size:24px,$line:29px);
   }
+  &__pos {
+    min-height: 36px;
+  }
 }

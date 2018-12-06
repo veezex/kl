@@ -20,7 +20,7 @@
     @include gradient ($dir:top,$start:#004E80,$end:#002649);
     @media (max-width: $min-width-mob) {
       width: 300px;
-      height: 225px;  
+      height: 225px;
     }
   }
   &__card-header {
@@ -40,6 +40,21 @@
     width: 100%;
     @media (max-width: $min-width-mob) {
       min-width: 940px;
+    }
+  }
+
+  &_block {
+    @media screen and (min-width: 1020px) and (max-width: 1440px) {
+      justify-content: flex-start;
+
+      & .statistics__card {
+        margin-right: 60px;
+        width: 100%;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

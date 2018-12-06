@@ -35,14 +35,22 @@
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
     left: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(120px, 0, 0);
+            transform: translate3d(120px, 0, 0);
+            @media (max-width: $min-width-medium) {
+              -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0);
+            }
   }
   .carousel-inner > .item.prev,
   .carousel-inner > .item.active.left {
     left: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-120px, 0, 0);
+            transform: translate3d(-120px, 0, 0);
+            @media (max-width: $min-width-medium) {
+              -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0);
+            }
   }
   .carousel-inner > .item.next.left,
   .carousel-inner > .item.prev.right,
