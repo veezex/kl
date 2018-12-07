@@ -1,4 +1,11 @@
 .employees {
+  &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
   &__scrollable-div {
     width: 100%;
     @media (max-width: $min-width-mob) {
@@ -20,23 +27,64 @@
     height: 410px;
     border-radius: 8px;
     margin-bottom: 60px;
+    margin-right: 46px;
     // background-color: #441E1C;
     overflow: hidden;
     @include link-tansition;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
     &:hover {
       box-shadow: 0 25px 40px 0 rgba(0,0,0,0.31);
       .employees__text {
         background-color: transparent;
       }
     }
+
+    @media (max-width: 1370px) {
+      margin-right: 25px;
+    }
+
+    @media (max-width: 1310px) {
+      margin-right: 5%;
+      &:nth-child(4n) {
+        margin-right: 5%;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 900px) {
+      &:nth-child(3n) {
+        margin-right: 5%;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 500px) {
+      margin-right: 0;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
   }
-  &__card, &__block:after {
+  &__card {
     width: 300px;
+    @media (max-width: 1310px) {
+      width: 30%;
+    }
+    @media (max-width: 900px) {
+      width: 47%;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
+    }
   }
   &__text {
     width: 100%;
     color: $white;
-    padding: 20px 40px 20px 20px;
+    padding: 20px 20px 20px 20px;
     position: absolute;
     bottom: 0;
     background-color: #441E1C;

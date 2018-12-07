@@ -24,6 +24,13 @@
     height: 75px;
     float: left;
     padding: 0 10px;
+
+    &.active {
+
+      img {
+        border: 3px solid #027993;
+      }
+    }
     @media (max-width: $min-width-medium) {
       width: 100%;
       padding: 0 74px;

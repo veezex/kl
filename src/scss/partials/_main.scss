@@ -18,6 +18,37 @@ input, textarea, select, button {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
 .container {
   width: 100%;
   max-width: $container-width;
