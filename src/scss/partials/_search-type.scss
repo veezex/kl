@@ -15,9 +15,24 @@
     display: flex;
   }
   &__scrollable-div {
-    width: 100%;    
+    width: 100%;
     @media (max-width: $min-width-mob) {
       min-width: 940px;
+    }
+  }
+}
+
+.apartments-block {
+  @media screen and (min-width: 1020px) and (max-width: 1440px) {
+    justify-content: flex-start;
+
+    & .search-type__preset {
+      margin-right: 60px;
+      width: 100%;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 }
