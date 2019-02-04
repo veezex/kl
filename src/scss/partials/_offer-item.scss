@@ -251,7 +251,7 @@
       transform: translateX(-50%);
 
       & .carousel-inner {
-        margin: 0 100px;
+        margin: 0 77px;
 
         @media (max-width: 767px) {
           margin: 0;
@@ -309,9 +309,11 @@
       width: 90%;
       height: 60%;
       object-fit: cover;
-      max-width: 1200px;
+      max-width: 1056px;
       max-height: 680px;
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }
