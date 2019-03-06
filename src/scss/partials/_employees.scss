@@ -1,3 +1,4 @@
+$employe-margin: 30px;
 .employees {
   &__scrollable-div {
     width: 100%;
@@ -15,7 +16,52 @@
       transform: scale(1.02);
     }
   }
+  &__block:after {
+    content:'';
+    display:block;
+    clear:both;
+  }
   &__card {
+    // 4 колонки
+    width: calc((100% - #{$employe-margin}*3)/4);
+    margin-right:$employe-margin;
+    &:nth-child(4n) {
+      margin-right:0;
+    }
+
+    @media (max-width: $min-width-mob) {
+      // 3 колонки
+      width: calc((100% - #{$employe-margin}*2)/3);
+      margin-right:$employe-margin;
+      &:nth-child(4n) {
+        margin-right:$employe-margin;
+      }
+      &:nth-child(3n) {
+        margin-right:0;
+      }
+    }
+
+    @media (max-width: $min-width-medium) {
+      // 2 колонки
+      width: calc((100% - #{$employe-margin}*1)/2);
+      margin-right:$employe-margin;
+      &:nth-child(3n) {
+        margin-right:$employe-margin;
+      }
+      &:nth-child(2n) {
+        margin-right:0;
+      }
+    }
+
+
+    @media (max-width: $min-width-xsmall) {
+      // 1 колонка
+      width: 100%;
+      margin-right:0;
+    }
+
+    float:left;
+
     position: relative;
     height: 410px;
     border-radius: 8px;
@@ -30,9 +76,8 @@
       }
     }
   }
-  &__card, &__block:after {
-    width: 300px;
-  }
+
+
   &__text {
     width: 100%;
     color: $white;

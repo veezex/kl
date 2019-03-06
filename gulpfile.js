@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp        = require('gulp'),
-    watch       = require('gulp-watch'),
     uglify      = require('gulp-uglify'),
     prefixer    = require('gulp-autoprefixer'),
     sass        = require('gulp-sass'),
@@ -162,14 +161,9 @@ gulp.task('watch', function(cb){
         cb();
     });
 */
-    watch([path.watch.js], function(event, cb) {
-        gulp.start('js:build');
-        cb();
-    });
-    watch([path.watch.style], function(event, cb) {
-        gulp.start('style:build');
-        cb();
-    });
+    gulp.watch(path.watch.js, gulp.parallel('js:build'));
+
+    gulp.watch(path.watch.style, gulp.parallel('style:build'));
     /*
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
