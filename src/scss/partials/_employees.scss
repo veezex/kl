@@ -56,8 +56,8 @@ $employe-margin: 30px;
 
     @media (max-width: $min-width-xsmall) {
       // 1 колонка
-      width: 100%;
-      margin-right:0;
+      width: 100% !important;
+      margin-right:0 !important;
     }
 
     float:left;
